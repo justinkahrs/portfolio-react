@@ -1,0 +1,99 @@
+body{
+  background-color: white;
+  font-family: Lobster;
+}
+
+#twittericon{
+  color: rgb(0, 172, 237);
+}
+
+#githubicon{
+  color: rgb(102, 43, 129);
+}
+
+#linkedinicon{
+  color: rgb(0, 127, 178);
+}
+
+#freecodecampicon{
+  color: rgb(0, 100, 0);
+}
+
+.block{
+  padding:20px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  min-width: 25%;
+}
+
+.nav-pills{
+  background-color: white;
+}
+
+.navbar-brand{
+  font-family: Lobster;
+  font-size: 2.0em;
+}
+
+.nav-link{
+  font-family: 'Rasa', serif;
+  font-size: 1.7em;
+}
+
+h1{
+  padding: 0px;
+  margin-top: 0px;
+  font-size: 5.0em;
+}
+
+h3.span{
+font-family: 'Rasa', serif;
+}
+
+.btn-default{
+  border: none;
+  background-color: white;
+  color: #337ab7;
+  font-size: 1.7em;
+  margin-top: 1%;
+}
+
+.pageOne{
+  background-color: white;
+  background-size: cover;
+  padding: 15% 20% 20% 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-all;
+}
+
+.pageTwo{
+  background-color: gray;
+  background-size: cover;
+  padding: 15% 20% 20% 20%;
+  overflow: hidden;
+}
+
+.pageThree{
+  background-color:white;
+  background-size: cover;
+  padding: 5% 5% 5% 5%;
+  overflow: hidden;
+}
+
+.pageFour{
+  background-color:gray;
+  background-size: cover;
+  padding: 5% 5% 5% 5%;
+  padding-top: 5%;
+}
+
+.footer{
+  background-color: white;
+  background-size: cover;
+  padding: 5% 5% 5% 5%;
+  padding-top: 10%;
+}
