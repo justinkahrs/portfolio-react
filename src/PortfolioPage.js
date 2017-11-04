@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./portfolioPage.css";
 
 class PortfolioPage extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row portfolioPage" id="portfolio">
         <div className="content text-center">
           <h1>Portfolio</h1>
           <h2>Check out some of my recent projects, ideas, and designs</h2>

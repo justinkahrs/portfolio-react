@@ -3,43 +3,43 @@ import React, { Component } from "react";
 class Nav extends Component {
   render() {
     return (
-      <div className="row">
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <div class="navbar-header">
+      <div classNameName="row">
+        <nav className="navbar navbar-fixed-top">
+          <div className="container-fluid">
+            <div className="navbar-header">
               <button
                 type="button"
-                class="navbar-toggle collapsed"
+                className="navbar-toggle collapsed"
                 data-toggle="collapse"
                 data-target="#bs-example-navbar-collapse-1"
                 aria-expanded="false"
               >
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar" />
-                <span class="icon-bar" />
-                <span class="icon-bar" />
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar" />
+                <span className="icon-bar" />
+                <span className="icon-bar" />
               </button>
-              <a class="navbar-brand" href="#">
+              <a className="navbar-brand" href="#">
                 Brand
               </a>
             </div>
 
             <div
-              class="collapse navbar-collapse"
+              className="collapse navbar-collapse"
               id="bs-example-navbar-collapse-1"
             >
-              <ul class="nav navbar-nav navbar-right">
+              <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#">Link</a>
+                  <a href="#about">about</a>
                 </li>
                 <li>
-                  <a href="#">Link</a>
+                  <a href="#portfolio">portfolio</a>
                 </li>
                 <li>
-                  <a href="#">Link</a>
+                  <a href="#resume">resume</a>
                 </li>
                 <li>
-                  <a href="#">Link</a>
+                  <a href="#contact">contact</a>
                 </li>
               </ul>
             </div>

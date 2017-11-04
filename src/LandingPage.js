@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./landingPage.css";
 
 class LandingPage extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row landingPage">
         <div className="content text-center">
           <h1>Anna VanderJagt</h1>
           <div className="btnList">

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./aboutPage.css";
 
 class AboutPage extends Component {
   render() {
     return (
-      <div className="row">
+      <div className="row aboutPage" id="about">
         <div className="content text-center">
           <h1>Let me introduce myself</h1>
           <h2>Hi, Im Anna</h2>
