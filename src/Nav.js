@@ -3,30 +3,49 @@ import React, { Component } from "react";
 class Nav extends Component {
   render() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#p1">
-            Anna VanderJagt
-          </a>
-          <ul className="nav nav-pills">
-            <li className="pull-right">
-              <a className="nav-link" href="#p4">
-                Resume
+      <div className="row">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+                <span class="icon-bar" />
+              </button>
+              <a class="navbar-brand" href="#">
+                Brand
               </a>
-            </li>
-            <li className="pull-right">
-              <a className="nav-link" href="#p3">
-                Portfolio
-              </a>
-            </li>
-            <li className="pull-right">
-              <a className="nav-link active" href="#p2">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+            </div>
+
+            <div
+              class="collapse navbar-collapse"
+              id="bs-example-navbar-collapse-1"
+            >
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     );
   }
 }
