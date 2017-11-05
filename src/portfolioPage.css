@@ -1,4 +1,28 @@
 .portfolioPage {
-  height: auto;
-  margin-bottom: 10em;
+  min-height: 88vh;
+  background-color: rgb(78, 228, 123);
+  padding: 12em;
+}
+
+.portfolioPage h1, h2 {
+    text-align: center;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolioPage {
+    padding: 2em;
+    font-size: 18px;
+  }
+}
+
+.portfolioItem {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

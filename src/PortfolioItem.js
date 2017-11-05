@@ -1,61 +1,100 @@
 import React, { Component } from "react";
 import ImagePaletteProvider from "react-image-palette";
-
+import "./portfolioItem.css";
 class PortfolioItem extends Component {
   render() {
     return (
       <ImagePaletteProvider
         crossOrigin
-        image="https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png"
-        key="https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png"
+        image={this.props.imgURL}
+        key={this.props.imgURL}
       >
         {({ backgroundColor, color, alternativeColor }) => (
-          <div className="album" style={{ backgroundColor, color }}>
-            <h3>Project 1</h3>
+          <div className="portfolioItem" style={{ backgroundColor, color }}>
+            <h3>{this.props.title}</h3>
             <a
               href="#"
-              class="btn btn-lg btn-primary"
+              className="btn btn-lg btn-primary"
               data-toggle="modal"
               data-target="#largeModal"
             >
               Click to open Modal
             </a>
             <div
-              class="modal fade"
+              className="modal fade"
               id="largeModal"
               tabindex="-1"
               role="dialog"
               aria-labelledby="largeModal"
               aria-hidden="true"
             >
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-header">
+              <div className="modal-dialog modal-lg">
+                <div className="modal-content">
+                  <div className="modal-header">
                     <button
                       type="button"
-                      class="close"
+                      className="close"
                       data-dismiss="modal"
                       aria-hidden="true"
                     >
                       &times;
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">
+                    <h4 className="modal-title" id="myModalLabel">
                       Large Modal
                     </h4>
                   </div>
-                  <div class="modal-body">
-                    <h3>Modal Body</h3>
+                  <div className="modal-body">
+                    <div
+                      id="myCarousel"
+                      className="carousel slide"
+                      data-ride="carousel"
+                    >
+                      <ol className="carousel-indicators">
+                        <li
+                          data-target="#myCarousel"
+                          data-slide-to="0"
+                          className="active"
+                        />
+                        <li data-target="#myCarousel" data-slide-to="1" />
+                        <li data-target="#myCarousel" data-slide-to="2" />
+                      </ol>
+
+                      <div className="carousel-inner">
+                        {this.props.carouselURLs &&
+                          this.props.carouselURLs.map((url, i) => (
+                            <div
+                              className={`item ${i === 0 ? "active" : null}`}
+                            >
+                              <img src={url} alt="" />
+                            </div>
+                          ))}
+                      </div>
+
+                      <a
+                        className="left carousel-control"
+                        href="#myCarousel"
+                        data-slide="prev"
+                      >
+                        <span className="glyphicon glyphicon-chevron-left" />
+                        <span className="sr-only">Previous</span>
+                      </a>
+                      <a
+                        className="right carousel-control"
+                        href="#myCarousel"
+                        data-slide="next"
+                      >
+                        <span className="glyphicon glyphicon-chevron-right" />
+                        <span className="sr-only">Next</span>
+                      </a>
+                    </div>
                   </div>
-                  <div class="modal-footer">
+                  <div className="modal-footer">
                     <button
                       type="button"
-                      class="btn btn-default"
+                      className="btn btn-default"
                       data-dismiss="modal"
                     >
                       Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Save changes
                     </button>
                   </div>
                 </div>
@@ -63,12 +102,16 @@ class PortfolioItem extends Component {
             </div>
 
             <br />
-            <img src="https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png" />
+            <img className="img-responsive" src={this.props.imgURL} />
           </div>
         )}
       </ImagePaletteProvider>
     );
   }
 }
-
+PortfolioItem.defaultProps = {
+  title: "Project Name",
+  imgURL:
+    "https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png"
+};
 export default PortfolioItem;

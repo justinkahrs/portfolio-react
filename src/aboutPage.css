@@ -1,3 +1,42 @@
 .aboutPage {
-  height: 88vh;
+  min-height: 88vh;
+  background-color: rgb(97, 99, 175);
+  padding: 12em;
+}
+
+.aboutPage h1,
+h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+.aboutPage p {
+  text-align: justify;
+  padding: 10px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutPage {
+    padding: 2em;
+    font-size: 18px;
+  }
+}
+
+.aboutImage {
+  min-height: 460px;
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-image: url("https://avatars1.githubusercontent.com/u/21692318?s=460&v=4");
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 460px;
 }

@@ -5,11 +5,13 @@ class AboutPage extends Component {
   render() {
     return (
       <div className="row aboutPage" id="about">
-        <div className="content text-center">
-          <h1>Let me introduce myself</h1>
-          <h2>Hi, Im Anna</h2>
+        <h1>Let me introduce myself</h1>
+        <h2>Hi, Im Anna</h2>
+
+        <div className="col-sm-6 col-xs-12 aboutImage" />
+        <div className="col-sm-6 col-xs-12 aboutText">
           <p>
-            As an information architect intern for IU Communications, I works
+            As an information architect intern for IU Communications, I work
             with a team to develop seamless user experiences for websites across
             IU. Currently pursuing dual master’s degrees in information science
             and library science, I focus my coursework in information
@@ -19,7 +21,7 @@ class AboutPage extends Component {
           </p>
 
           <p>
-            As a frequent wanderer of the complex{" "}
+            As a frequent wanderer of the complex
             <a href="https://youtu.be/f99PcP0aFNE">"series of tubes"</a> we call
             the internet, I enjoy doing my part to make things a little more
             easy to navigate, &lt;div&gt; by &lt;/div&gt;.
@@ -29,9 +31,6 @@ class AboutPage extends Component {
             In my spare time, I enjoy traveling, cooking, pinball, and disc
             golf.
           </p>
-        </div>
-        <div className="col-md-6">
-          <img src="#" />
         </div>
       </div>
     );
