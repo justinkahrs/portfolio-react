@@ -5,8 +5,14 @@ class ResumePage extends Component {
   render() {
     return (
       <div className="row resumePage" id="resume">
-        <div className="content text-center">
-          <h1>Resume</h1>
+        <h1>Resume</h1>
+        <div className="col-lg-12 resumeCard">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Perspiciatis facilis similique quasi vitae porro inventore enim
+            tempore veritatis dolorem aliquid laudantium necessitatibus ex magni
+            error molestias ullam, alias natus. Animi!
+          </p>
         </div>
       </div>
     );

@@ -16,8 +16,6 @@ class App extends Component {
       <div className="container-fluid">
         <Nav />
         <LandingPage />
-
-        <AboutPage />
         <PortfolioPage>
           <PortfolioItem
             title="Project 1"
@@ -34,6 +32,7 @@ class App extends Component {
           <PortfolioItem />
           <PortfolioItem />
         </PortfolioPage>
+        <AboutPage />
         <ResumePage />
         <Footer />
       </div>
