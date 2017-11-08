@@ -9,6 +9,7 @@ import PortfolioItem from "./PortfolioItem.js";
 import "./App.css";
 import "./imgPalette.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import image from "./iu_trident_web_reverse.png";
 
 class App extends Component {
   render() {
@@ -19,7 +20,7 @@ class App extends Component {
         <PortfolioPage>
           <PortfolioItem
             title="Project 1"
-            imgURL="https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png"
+            imgURL={image}
             carouselURLs={[
               "https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png",
               "https://i.imgur.com/MuhSOSd.jpg",

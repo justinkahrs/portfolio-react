@@ -14,11 +14,11 @@ class PortfolioItem extends Component {
             <h3>{this.props.title}</h3>
             <a
               href="#"
-              className="btn btn-lg btn-primary"
+              className="btn btn-lg btn-primary openModalButton"
               data-toggle="modal"
               data-target="#largeModal"
             >
-              Click to open Modal
+              View project
             </a>
             <div
               className="modal fade"
@@ -40,7 +40,7 @@ class PortfolioItem extends Component {
                       &times;
                     </button>
                     <h4 className="modal-title" id="myModalLabel">
-                      Large Modal
+                      {this.props.title}
                     </h4>
                   </div>
                   <div className="modal-body">
@@ -65,7 +65,11 @@ class PortfolioItem extends Component {
                             <div
                               className={`item ${i === 0 ? "active" : null}`}
                             >
-                              <img src={url} alt="" />
+                              <img
+                                className="portfolioImage"
+                                src={url}
+                                alt=""
+                              />
                             </div>
                           ))}
                       </div>

@@ -1,11 +1,12 @@
 .portfolioPage {
   min-height: 88vh;
-  background-color: rgb(78, 228, 123);
+  background-color: #1f5f8b;
   padding: 12em;
 }
 
-.portfolioPage h1, h2 {
-    text-align: center;
+.portfolioPage h1,
+h2 {
+  text-align: center;
 }
 
 h2 {
@@ -17,12 +18,20 @@ h2 {
     padding: 2em;
     font-size: 18px;
   }
+  .portfolioItem {
+    padding: 0.5em !important;
+  }
 }
 
 .portfolioItem {
-  padding: 3em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 2em;
+  text-align: center;
+}
+
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.img-responsive,
+.thumbnail a > img,
+.thumbnail > img {
+  display: initial !important;
 }

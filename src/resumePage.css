@@ -1,6 +1,5 @@
 .resumePage {
-  min-height: 88vh;
-  background-color: #e7128e;
+  background-color: #d2ecf9;
   padding: 12em;
 }
 
@@ -11,12 +10,23 @@ h2 {
 
 .resumeCard {
   background-color: white;
-  min-height: 50vh;
 }
 
 @media only screen and (max-width: 768px) {
   .resumePage {
-    padding: 2em;
+    padding: 0.5em;
     font-size: 18px;
   }
+  .resumeBlock {
+    font-size: 20px;
+    -webkit-column-count: 1 !important;
+    column-count: 1;
+    padding: 1.5em !important;
+  }
+}
+
+.resumeBlock {
+  font-size: 20px;
+  column-count: 2;
+  padding: 2em;
 }

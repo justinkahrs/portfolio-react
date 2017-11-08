@@ -3,3 +3,12 @@
   -moz-border-radius: 0px !important;
   border-radius: 0px !important;
 }
+
+.modal-title {
+  color: black;
+  font-size: 30px;
+}
+
+.openModalButton {
+  margin-bottom: 1em;
+}

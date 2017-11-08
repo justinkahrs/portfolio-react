@@ -8,7 +8,7 @@ class PortfolioPage extends Component {
         <h1>Portfolio</h1>
         <h2>Check out some of my recent projects, ideas, and designs</h2>
         {this.props.children.map(i => (
-          <div className="col-md-4 portfolioItem">{i}</div>
+          <div className="col-md-6 col-lg-4 portfolioItem">{i}</div>
         ))}
       </div>
     );
