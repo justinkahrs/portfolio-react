@@ -23,6 +23,10 @@ h2 {
     padding: 2em;
     font-size: 18px;
   }
+  .aboutImage {
+    min-height: 250px !important;
+    background-size: 93% !important;
+  }
 }
 
 .aboutImage {
@@ -38,4 +42,5 @@ h2 {
   flex-direction: column;
   justify-content: center;
   min-height: 460px;
+  padding: 0;
 }

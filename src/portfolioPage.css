@@ -1,5 +1,4 @@
 .portfolioPage {
-  min-height: 88vh;
   background-color: #1f5f8b;
   padding: 12em;
 }
@@ -19,7 +18,7 @@ h2 {
     font-size: 18px;
   }
   .portfolioItem {
-    padding: 0.5em !important;
+    padding: 0.75em !important;
   }
 }
 

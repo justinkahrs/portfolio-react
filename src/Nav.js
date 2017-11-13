@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Scrollchor from "react-scrollchor";
+import "./nav.css";
 
 class Nav extends Component {
   render() {
@@ -30,16 +32,13 @@ class Nav extends Component {
             >
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <a href="#about">about</a>
+                  <Scrollchor to="#about">about</Scrollchor>
                 </li>
                 <li>
-                  <a href="#portfolio">portfolio</a>
+                  <Scrollchor to="#portfolio">work</Scrollchor>
                 </li>
                 <li>
-                  <a href="#resume">resume</a>
-                </li>
-                <li>
-                  <a href="#contact">contact</a>
+                  <Scrollchor to="#resume">resume</Scrollchor>
                 </li>
               </ul>
             </div>
