@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./portfolioPage.css";
+import PortfolioItem from "./PortfolioItem";
+import projects from "./projects";
 
 class PortfolioPage extends Component {
   render() {
@@ -7,8 +9,8 @@ class PortfolioPage extends Component {
       <div className="row portfolioPage" id="portfolio">
         <h1>Portfolio</h1>
         <h2>Check out some of my recent projects, ideas, and designs</h2>
-        {this.props.children.map(i => (
-          <div className="col-md-6 col-lg-4 portfolioItem">{i}</div>
+        {projects.map(i => (
+          <PortfolioItem id={i.id} title={i.title} imgURL={i.imgURL} />
         ))}
       </div>
     );
