@@ -1,14 +1,28 @@
 import React, { Component } from "react";
-import "./aboutPage.css";
 
-class AboutPage extends Component {
+const styles = {
+  aboutPage: {
+    backgroundColor: "#9EBCB6",
+    padding: "12em"
+  },
+  aboutImage: {
+    minHeight: "460px",
+    backgroundPosition: "center",
+    backgroundSize: "50%",
+    backgroundRepeat: "no-repeat",
+    backgroundImage:
+      'url("https://avatars1.githubusercontent.com/u/21692318?s=460&v=4")'
+  }
+};
+
+class About extends Component {
   render() {
     return (
-      <div className="row aboutPage" id="about">
+      <div className="row" id="about" style={styles.aboutPage}>
         <h1>Let me introduce myself</h1>
         <h2>Hi, Im Anna</h2>
 
-        <div className="col-sm-6 col-xs-12 aboutImage" />
+        <div className="col-sm-6 col-xs-12" style={styles.aboutImage} />
         <div className="col-sm-6 col-xs-12 aboutText">
           <p>
             As an information architect intern for IU Communications, I work
@@ -37,4 +51,4 @@ class AboutPage extends Component {
   }
 }
 
-export default AboutPage;
+export default About;

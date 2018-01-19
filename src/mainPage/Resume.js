@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import "./resumePage.css";
 
-class ResumePage extends Component {
+const styles = {
+  resumePage: {
+    backgroundColor: "#37474F",
+    padding: "12em"
+  }
+};
+class Resume extends Component {
   render() {
     return (
-      <div className="row resumePage" id="resume">
+      <div className="row" id="resume" style={styles.resumePage}>
         <h1>Resume</h1>
         <h2>Hello World </h2>
         <div className="col-lg-12 resumeCard">
@@ -71,4 +76,4 @@ class ResumePage extends Component {
   }
 }
 
-export default ResumePage;
+export default Resume;

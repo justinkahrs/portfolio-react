@@ -1,49 +1,73 @@
 import React, { Component } from "react";
 import Scrollchor from "react-scrollchor";
-import { Link } from "react-router-dom";
-import "./nav.css";
+import NavBrand from "./NavBrand";
 
+const styles = {
+  nav: {
+    listStyleType: "none"
+  },
+  navLink: {
+    display: "inline",
+    paddingRight: "5rem"
+  },
+  navLinkColor: {
+    color: "#3A4C39"
+  },
+  navbar: {
+    display: "flex",
+    backgroundColor: "#ffffff",
+    height: "151px",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+};
 class Nav extends Component {
   render() {
+    const { match } = this.props;
     return (
-      <div className="row">
-        <nav className="navbar navbar-fixed-top">
-          <div className="navbar-header">
-            {this.props.match ? (
-              <Scrollchor to="#">Anna VanderJagt</Scrollchor>
-            ) : (
-              <Link className="navbar-brand" to="/">
-                Anna VanderJagt
-              </Link>
-            )}
-          </div>
-          <div className="collapse navbar-collapse">
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                {this.props.match ? (
-                  <Scrollchor to="#about">about</Scrollchor>
-                ) : (
-                  <a href="/#about">about</a>
-                )}
-              </li>
-              <li>
-                {this.props.match ? (
-                  <Scrollchor to="#portfolio">work</Scrollchor>
-                ) : (
-                  <a href="/#portfolio">work</a>
-                )}
-              </li>
-              <li>
-                {this.props.match ? (
-                  <Scrollchor to="#resume">resume</Scrollchor>
-                ) : (
-                  <a href="/#resume">resume</a>
-                )}
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+      <nav className="navbar-fixed-top" style={styles.navbar}>
+        <div>
+          <NavBrand match={match} />
+        </div>
+        <div>
+          <ul style={styles.nav}>
+            <li style={styles.navLink}>
+              {match ? (
+                <Scrollchor style={styles.navLinkColor} to="#about">
+                  about
+                </Scrollchor>
+              ) : (
+                <a style={styles.navLinkColor} href="/#about">
+                  about
+                </a>
+              )}
+            </li>
+            <li style={styles.navLink}>
+              {match ? (
+                <Scrollchor style={styles.navLinkColor} to="#portfolio">
+                  work
+                </Scrollchor>
+              ) : (
+                <a style={styles.navLinkColor} href="/#portfolio">
+                  work
+                </a>
+              )}
+            </li>
+            <li style={styles.navLink}>
+              {match ? (
+                <Scrollchor style={styles.navLinkColor} to="#resume">
+                  resume
+                </Scrollchor>
+              ) : (
+                <a style={styles.navLinkColor} href="/#resume">
+                  resume
+                </a>
+              )}
+            </li>
+          </ul>
+        </div>
+      </nav>
     );
   }
 }

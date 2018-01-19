@@ -1,10 +1,18 @@
 import React, { Component } from "react";
-import "./landingPage.css";
 
-class LandingPage extends Component {
+const styles = {
+  landingPage: {
+    minHeight: "88vh",
+    backgroundColor: "#fff",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+};
+class Landing extends Component {
   render() {
     return (
-      <div className="row landingPage">
+      <div className="row" style={styles.landingPage}>
         <div className="content text-center">
           <h1>Anna VanderJagt</h1>
           <div className="btnList">
@@ -52,4 +60,4 @@ class LandingPage extends Component {
   }
 }
 
-export default LandingPage;
+export default Landing;

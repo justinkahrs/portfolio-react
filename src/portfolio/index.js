@@ -51,6 +51,10 @@ export default ({ match: { params: { name } } }) => {
   return (
     <div>
       <Nav />
+      <br />
+      <br />
+      <br />
+      <br />
       <div style={{ padding: "5em" }}>
         {projectExists(name) ? `Hey ${name}` : "Project does not exist"}
       </div>
