@@ -3,6 +3,12 @@ import { Col, Image } from "react-bootstrap";
 import ImagePaletteProvider from "react-image-palette";
 import { Link } from "react-router-dom";
 
+const styles = {
+  itemCard: {
+    padding: "4rem",
+    textAlign: "center"
+  }
+};
 class PortfolioItem extends Component {
   render() {
     return (
@@ -12,7 +18,7 @@ class PortfolioItem extends Component {
         key={this.props.imgURL}
       >
         {({ backgroundColor, color, alternativeColor }) => (
-          <Col lg={4} style={{ color }}>
+          <Col lg={4} style={{ color, ...styles.itemCard }}>
             <div style={{ backgroundColor }}>
               <h3>{this.props.title}</h3>
               <Link to={`portfolio/${this.props.title.replace(/\s+/g, "")}`}>
