@@ -4,22 +4,29 @@ import Scrollchor from "react-scrollchor";
 
 const styles = {
   navName: {
+    display: "inline-block",
+    verticalAlign: "middle",
+    textAlign: "left",
     color: "#C15C2E",
-    font: "italic bold 42px/39px fantasy",
-    width: "169px",
-    height: "87px",
+    font: "42px/39px mono",
     textDecoration: "none",
-    paddingRight: "60rem"
+    lineHeight: "39px"
   }
 };
 const NavBrand = ({ match }) => {
   return match ? (
     <Scrollchor style={styles.navName} to="#">
-      <div>Anna VanderJagt</div>
+      <div>
+        Anna <br />
+        VanderJagt
+      </div>
     </Scrollchor>
   ) : (
     <Link to="/" style={styles.navName}>
-      Anna VanderJagt
+      <div>
+        Anna <br />
+        VanderJagt
+      </div>
     </Link>
   );
 };

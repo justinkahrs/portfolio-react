@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "../common/Nav.js";
 import projects from "./projects";
 
 export default ({ match: { params: { name } } }) => {
@@ -50,12 +49,7 @@ export default ({ match: { params: { name } } }) => {
 
   return (
     <div>
-      <Nav />
-      <br />
-      <br />
-      <br />
-      <br />
-      <div style={{ padding: "5em" }}>
+      <div style={{ paddingTop: "15em" }}>
         {projectExists(name) ? `Hey ${name}` : "Project does not exist"}
       </div>
       {hasPreviousProject(name) ? (
