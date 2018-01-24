@@ -11,7 +11,7 @@ const styles = {
   },
   nav: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     paddingLeft: "0",
     listStyleType: "none",
     textAlign: "center"
