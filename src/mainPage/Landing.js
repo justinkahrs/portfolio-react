@@ -1,64 +1,48 @@
 import React, { Component } from "react";
-import { Grid } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import NavBrand from "../common/NavBrand";
 
 const styles = {
   landingPage: {
-    minHeight: "88vh",
-    backgroundColor: "#fff",
     display: "flex",
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: "center"
+    minHeight: "88vh",
+    backgroundColor: "#fff"
+  },
+  brand: {
+    marginRight: "10rem"
+  },
+  title: {
+    color: "#C15C2E",
+    fontSize: "15px",
+    fontWeight: "bold",
+    textTransform: "uppercase"
+  },
+  paragraph: {},
+  center: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   }
 };
 class Landing extends Component {
   render() {
     return (
-      <div className="row" style={styles.landingPage}>
-        <Grid>
-          <div className="content text-center">
-            <h1>Anna VanderJagt</h1>
-            <div className="btnList">
-              <a className="btn btn-default" href="https://github.com/avanderj">
-                <i
-                  className="fa fa-github fa-sm"
-                  id="githubicon"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                className="btn btn-default"
-                href="https://twitter.com/avanderj?lang=en"
-              >
-                <i
-                  className="fa fa-twitter fa-sm"
-                  id="twittericon"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                className="btn btn-default"
-                href="https://www.linkedin.com/in/annavanderjagt/"
-              >
-                <i
-                  className="fa fa-linkedin fa-sm"
-                  id="linkedinicon"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                className="btn btn-default"
-                href="https://www.linkedin.com/in/annavanderjagt/"
-              >
-                <i
-                  className="fa fa-free-code-camp fa-sm"
-                  id="freecodecampicon"
-                  aria-hidden="true"
-                />
-              </a>
-            </div>
-          </div>
-        </Grid>
-      </div>
+      <Row style={styles.landingPage}>
+        <Col lg={2} style={styles.brand}>
+          <NavBrand />
+        </Col>
+        <Col lg={5}>
+          <h1 style={styles.title}>
+            I specialize in information architecture & UX
+          </h1>
+          <p style={styles.paragraph}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
+            eros aliquam, tincidunt eros.
+          </p>
+        </Col>
+      </Row>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import PortfolioItem from "./PortfolioItem";
 import projects from "../portfolio/projects";
 
@@ -21,20 +21,18 @@ const styles = {
 class Portfolio extends Component {
   render() {
     return (
-      <div id="portfolio" style={styles.portfolioPage}>
-        <Grid>
-          <h1 style={styles.portfolioHeader}>Portfolio</h1>
-          <p style={styles.portfolioText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
-            eros aliquam, tincidunt eros. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Nullam velit ligula, maximus in
-            hendrerit vitae, fermentum id mauris.
-          </p>
-          {projects.map(i => (
-            <PortfolioItem id={i.id} title={i.title} imgURL={i.imgURL} />
-          ))}
-        </Grid>
-      </div>
+      <Row id="portfolio" style={styles.portfolioPage}>
+        <h1 style={styles.portfolioHeader}>Portfolio</h1>
+        <p style={styles.portfolioText}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
+          eros aliquam, tincidunt eros. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nullam velit ligula, maximus in hendrerit vitae,
+          fermentum id mauris.
+        </p>
+        {projects.map(i => (
+          <PortfolioItem id={i.id} title={i.title} imgURL={i.imgURL} />
+        ))}
+      </Row>
     );
   }
 }
