@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row } from "react-bootstrap";
+import { Row } from "reactstrap";
 
 const styles = {
   contactPage: {
@@ -17,7 +17,11 @@ const styles = {
 class Contact extends Component {
   render() {
     return (
-      <Row id="contact" style={styles.contactPage}>
+      <Row
+        className="d-flex justify-content-center p-lg-5"
+        id="contact"
+        style={styles.contactPage}
+      >
         <h1 style={styles.header}>
           I specialize in information architecture & UX
         </h1>

@@ -1,46 +1,58 @@
 import React, { Component } from "react";
-import { Col, Row, Nav } from "react-bootstrap";
-import NavBrand from "./NavBrand";
+import {
+  Collapse,
+  Nav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  NavItem,
+  NavLink
+} from "reactstrap";
 
 const styles = {
-  fixedAtTop: {
-    position: "fixed",
-    paddingBottom: "20rem",
-    marginBottom: "20rem"
-  },
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    paddingLeft: "0",
-    listStyleType: "none",
-    textAlign: "center"
+  navBar: {
+    backgroundColor: "white",
+    zIndex: "1"
   }
 };
 class Navigation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  toggle = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
   render() {
     return (
-      <Row>
-        <Col lg={12}>
-          <Nav>
-            <Col lg={4}>
-              <NavBrand />
-            </Col>
-            <Col lg={4}>
-              <ul style={styles.nav}>
-                <li>
-                  <a href="/#about">ABOUT</a>
-                </li>
-                <li>
-                  <a href="/#portfolio">PORTFOLIO</a>
-                </li>
-                <li>
-                  <a href="/#contact">CONTACT</a>
-                </li>
-              </ul>
-            </Col>
+      <Navbar
+        className="fixed-top"
+        style={styles.navBar}
+        color="faded"
+        light
+        expand="md"
+      >
+        <NavbarBrand href="#">Anna VanderJagt</NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="#about">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#portfolio">Portfolio</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#contact">Contact</NavLink>
+            </NavItem>
           </Nav>
-        </Col>
-      </Row>
+        </Collapse>
+      </Navbar>
     );
   }
 }

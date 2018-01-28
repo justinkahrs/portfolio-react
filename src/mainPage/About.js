@@ -1,58 +1,25 @@
 import React, { Component } from "react";
-import { Col, Image, Row } from "react-bootstrap";
+import { Row } from "reactstrap";
 
 const styles = {
-  aboutHeader: {
-    color: "#FFF",
-    fontSize: "15px",
-    fontWeight: "bold",
-    textAlign: "center",
-    textTransform: "uppercase",
-    paddingBottom: "3rem"
-  },
-  aboutImage: {
-    height: "286px",
-    width: "286px"
-  },
-  aboutImageContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingBottom: "3rem"
-  },
   aboutPage: {
-    backgroundColor: "#9EBCB6",
-    padding: "12em"
-  },
-  aboutQuote: {
-    borderLeft: "none",
-    fontSize: "22px"
-  },
-  aboutText: {
-    fontFamily: "serif",
-    fontSize: "16px"
+    minHeight: "88vh",
+    backgroundColor: "#9EBCB6"
   }
 };
 
 class About extends Component {
   render() {
     return (
-      <div className="row" id="about" style={styles.aboutPage}>
-        <Row>
-          <Col style={styles.aboutImageContainer} lg={12}>
-            <Image
-              style={styles.aboutImage}
-              src="https://avatars1.githubusercontent.com/u/21692318?s=460&v=4"
-              circle
-              responsive
-            />
-          </Col>
-        </Row>
-
-        <h1 style={styles.aboutHeader}>
+      <Row
+        style={styles.aboutPage}
+        className="d-flex justify-content-center align-items-center p-3"
+        id="about"
+      >
+        <h3 className="col-lg-12 text-center pb-0">
           I specialize in information architecture & UX
-        </h1>
-        <div style={styles.aboutText}>
+        </h3>
+        <div className="col-lg-8">
           <p>
             As an information architect intern for IU Communications, I work
             with a team to develop seamless user experiences for websites across
@@ -62,7 +29,7 @@ class About extends Component {
             also hold a bachelors degree in art history from Kendall College of
             Art & Design.
           </p>
-          <blockquote style={styles.aboutQuote}>
+          <blockquote>
             The best word to describe how we work: partnership.
           </blockquote>
           <p>
@@ -76,7 +43,7 @@ class About extends Component {
             golf.
           </p>
         </div>
-      </div>
+      </Row>
     );
   }
 }

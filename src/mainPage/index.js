@@ -6,7 +6,6 @@ import Contact from "./Contact.js";
 import Footer from "./Footer.js";
 import "./App.css";
 import "./imgPalette.css";
-import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 export default class extends React.Component {
   render() {

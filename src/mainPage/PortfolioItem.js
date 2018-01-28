@@ -1,38 +1,38 @@
 import React, { Component } from "react";
-import { Col, Image } from "react-bootstrap";
 import ImagePaletteProvider from "react-image-palette";
 import { Link } from "react-router-dom";
 
-const styles = {
-  itemCard: {
-    padding: "4rem",
-    textAlign: "center"
-  }
-};
 class PortfolioItem extends Component {
   render() {
     return (
-      <ImagePaletteProvider
-        crossOrigin
-        image={this.props.imgURL}
-        key={this.props.imgURL}
-      >
-        {({ backgroundColor, color, alternativeColor }) => (
-          <Col lg={4} style={{ color, ...styles.itemCard }}>
-            <div style={{ backgroundColor }}>
-              <h3>{this.props.title}</h3>
-              <Link to={`portfolio/${this.props.title.replace(/\s+/g, "")}`}>
-                View project
-              </Link>
-              <Image
-                responsive
-                alt="a representation of the project"
-                src={this.props.imgURL}
-              />
+      <div className="col-lg-4 my-3">
+        <ImagePaletteProvider
+          crossOrigin
+          image={this.props.imgURL}
+          key={this.props.imgURL}
+        >
+          {({ backgroundColor, color, alternativeColor }) => (
+            <div style={{ color }}>
+              <div style={{ backgroundColor }}>
+                <h3 className="text-center pt-3">{this.props.title}</h3>
+                <div className="d-flex flex-column justify-content-center align-items-center">
+                  <img
+                    className="img-fluid"
+                    alt="a representation of the project"
+                    src={this.props.imgURL}
+                  />
+                  <Link
+                    className="pb-3"
+                    to={`portfolio/${this.props.title.replace(/\s+/g, "")}`}
+                  >
+                    View project
+                  </Link>
+                </div>
+              </div>
             </div>
-          </Col>
-        )}
-      </ImagePaletteProvider>
+          )}
+        </ImagePaletteProvider>
+      </div>
     );
   }
 }

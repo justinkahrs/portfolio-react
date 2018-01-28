@@ -1,43 +1,29 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
-import NavBrand from "../common/NavBrand";
+import { Row, Col } from "reactstrap";
 
 const styles = {
-  landingPage: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: "88vh",
-    backgroundColor: "#fff"
-  },
-  brand: {
-    marginRight: "10rem"
-  },
-  title: {
-    color: "#C15C2E",
-    fontSize: "15px",
-    fontWeight: "bold",
-    textTransform: "uppercase"
-  },
-  paragraph: {},
-  center: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+  landingHeader: {
+    color: "#C15C2E"
   }
 };
 class Landing extends Component {
   render() {
     return (
-      <Row style={styles.landingPage}>
-        <Col lg={2} style={styles.brand}>
-          <NavBrand />
+      <Row
+        style={{ minHeight: "88vh" }}
+        className="d-flex justify-content-center align-items-center"
+      >
+        <Col
+          className="d-none d-lg-flex"
+          style={styles.landingHeader}
+          xs={12}
+          lg={2}
+        >
+          Anna VanderJagt
         </Col>
-        <Col lg={5}>
-          <h1 style={styles.title}>
-            I specialize in information architecture & UX
-          </h1>
-          <p style={styles.paragraph}>
+        <Col className="text-center" lg={5}>
+          <h4>I specialize in information architecture & UX</h4>
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
             eros aliquam, tincidunt eros.
           </p>

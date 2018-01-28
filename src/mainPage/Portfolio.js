@@ -1,38 +1,32 @@
 import React, { Component } from "react";
-import { Row } from "react-bootstrap";
+import { Row } from "reactstrap";
 import PortfolioItem from "./PortfolioItem";
 import projects from "../portfolio/projects";
 
 const styles = {
-  portfolioHeader: {
-    color: "#C15C2E",
-    fontSize: "22px",
-    textAlign: "center",
-    textTransform: "uppercase"
-  },
   portfolioPage: {
-    backgroundColor: "#fff",
-    padding: "12em"
-  },
-  portfolioText: {
-    fontSize: "16px"
+    minHeight: "88vh",
+    backgroundColor: "#fff"
   }
 };
 class Portfolio extends Component {
   render() {
     return (
-      <Row id="portfolio" style={styles.portfolioPage}>
-        <h1 style={styles.portfolioHeader}>Portfolio</h1>
-        <p style={styles.portfolioText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
-          eros aliquam, tincidunt eros. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nullam velit ligula, maximus in hendrerit vitae,
-          fermentum id mauris.
-        </p>
-        {projects.map(i => (
-          <PortfolioItem id={i.id} title={i.title} imgURL={i.imgURL} />
-        ))}
-      </Row>
+      <div className="text-center p-5">
+        <div>
+          <h2>Portfolio</h2>
+        </div>
+        <div>
+          <p>Here's some of my kickass shit</p>
+        </div>
+        <Row
+          className="d-flex justify-content-center align-items-center"
+          id="portfolio"
+          style={styles.portfolioPage}
+        >
+          {projects.map(i => <PortfolioItem {...i} />)}
+        </Row>
+      </div>
     );
   }
 }
