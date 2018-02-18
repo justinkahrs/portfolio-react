@@ -1,63 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import projects from "./projects";
+import projects from '../projects';
+import PortfolioPage from './PortfolioPage';
 
 export default ({ match: { params: { name } } }) => {
-  const projectExists = name => {
-    return projects.find(i => i.title.replace(/\s+/g, "") === name);
-  };
 
-  const hasNextProject = name => {
-    const index = projects.findIndex(i => i.title.replace(/\s+/g, "") === name);
-    if (index === -1) {
-      return false;
-    }
-    if (index === projects.length - 1) {
-      return false;
-    }
-    return true;
-  };
+  const squish = name => name.replace(/\s+/g, "")
 
-  const getNextProjectLink = name => {
-    if (hasNextProject(name)) {
-      const index = projects.findIndex(
-        i => i.title.replace(/\s+/g, "") === name
-      );
-      return projects[index + 1].title.replace(/\s+/g, "");
-    }
-  };
+  const project = projects.find(i => squish(i.title) === name)
+  const projectIndex = projects.findIndex(i => squish(i.title) === name)
 
-  const hasPreviousProject = name => {
-    const index = projects.findIndex(i => i.title.replace(/\s+/g, "") === name);
-    if (index === -1) {
-      return false;
-    }
-    if (index === 0) {
-      return false;
-    }
-    return true;
-  };
+  const hasNextProject = !(projectIndex === projects.length - 1 || projectIndex === -1)
+  const hasPreviousProject = !(projectIndex <= 0);
 
-  const getPreviousProjectLink = name => {
-    if (hasPreviousProject(name)) {
-      const index = projects.findIndex(
-        i => i.title.replace(/\s+/g, "") === name
-      );
-      return projects[index - 1].title.replace(/\s+/g, "");
-    }
-  };
+  const previousProjectLink = hasPreviousProject ? squish(projects[projectIndex - 1].title) : null
+  const nextProjectLink = hasNextProject ? squish(projects[projectIndex + 1].title) : null
 
   return (
     <div>
-      <div style={{ paddingTop: "15em" }}>
-        {projectExists(name) ? `Hey ${name}` : "Project does not exist"}
+      <div style={{ paddingTop: "5em" }}>
+        {project
+          ? <PortfolioPage
+              {...project}
+          />
+          : "Project does not exist"}
       </div>
-      {hasPreviousProject(name) ? (
-        <Link to={getPreviousProjectLink(name)}>Previous Project</Link>
+      {hasPreviousProject ? (
+        <Link to={previousProjectLink}>Previous Project</Link>
       ) : null}
       <br />
-      {hasNextProject(name) ? (
-        <Link to={getNextProjectLink(name)}>Next Project</Link>
+      {hasNextProject ? (
+        <Link to={nextProjectLink}>Next Project</Link>
       ) : null}
     </div>
   );

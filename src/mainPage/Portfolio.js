@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row } from "reactstrap";
 import PortfolioItem from "./PortfolioItem";
-import projects from "../portfolio/projects";
+import projects from "../projects";
 
 const styles = {
   portfolioPage: {

@@ -17,6 +17,7 @@ class PortfolioItem extends Component {
                 <h3 className="text-center pt-3">{this.props.title}</h3>
                 <div className="d-flex flex-column justify-content-center align-items-center">
                   <img
+                    style={{minWidth: '400px'}}
                     className="img-fluid"
                     alt="a representation of the project"
                     src={this.props.imgURL}

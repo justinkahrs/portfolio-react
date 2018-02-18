@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Nav,
@@ -37,7 +38,7 @@ class Navigation extends Component {
         light
         expand="md"
       >
-        <NavbarBrand href="#">Anna VanderJagt</NavbarBrand>
+        <NavbarBrand><Link to="/">Anna VanderJagt</Link></NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
