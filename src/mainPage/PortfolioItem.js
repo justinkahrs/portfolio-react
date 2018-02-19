@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ImagePaletteProvider from "react-image-palette";
 import { Link } from "react-router-dom";
+import './portfolioItem.css';
 
 class PortfolioItem extends Component {
   render() {
@@ -12,25 +13,24 @@ class PortfolioItem extends Component {
           key={this.props.imgURL}
         >
           {({ backgroundColor, color, alternativeColor }) => (
-            <div style={{ color }}>
-              <div style={{ backgroundColor }}>
-                <h3 className="text-center pt-3">{this.props.title}</h3>
-                <div className="d-flex flex-column justify-content-center align-items-center">
-                  <img
-                    style={{minWidth: '400px'}}
-                    className="img-fluid"
-                    alt="a representation of the project"
-                    src={this.props.imgURL}
-                  />
-                  <Link
-                    className="pb-3"
-                    to={`portfolio/${this.props.title.replace(/\s+/g, "")}`}
-                  >
-                    View project
-                  </Link>
+            <Link
+              className="pb-3"
+              to={`portfolio/${this.props.title.replace(/\s+/g, "")}`}
+            >
+              <div className="portfolioCard" style={{ color }}>
+                <div style={{ backgroundColor }}>
+                  <h3 className="text-center pt-3">{this.props.title}</h3>
+                  <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img
+                      style={{ minWidth: '400px' }}
+                      className="img-fluid"
+                      alt="a representation of the project"
+                      src={this.props.imgURL}
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           )}
         </ImagePaletteProvider>
       </div>

@@ -5,15 +5,18 @@ import projects from "../projects";
 
 const styles = {
   portfolioPage: {
-    minHeight: "88vh",
+    minHeight: "60vh",
     backgroundColor: "#fff"
+  },
+  header: {
+    marginTop: '15rem'
   }
 };
 class Portfolio extends Component {
   render() {
     return (
-      <div className="text-center p-5">
-        <div>
+      <div id="portfolio" className="text-center p-5">
+        <div style={styles.header}>
           <h2>Portfolio</h2>
         </div>
         <div>
@@ -21,7 +24,6 @@ class Portfolio extends Component {
         </div>
         <Row
           className="d-flex justify-content-center align-items-center"
-          id="portfolio"
           style={styles.portfolioPage}
         >
           {projects.map(i => <PortfolioItem {...i} />)}
