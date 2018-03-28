@@ -1,16 +1,18 @@
-import React, { Component } from "react";
-import { Row, Col } from "reactstrap";
+import React, { Component } from 'react';
+import { Row, Col } from 'reactstrap';
 
 const styles = {
   landingHeader: {
-    color: "#C15C2E"
+    fontFamily: 'Playfair Display, serif',
+    fontSize: '38px',
+    color: '#C15C2E'
   }
 };
 class Landing extends Component {
   render() {
     return (
       <Row
-        style={{ minHeight: "88vh" }}
+        style={{ minHeight: '88vh' }}
         className="d-flex justify-content-center align-items-center"
       >
         <Col

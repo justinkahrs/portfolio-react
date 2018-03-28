@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Collapse,
@@ -8,12 +8,18 @@ import {
   NavbarToggler,
   NavItem,
   NavLink
-} from "reactstrap";
+} from 'reactstrap';
 
 const styles = {
   navBar: {
-    backgroundColor: "white",
-    zIndex: "1"
+    backgroundColor: 'white',
+    zIndex: '1',
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr'
+  },
+  navItems: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr'
   }
 };
 class Navigation extends Component {
@@ -38,10 +44,12 @@ class Navigation extends Component {
         light
         expand="md"
       >
-        <NavbarBrand><Link to="/">Anna VanderJagt</Link></NavbarBrand>
+        <NavbarBrand>
+          <Link to="/">Anna VanderJagt</Link>
+        </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="ml-auto" navbar>
+          <Nav className="mx-auto" navbar>
             <NavItem>
               <NavLink href="#about">About</NavLink>
             </NavItem>
