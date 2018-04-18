@@ -1,48 +1,58 @@
-import React from "react";
-import { Col, Row } from "reactstrap";
+import React, { Component } from 'react';
 
-const PortfolioPage = ({
-  title,
-  context,
-  methodsAndSkills,
-  role,
-  roleSummary,
-  lessonsLearned,
-  imgURL,
-  imgCaption
-}) => (
-  <Row>
-    <div style={{ textAlign: "center" }}>
-      <Col xs={12}>
-        <h1>{title.toUpperCase()}</h1>
-      </Col>
-      <Col xs={12}>
+const styles = {
+  image: {
+    margin: 'auto',
+    maxWidth: '400px'
+  },
+  page: {
+    display: 'grid',
+    gridTemplateRows: 'auto',
+    padding: '10rem 20rem 10rem 20rem',
+    textAlign: 'justify',
+    textJustify: 'auto'
+  },
+  title: {
+    textAlign: 'center'
+  }
+};
+class PortfolioPage extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+  componentWillReceiveProps() {
+    window.scrollTo(0, 0);
+  }
+  render() {
+    const {
+      title,
+      context,
+      methodsAndSkills,
+      role,
+      roleSummary,
+      lessonsLearned,
+      imgURL,
+      imgCaption
+    } = this.props;
+    return (
+      <div style={styles.page}>
+        <h1 style={styles.title}>{title.toUpperCase()}</h1>
         <p>{context}</p>
-      </Col>
-      <Col xs={12}>
         <img
           alt="representation of project"
-          style={{ maxWidth: "400px" }}
+          style={styles.image}
           src={imgURL}
         />
         <p>{imgCaption}</p>
-      </Col>
-      <Col xs={3} style={{ textAlign: "center" }}>
         <h2>Methods and Skills:</h2>
-        <ul>{methodsAndSkills.split(",").map(i => <li>{i}</li>)}</ul>
-      </Col>
-      <Col xs={12}>
+        <ul>{methodsAndSkills.split(',').map(i => <li>{i}</li>)}</ul>
         <h2>{role}</h2>
-      </Col>
-      <Col xs={12}>
         <p>{roleSummary}</p>
-      </Col>
-      <Col xs={12}>
         <h2>Lessons learned:</h2>
         <p>{lessonsLearned}</p>
-      </Col>
-    </div>
-  </Row>
-);
+      </div>
+    );
+  }
+}
 
 export default PortfolioPage;
