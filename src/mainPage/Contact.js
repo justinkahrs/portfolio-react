@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Row } from "reactstrap";
 
 const styles = {
   contactPage: {
@@ -8,8 +7,6 @@ const styles = {
   },
   header: {
     color: "#C15C2E",
-    fontSize: "16px",
-    fontWeight: "bold",
     textTransform: "uppercase",
     textAlign: "center"
   }
@@ -17,15 +14,14 @@ const styles = {
 class Contact extends Component {
   render() {
     return (
-      <Row
-        className="d-flex justify-content-center p-lg-5"
+      <div
         id="contact"
         style={styles.contactPage}
       >
-        <h1 style={styles.header}>
+        <div style={styles.header}>
           I specialize in information architecture & UX
-        </h1>
-      </Row>
+        </div>
+      </div>
     );
   }
 }

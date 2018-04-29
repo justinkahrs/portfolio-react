@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
 
 const styles = {
+  blurb: {
+    gridColumn: '3',
+    gridRow: '3'
+  },
+  page: {
+    display: 'grid',
+    gridTemplateRows: '1fr 1fr 1fr 1fr',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    minHeight: '88vh'
+  },
   landingHeader: {
+    gridColumn: '2',
+    gridRow: '3',
     fontFamily: 'Playfair Display, serif',
     fontSize: '38px',
     color: '#C15C2E'
@@ -11,26 +22,16 @@ const styles = {
 class Landing extends Component {
   render() {
     return (
-      <Row
-        style={{ minHeight: '88vh' }}
-        className="d-flex justify-content-center align-items-center"
-      >
-        <Col
-          className="d-none d-lg-flex"
-          style={styles.landingHeader}
-          xs={12}
-          lg={2}
-        >
-          Anna VanderJagt
-        </Col>
-        <Col className="text-center" lg={5}>
-          <h4>I specialize in information architecture & UX</h4>
+      <div style={styles.page}>
+        <div style={styles.landingHeader}>Anna VanderJagt</div>
+        <div style={styles.blurb}>
+          <div>I specialize in information architecture & UX</div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
             eros aliquam, tincidunt eros.
           </p>
-        </Col>
-      </Row>
+        </div>
+      </div>
     );
   }
 }

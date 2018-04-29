@@ -1,25 +1,33 @@
-import React, { Component } from "react";
-import { Row } from "reactstrap";
+import React, { Component } from 'react';
 
 const styles = {
   aboutPage: {
-    minHeight: "88vh",
-    backgroundColor: "#9EBCB6"
+    display: 'grid',
+    gridTemplateRows: '1fr 1fr 1fr',
+    gridTemplateColumns: '1fr 4fr 1fr',
+    minHeight: '88vh',
+    backgroundColor: '#9EBCB6'
+  },
+  header: {
+    gridRow: '1',
+    gridColumn: '2',
+    textAlign: 'center',
+    padding: '2rem'
+  },
+  text: {
+    gridRow: '2',
+    gridColumn: '2'
   }
 };
 
 class About extends Component {
   render() {
     return (
-      <Row
-        style={styles.aboutPage}
-        className="d-flex justify-content-center align-items-center p-3"
-        id="about"
-      >
-        <h3 className="col-lg-12 text-center pb-0">
+      <div style={styles.aboutPage} id="about">
+        <div style={styles.header}>
           I specialize in information architecture & UX
-        </h3>
-        <div className="col-lg-8">
+        </div>
+        <div style={styles.text}>
           <p>
             As an information architect intern for IU Communications, I work
             with a team to develop seamless user experiences for websites across
@@ -43,7 +51,7 @@ class About extends Component {
             golf.
           </p>
         </div>
-      </Row>
+      </div>
     );
   }
 }
