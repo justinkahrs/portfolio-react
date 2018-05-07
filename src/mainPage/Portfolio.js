@@ -1,72 +1,44 @@
 import React, { Component } from 'react';
-import debounce from 'lodash.debounce';
 
 import PortfolioItem from './PortfolioItem';
 import projects from '../projects';
 
-const portfolioPage = width => {
-  const isBig = () => width >= 768;
-
-  return {
-    portfolioPage: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 4fr 1fr',
-      gridTemplateRows: '1fr 1fr',
-      top: isBig() ? '-5rem' : '-2rem',
-    },
-  }
-}
-const styles = {
-  header: {
-    gridColumn: '2',
-    gridRow: '1'
-  },
-  title: {
-    gridColumn: '2',
-    gridRow: '1'
-  },
-  projects: {
-    maxHeight: '30%',
-    gridColumn: '2',
-    gridRow: '2'
-  },
-  projectGrid: {
-    display: 'subgrid',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    gridTemplateRows: '1fr'
-  }
-};
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: null
+  styles = () => {
+    const { big } = this.props;
+    return {
+      header: {
+        color: '#C15C2E',
+        textAlign: 'center'
+      },
+      portfolioPage: {
+        display: 'grid',
+        padding: big ? '0 21rem' : '',
+        gridTemplateColumns: big
+          ? '1fr 1fr 1fr'
+          : '1fr',
+        top: !big ? '-5rem' : ''
+      },
+      text: {
+        textAlign: 'center',
+        padding: this.props.big ? '0 22rem' : '1rem'
+      }
     };
-    this.updateDimensions = debounce(this.updateDimensions.bind(this), 100)    
-  }
-  componentDidMount() {
-    this.updateDimensions();
-    window.addEventListener('resize', this.updateDimensions, false);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
-  }
-
-  updateDimensions() {
-    this.setState({ width: window.innerWidth });
-  }
+  };
   render() {
     return (
-      <div style={portfolioPage(this.state.width).portfolioPage} id="portfolio">
-        <div style={styles.header}>
-          <h2>Portfolio</h2>
-          <p>Here's some of my kickass shit</p>
-        </div>
-        <div style={styles.projects}>
-          <div style={styles.projectGrid}>
-            {projects.map(i => <PortfolioItem key={i} {...i} />)}
-          </div>
+      <div>
+        <h2 style={this.styles().header}>Portfolio</h2>
+        <p style={this.styles().text}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
+          eros aliquam, tincidunt eros. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Nullam velit ligula, maximus in hendrerit vitae,
+          fermentum id mauris.
+        </p>
+        <div style={this.styles().portfolioPage} id="portfolio">
+          {projects.map(i => (
+            <PortfolioItem big={this.props.big} key={i.id} {...i} />
+          ))}
         </div>
       </div>
     );

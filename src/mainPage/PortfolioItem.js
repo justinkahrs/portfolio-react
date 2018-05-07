@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
 import ImagePaletteProvider from 'react-image-palette';
 import { Link } from 'react-router-dom';
-
-const styles = {
-  image: {
-    maxWidth: '400px',
-    height: 'auto'
-  }
-};
+import './portfolioItem.css';
 
 class PortfolioItem extends Component {
+  styles = () => ({
+    image: {
+      width: '75%',
+      height: 'auto'
+    },
+    test: {
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '1px',
+      boxShadow: '4px 4px 12px 2px lightgrey',
+      margin: this.props.big ? '1rem 3rem' : '1rem',
+      padding: this.props.big ? '1rem' : '1rem',
+      height: this.props.big ? '400px' : '100%'
+    }
+  });
   render() {
     return (
       <ImagePaletteProvider
@@ -20,11 +29,14 @@ class PortfolioItem extends Component {
         {({ backgroundColor, color, alternativeColor }) => (
           <Link to={`portfolio/${this.props.title.replace(/\s+/g, '')}`}>
             <div className="portfolioCard" style={{ color }}>
-              <div style={{ backgroundColor }}>
-                <h3 className="text-center pt-3">{this.props.title}</h3>
-                <div className="d-flex flex-column justify-content-center align-items-center">
+              <div
+                className="test"
+                style={{ backgroundColor, ...this.styles().test }}
+              >
+                <h3>{this.props.title}</h3>
+                <div className="imageContainer">
                   <img
-                    style={styles.image}
+                    style={this.styles().image}
                     alt="a representation of the project"
                     src={this.props.imgURL}
                   />

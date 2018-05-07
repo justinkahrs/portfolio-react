@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
 
-const styles = {
-  aboutPage: {
-    display: 'grid',
-    gridTemplateRows: '1fr 1fr 1fr',
-    gridTemplateColumns: '1fr 4fr 1fr',
-    minHeight: '88vh',
-    backgroundColor: '#9EBCB6'
-  },
-  header: {
-    gridRow: '1',
-    gridColumn: '2',
-    textAlign: 'center',
-    padding: '2rem'
-  },
-  text: {
-    gridRow: '2',
-    gridColumn: '2'
-  }
-};
-
 class About extends Component {
+  styles = () => ({
+    aboutPage: {
+      minHeight: '88vh',
+      backgroundColor: '#9EBCB6'
+    },
+    bq: {
+      fontWeight: 'bold'
+    },
+    header: {
+      color: 'white',
+      textTransform: 'uppercase',
+      textAlign: 'center',
+      paddingTop: this.props.big ? '10rem' : '1rem'
+    },
+    text: {
+      padding: this.props.big ? '1rem 25rem' : '2rem'
+    }
+  });
   render() {
     return (
-      <div style={styles.aboutPage} id="about">
-        <div style={styles.header}>
+      <div style={this.styles().aboutPage} id="about">
+        <div style={this.styles().header}>
           I specialize in information architecture & UX
         </div>
-        <div style={styles.text}>
+        <div style={this.styles().text}>
           <p>
             As an information architect intern for IU Communications, I work
             with a team to develop seamless user experiences for websites across
@@ -37,7 +35,7 @@ class About extends Component {
             also hold a bachelors degree in art history from Kendall College of
             Art & Design.
           </p>
-          <blockquote>
+          <blockquote style={this.styles().bq}>
             The best word to describe how we work: partnership.
           </blockquote>
           <p>

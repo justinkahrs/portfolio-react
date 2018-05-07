@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 
-const styles = {
-  image: {
-    margin: 'auto',
-    maxWidth: '400px'
-  },
-  page: {
-    display: 'grid',
-    gridTemplateRows: 'auto',
-    padding: '10rem 20rem 10rem 20rem',
-    textAlign: 'justify',
-    textJustify: 'auto'
-  },
-  title: {
-    textAlign: 'center'
-  }
-};
 class PortfolioPage extends Component {
+  styles = () => ({
+    image: {
+      margin: 'auto',
+      maxWidth: '400px'
+    },
+    page: {
+      display: 'grid',
+      gridTemplateRows: 'auto',
+      padding: '10rem 20rem 10rem 20rem',
+      textAlign: 'justify',
+      textJustify: 'auto'
+    },
+    title: {
+      textAlign: 'center'
+    }
+  })
   componentDidMount() {
     window.scrollTo(0, 0);
   }
@@ -35,12 +35,12 @@ class PortfolioPage extends Component {
       imgCaption
     } = this.props;
     return (
-      <div style={styles.page}>
-        <h1 style={styles.title}>{title.toUpperCase()}</h1>
+      <div style={this.styles().page}>
+        <h1 style={this.styles().title}>{title.toUpperCase()}</h1>
         <p>{context}</p>
         <img
           alt="representation of project"
-          style={styles.image}
+          style={this.styles().image}
           src={imgURL}
         />
         <p>{imgCaption}</p>

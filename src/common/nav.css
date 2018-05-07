@@ -1,0 +1,65 @@
+.navItems a {
+  text-decoration: none;
+  color: black;
+}
+.navItems a:hover {
+  color: #c15c2e;
+}
+.navBrand {
+  font-family: Playfair Display, serif;
+  color: #c15c2e;
+  text-decoration: none;
+}
+.navBarAfterScroll {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .navBar {
+    background-color: white;
+    border-top: thin solid lightgrey;
+    border-bottom: thin solid lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+    position: fixed;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 5rem;
+    width: 100%;
+    top: 2rem;
+    transition: grid-template-columns 2s;
+  }
+  .navBrand {
+    text-align: center;
+    font-size: 22px;
+  }
+  .navItems {
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 768px) {
+  .navBar {
+    position: fixed;
+    z-index: 1;
+  }
+  .navBrand {
+    display: none;
+  }
+  .navItems {
+    display: none;
+  }
+  .navItemsBurger {
+    background-color: white;
+    margin-top: 4rem;
+  }
+}
