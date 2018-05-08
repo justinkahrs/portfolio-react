@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LeftArrow from 'react-icons/lib/md/chevron-left';
+import RightArrow from 'react-icons/lib/md/chevron-right';
 import projects from '../projects';
 import PortfolioPage from './PortfolioPage';
+import './portfolioPage.css';
 
 export default ({
   match: {
@@ -33,10 +36,16 @@ export default ({
         {project ? <PortfolioPage {...project} /> : 'Project does not exist'}
       </div>
       {hasPreviousProject ? (
-        <Link to={previousProjectLink}>Previous Project</Link>
+        <Link className="previousLink" to={previousProjectLink}>
+          <LeftArrow style={{ fontSize: '30px' }} />Previous
+        </Link>
       ) : null}
       <br />
-      {hasNextProject ? <Link to={nextProjectLink}>Next Project</Link> : null}
+      {hasNextProject ? (
+        <Link className="nextLink" to={nextProjectLink}>
+          Next<RightArrow style={{ fontSize: '30px' }} />
+        </Link>
+      ) : null}
     </div>
   );
 };

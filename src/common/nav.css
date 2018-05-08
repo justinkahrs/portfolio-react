@@ -1,19 +1,40 @@
+.navItems li div {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
 .navItems a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
-.navItems a:hover {
+.navItems div:hover {
   color: #c15c2e;
 }
 .navBrand {
   font-family: Playfair Display, serif;
   color: #c15c2e;
+  cursor: pointer;
   text-decoration: none;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear, visibility 2s linear;
 }
 .navBarAfterScroll {
   position: fixed;
   top: 0;
+  background-color: white;
+  border-top: thin solid lightgrey;
+  border-bottom: thin solid lightgrey;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  position: fixed;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 5rem;
   width: 100%;
+  transition: top 0.5s;
 }
 @media (min-width: 768px) {
   .navBar {
@@ -29,7 +50,7 @@
     height: 5rem;
     width: 100%;
     top: 2rem;
-    transition: grid-template-columns 2s;
+    transition: top 0.5s;
   }
   .navBrand {
     text-align: center;

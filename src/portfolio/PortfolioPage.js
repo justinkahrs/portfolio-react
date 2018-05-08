@@ -45,7 +45,7 @@ class PortfolioPage extends Component {
         />
         <p>{imgCaption}</p>
         <h2>Methods and Skills:</h2>
-        <ul>{methodsAndSkills.split(',').map(i => <li>{i}</li>)}</ul>
+        <ul>{methodsAndSkills.split(',').map((i,key) => <li key={key}>{i}</li>)}</ul>
         <h2>{role}</h2>
         <p>{roleSummary}</p>
         <h2>Lessons learned:</h2>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import MainPage from './mainPage';
 import PortfolioPage from './portfolio';
 import Navigation from './common/Nav';
@@ -40,8 +40,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navigation big={big} />
-          <Switch>
+          <Navigation big={big} {...this.props} />
             <Route
               path="/"
               exact
@@ -51,7 +50,6 @@ class App extends Component {
               path="/portfolio/:name"
               render={({ match }) => <PortfolioPage big={big} match={match} />}
             />
-          </Switch>
         </div>
       </Router>
     );

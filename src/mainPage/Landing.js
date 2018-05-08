@@ -25,7 +25,7 @@ class Landing extends Component {
   });
   render() {
     return (
-      <div style={this.styles().page}>
+      <div style={this.styles().page} id="annavanderjagt">
         <div style={this.styles().landingHeader}>Anna VanderJagt</div>
         <div style={this.styles().blurb}>
           <div>I specialize in information architecture & UX</div>

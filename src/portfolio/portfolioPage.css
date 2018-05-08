@@ -1,0 +1,13 @@
+.previousLink {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  float: left;
+}
+
+.nextLink {
+  position: absolute;
+  top: 50%;
+  left: 93%;
+  float: right;
+}

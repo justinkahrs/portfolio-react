@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import ImagePaletteProvider from 'react-image-palette';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import './portfolioItem.css';
 
+const Item = styled.div`
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
 class PortfolioItem extends Component {
   styles = () => ({
     image: {
@@ -12,7 +24,10 @@ class PortfolioItem extends Component {
     test: {
       display: 'flex',
       alignItems: 'center',
+      justifyContent: 'center',
       borderRadius: '1px',
+      flexDirection: 'column',
+      textAlign: 'center',
       boxShadow: '4px 4px 12px 2px lightgrey',
       margin: this.props.big ? '1rem 3rem' : '1rem',
       padding: this.props.big ? '1rem' : '1rem',
@@ -28,7 +43,7 @@ class PortfolioItem extends Component {
       >
         {({ backgroundColor, color, alternativeColor }) => (
           <Link to={`portfolio/${this.props.title.replace(/\s+/g, '')}`}>
-            <div className="portfolioCard" style={{ color }}>
+            <Item style={{ color }}>
               <div
                 className="test"
                 style={{ backgroundColor, ...this.styles().test }}
@@ -42,7 +57,7 @@ class PortfolioItem extends Component {
                   />
                 </div>
               </div>
-            </div>
+            </Item>
           </Link>
         )}
       </ImagePaletteProvider>

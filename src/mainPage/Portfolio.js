@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import PortfolioItem from './PortfolioItem';
 import projects from '../projects';
 
@@ -7,6 +6,20 @@ class Portfolio extends Component {
   styles = () => {
     const { big } = this.props;
     return {
+      container: {
+        display: 'flex',
+        flexDirection: 'column',
+        minHeigth: '88vh',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '10rem 0'
+      },
+      anchor: {
+        display: 'block',
+        content: '',
+        visibility: 'hidden',
+        pointerEvents: 'none'
+      },
       header: {
         color: '#C15C2E',
         textAlign: 'center'
@@ -14,9 +27,7 @@ class Portfolio extends Component {
       portfolioPage: {
         display: 'grid',
         padding: big ? '0 21rem' : '',
-        gridTemplateColumns: big
-          ? '1fr 1fr 1fr'
-          : '1fr',
+        gridTemplateColumns: big ? '1fr 1fr 1fr' : '1fr',
         top: !big ? '-5rem' : ''
       },
       text: {
@@ -27,7 +38,8 @@ class Portfolio extends Component {
   };
   render() {
     return (
-      <div>
+      <div style={this.styles().container}>
+        <div id="portfolio" />
         <h2 style={this.styles().header}>Portfolio</h2>
         <p style={this.styles().text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
@@ -35,7 +47,7 @@ class Portfolio extends Component {
           adipiscing elit. Nullam velit ligula, maximus in hendrerit vitae,
           fermentum id mauris.
         </p>
-        <div style={this.styles().portfolioPage} id="portfolio">
+        <div style={this.styles().portfolioPage}>
           {projects.map(i => (
             <PortfolioItem big={this.props.big} key={i.id} {...i} />
           ))}

@@ -13,13 +13,9 @@ const styles = {
 };
 
 class NavBrand extends Component {
-  hideBeforeScroll = () => {
-    console.log("am I getting called?");
-    console.log(this.refs.navBrand.scrollTop);
-  };
   render() {
     return (
-      <div onScroll={this.hideBeforeScroll} ref="navBrand">
+      <div ref="navBrand">
         <Link to="/" style={styles.navName}>
           <div>
             Anna <br />

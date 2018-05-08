@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 class About extends Component {
   styles = () => ({
     aboutPage: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
       minHeight: '88vh',
       backgroundColor: '#9EBCB6'
     },
@@ -13,7 +17,6 @@ class About extends Component {
       color: 'white',
       textTransform: 'uppercase',
       textAlign: 'center',
-      paddingTop: this.props.big ? '10rem' : '1rem'
     },
     text: {
       padding: this.props.big ? '1rem 25rem' : '2rem'
