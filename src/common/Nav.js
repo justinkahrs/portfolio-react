@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import MenuIcon from 'react-icons/lib/md/menu';
+import Close from 'react-icons/lib/md/close';
 import throttle from 'lodash.throttle';
 import ScrollIntoView from 'react-scroll-into-view';
 
@@ -17,12 +18,11 @@ class Navigation extends Component {
   }
 
   componentDidMount() {
-    this.props.big &&
-      window.addEventListener(
-        'scroll',
-        throttle(this.handleScroll, 100),
-        false
-      );
+    window.addEventListener('scroll', throttle(this.handleScroll, 100), false);
+    console.log(this.props);
+    // if (window.location.href.includes('/portfolio/')) {
+    //   this.setState({ sticky: true });
+    // }
   }
 
   generateLink = location => {
@@ -47,53 +47,101 @@ class Navigation extends Component {
   };
 
   handleScroll = () => {
-    const { big } = this.props;
     const { sticky } = this.state;
 
-    if (big && window.scrollY >= 800 && !sticky) {
+    if (window.scrollY >= 800 && !sticky) {
       this.setState({ sticky: true });
     }
-    if (big && window.scrollY < 800 && sticky) {
+    if (window.scrollY < 800 && sticky) {
       this.setState({ sticky: false });
     }
   };
 
   styles = () => ({
+    bootstrapNav: {
+      display: 'flex !important',
+      flexDirection: 'column !important',
+      alignItems: 'center !important',
+      justifyContent: 'center !important'
+    },
+    closeButton: {
+      color: '#888',
+      display: this.state.open ? 'flex' : 'none',
+      justifyContent: 'flex-end',
+      height: '3rem',
+      width: '3rem',
+      float: 'right',
+      marginRight: '1rem',
+      marginTop: '1rem'
+    },
     menuIcon: {
-      display: this.props.big ? 'none' : 'flex',
-      height: '100%',
-      width: '100%'
+      display: this.state.open ? 'none' : ''
     },
     navBrand: {
-      opacity: this.state.sticky || this.props.match ? '1' : '0',
-      transition: 'opacity .5s linear'
-    },
-    dropDown: {
-      display: this.state.open ? 'block' : 'none'
+      opacity: !this.state.sticky ? '1 !important' : '0 !important',
+      transition: 'opacity .5s linear !important',
+      textAlign: 'center',
+      fontSize: '22px',
+      fontFamily: 'Playfair Display, serif',
+      color: '#c15c2e',
+      cursor: 'pointer',
+      textDecoration: 'none',
+      visibility: 'visible'
     }
   });
 
   toggleOpen = () => this.setState({ open: !this.state.open });
 
   render() {
-    
-    return (
-      <div className="navBar">
-        <MenuIcon onClick={this.toggleOpen} style={this.styles().menuIcon} />
-        <div style={this.styles().navBrand} className="navBrand">
-          {this.generateLink('Anna VanderJagt')}
+    const { big } = this.props;
+    console.log('sticky:', this.state.sticky);
+    if (big) {
+      return (
+        <div className="navBar">
+          <div style={this.styles().navBrand}>
+            {this.generateLink('Anna VanderJagt')}
+          </div>
+          <ul className="navItems">
+            <li>{this.generateLink('ABOUT')}</li>
+            <li>{this.generateLink('PORTFOLIO')}</li>
+            <li>{this.generateLink('CONTACT')}</li>
+          </ul>
+          <div />
         </div>
-        <ul className="navItems">
-          <li>{this.generateLink('ABOUT')}</li>
-          <li>{this.generateLink('PORTFOLIO')}</li>
-          <li>{this.generateLink('CONTACT')}</li>
-        </ul>
-        <ul style={this.styles().dropDown} className="navItemsBurger">
-          <li>{this.generateLink('ABOUT')}</li>
-          <li>{this.generateLink('PORTFOLIO')}</li>
-          <li>{this.generateLink('CONTACT')}</li>
-        </ul>
-        <div />
+      );
+    }
+    return (
+      <div style={{ maxHeight: '55px' }}>
+        <Navbar
+          style={this.styles().bootstrapNav}
+          className="bootstrapNav"
+          expanded={this.state.open}
+          fixedTop
+          collapseOnSelect
+          onToggle={this.toggleOpen}
+        >
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a style={this.styles().navBrand}>
+                {this.generateLink('Anna VanderJagt')}
+              </a>
+            </Navbar.Brand>
+            <Navbar.Toggle style={this.styles().menuIcon} />
+            <div style={{ height: '55px' }}>
+              <Close
+                style={this.styles().closeButton}
+                onClick={this.toggleOpen}
+              />
+            </div>
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+              <NavItem eventKey={1}>{this.generateLink('ABOUT')}</NavItem>
+              <NavItem eventKey={2}>{this.generateLink('PORTFOLIO')}</NavItem>
+              <NavItem eventKey={2}>{this.generateLink('CONTACT')}</NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </div>
     );
   }

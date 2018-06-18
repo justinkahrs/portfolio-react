@@ -12,27 +12,20 @@ class Portfolio extends Component {
         minHeigth: '88vh',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '10rem 0'
-      },
-      anchor: {
-        display: 'block',
-        content: '',
-        visibility: 'hidden',
-        pointerEvents: 'none'
+        padding: big ? '10rem 0' : ''
       },
       header: {
         color: '#C15C2E',
         textAlign: 'center'
       },
-      portfolioPage: {
-        display: 'grid',
-        padding: big ? '0 21rem' : '',
-        gridTemplateColumns: big ? '1fr 1fr 1fr' : '1fr',
-        top: !big ? '-5rem' : ''
+      portfolioItems: {
+        display: 'flex',
+        flexDirection: big ? 'row' : 'column',
+        padding: big ? '' : '0 3rem'
       },
       text: {
         textAlign: 'center',
-        padding: this.props.big ? '0 22rem' : '1rem'
+        padding: big ? '0 22rem' : '0 3rem'
       }
     };
   };
@@ -47,7 +40,7 @@ class Portfolio extends Component {
           adipiscing elit. Nullam velit ligula, maximus in hendrerit vitae,
           fermentum id mauris.
         </p>
-        <div style={this.styles().portfolioPage}>
+        <div style={this.styles().portfolioItems}>
           {projects.map(i => (
             <PortfolioItem big={this.props.big} key={i.id} {...i} />
           ))}

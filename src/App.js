@@ -40,16 +40,25 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navigation big={big} {...this.props} />
-            <Route
-              path="/"
-              exact
-              render={({ match }) => <MainPage big={big} match={match} />}
-            />
-            <Route
-              path="/portfolio/:name"
-              render={({ match }) => <PortfolioPage big={big} match={match} />}
-            />
+          <Route
+            path="/"
+            exact
+            render={({ match }) => (
+              <div>
+                <Navigation big={big} {...this.props} match={match} />
+                <MainPage big={big} match={match} />
+              </div>
+            )}
+          />
+          <Route
+            path="/portfolio/:name"
+            render={({ match }) => (
+              <div>
+                <Navigation big={big} {...this.props} match={match} />
+                <PortfolioPage big={big} match={match} />
+              </div>
+            )}
+          />
         </div>
       </Router>
     );

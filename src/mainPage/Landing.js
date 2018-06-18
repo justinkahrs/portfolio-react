@@ -3,21 +3,19 @@ import React, { Component } from 'react';
 class Landing extends Component {
   styles = () => ({
     blurb: {
-      gridColumn: this.props.big ? '3' : '1',
-      gridRow: this.props.big ? '3' : '2'
+      padding: this.props.big ? '' : '0 5rem'
     },
     page: {
-      display: 'grid',
-      gridGap: this.props.big ? '5rem' : '2rem',
-      gridTemplateRows: this.props.big ? '1fr 1fr 1fr 1fr' : '1fr 1fr 1fr',
-      gridTemplateColumns: this.props.big ? '1fr 1fr 1fr 1fr' : '1fr',
-      textAlign: 'center',
-      minHeight: this.props.big ? '88vh' : '40vh',
-      marginTop: this.props.big ? '0' : '15rem'
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: this.props.big ? 'row' : 'column',
+      minHeight: this.props.big ? '88vh' : '60vh',
+      textAlign: 'center'
     },
     landingHeader: {
-      gridColumn: this.props.big ? '2' : '1',
-      gridRow: this.props.big ? '3' : '1',
+      marginRight: this.props.big ? '5rem' : '',
+      marginBottom: this.props.big ? '' : '2rem',
       fontFamily: 'Playfair Display, serif',
       fontSize: '38px',
       color: '#C15C2E'
@@ -26,9 +24,14 @@ class Landing extends Component {
   render() {
     return (
       <div style={this.styles().page} id="annavanderjagt">
-        <div style={this.styles().landingHeader}>Anna VanderJagt</div>
+        <div style={this.styles().landingHeader}>
+          <div>Anna</div>
+          <div>VanderJagt</div>
+        </div>
         <div style={this.styles().blurb}>
-          <div>I specialize in information architecture & UX</div>
+          <div style={{ color: '#C15C2E', textTransform: 'uppercase' }}>
+            I specialize in information architecture & UX
+          </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
             eros aliquam, tincidunt eros.

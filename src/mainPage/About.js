@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import "./About.css";
 
 class About extends Component {
   styles = () => ({
     aboutPage: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '88vh',
-      backgroundColor: '#9EBCB6'
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      minHeight: "60vh",
+      backgroundColor: "#37474f"
     },
     bq: {
-      fontWeight: 'bold'
+      fontWeight: "bold"
     },
     header: {
-      color: 'white',
-      textTransform: 'uppercase',
-      textAlign: 'center',
+      color: "white",
+      textTransform: "uppercase",
+      textAlign: "center",
+      padding: this.props.big ? "" : "3rem"
     },
     text: {
-      padding: this.props.big ? '1rem 25rem' : '2rem'
+      padding: this.props.big ? "1rem 25rem" : "0 3rem"
     }
   });
   render() {

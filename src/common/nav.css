@@ -11,15 +11,7 @@
 .navItems div:hover {
   color: #c15c2e;
 }
-.navBrand {
-  font-family: Playfair Display, serif;
-  color: #c15c2e;
-  cursor: pointer;
-  text-decoration: none;
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 2s linear, visibility 2s linear;
-}
+
 .navBarAfterScroll {
   position: fixed;
   top: 0;
@@ -47,7 +39,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 5rem;
+    height: 8rem !important;
     width: 100%;
     top: 2rem;
     transition: top 0.5s;
@@ -83,4 +75,33 @@
     background-color: white;
     margin-top: 4rem;
   }
+}
+
+.bootstrapNav {
+  background-color: white !important;
+  max-height: 55px;
+  border: none;
+  z-index: 5;
+}
+.bootstrapNav button {
+  border: none !important;
+  background-color: white !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0;
+}
+
+.navbar-collapse,
+.collapse,
+.in {
+  text-align: center;
+  background-color: white !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px !important;
+}
+
+.navbar-toggle .icon-bar {
+  display: block !important;
+  width: 34px !important;
+  height: 3px !important;
+  border-radius: 1px !important;
 }

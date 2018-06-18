@@ -3,7 +3,6 @@ import Landing from "./Landing.js";
 import About from "./About.js";
 import Portfolio from "./Portfolio.js";
 import Contact from "./Contact.js";
-import Footer from "./Footer.js";
 import "./App.css";
 import "./imgPalette.css";
 
@@ -22,7 +21,6 @@ class MainPage extends React.Component {
         <About big={big} />
         <Portfolio big={big} />
         <Contact big={big} />
-        <Footer big={big} />
       </div>
     );
   }
