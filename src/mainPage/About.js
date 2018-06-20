@@ -9,7 +9,6 @@ class About extends Component {
       alignItems: "center",
       justifyContent: "center",
       minHeight: "60vh",
-      backgroundColor: "#37474f"
     },
     bq: {
       fontWeight: "bold"
@@ -26,7 +25,8 @@ class About extends Component {
   });
   render() {
     return (
-      <div style={this.styles().aboutPage} id="about">
+      <div style={this.styles().aboutPage} id="aboutBackground">
+        <div id="aboutForeground">
         <div style={this.styles().header}>
           I specialize in information architecture & UX
         </div>
@@ -53,6 +53,7 @@ class About extends Component {
             In my spare time, I enjoy traveling, cooking, pinball, and disc
             golf.
           </p>
+        </div>
         </div>
       </div>
     );

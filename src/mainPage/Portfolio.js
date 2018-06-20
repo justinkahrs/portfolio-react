@@ -31,8 +31,7 @@ class Portfolio extends Component {
   };
   render() {
     return (
-      <div style={this.styles().container}>
-        <div id="portfolio" />
+      <div id="portfolio" style={this.styles().container}>
         <h2 style={this.styles().header}>Portfolio</h2>
         <p style={this.styles().text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
