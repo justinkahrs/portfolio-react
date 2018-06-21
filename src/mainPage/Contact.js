@@ -20,7 +20,7 @@ class Contact extends Component {
     return (
       <div id="contact" style={styles.contactPage}>
         <div style={styles.header}>
-          I specialize in information architecture & UX
+          Let's connect
         </div>
       </div>
     );

@@ -12,11 +12,12 @@ class Portfolio extends Component {
         minHeigth: '88vh',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: big ? '10rem 0' : ''
+        padding: big ? '20rem 10rem' : ''
       },
       header: {
         color: '#C15C2E',
-        textAlign: 'center'
+        textAlign: 'center',
+        textTransform: "uppercase",
       },
       portfolioItems: {
         display: 'flex',
@@ -32,13 +33,7 @@ class Portfolio extends Component {
   render() {
     return (
       <div id="portfolio" style={this.styles().container}>
-        <h2 style={this.styles().header}>Portfolio</h2>
-        <p style={this.styles().text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non
-          eros aliquam, tincidunt eros. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Nullam velit ligula, maximus in hendrerit vitae,
-          fermentum id mauris.
-        </p>
+        <h4 style={this.styles().header}>Here you'll find my recent projects</h4>
         <div style={this.styles().portfolioItems}>
           {projects.map(i => (
             <PortfolioItem big={this.props.big} key={i.id} {...i} />

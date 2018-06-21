@@ -78,7 +78,7 @@ class Navigation extends Component {
       display: this.state.open ? 'none' : ''
     },
     navBrand: {
-      opacity: !this.state.sticky ? '1 !important' : '0 !important',
+      opacity: this.state.sticky ? '1 !important' : '0 !important',
       transition: 'opacity .5s linear !important',
       textAlign: 'center',
       fontSize: '22px',
