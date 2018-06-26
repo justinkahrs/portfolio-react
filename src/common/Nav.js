@@ -19,22 +19,15 @@ class Navigation extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', throttle(this.handleScroll, 100), false);
-    console.log(this.props);
-    // if (window.location.href.includes('/portfolio/')) {
-    //   this.setState({ sticky: true });
-    // }
+
+    if (window.location.href.includes('/portfolio/')) {
+      this.setState({ sticky: true });
+    }
   }
 
   generateLink = location => {
     if (window.location.href.includes('/portfolio/')) {
-      return (
-        <Link
-          className={location === 'Anna VanderJagt' ? 'navBrand' : 'navItems'}
-          to={`../../#${location}`}
-        >
-          {location}
-        </Link>
-      );
+      return <Link to={`../../#${location}`}>{location}</Link>;
     } else {
       return (
         <ScrollIntoView
@@ -47,12 +40,15 @@ class Navigation extends Component {
   };
 
   handleScroll = () => {
+    const { big } = this.props;
     const { sticky } = this.state;
 
-    if (window.scrollY >= 800 && !sticky) {
+    const scrollAmount = big ? 650 : 300;
+
+    if (window.scrollY >= scrollAmount && !sticky) {
       this.setState({ sticky: true });
     }
-    if (window.scrollY < 800 && sticky) {
+    if (window.scrollY < scrollAmount && sticky) {
       this.setState({ sticky: false });
     }
   };
@@ -78,15 +74,15 @@ class Navigation extends Component {
       display: this.state.open ? 'none' : ''
     },
     navBrand: {
-      opacity: this.state.sticky ? '1 !important' : '0 !important',
-      transition: 'opacity .5s linear !important',
+      opacity: this.state.sticky ? '1' : '0',
+      transition: 'opacity .25s linear, visibility .25s linear',
       textAlign: 'center',
       fontSize: '22px',
       fontFamily: 'Playfair Display, serif',
       color: '#c15c2e',
       cursor: 'pointer',
       textDecoration: 'none',
-      visibility: 'visible'
+      visibility: this.state.sticky ? 'visible' : 'hidden'
     }
   });
 
