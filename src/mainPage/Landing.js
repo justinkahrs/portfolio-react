@@ -37,7 +37,7 @@ class Landing extends Component {
           <div style={{ color: '#C15C2E', textTransform: 'uppercase' }}>
             Hello World
           </div>
-          <p>
+          <p style={{ color: '#212C21' }}>
             I'm an information architect and UX/UI designer in San Francisco.
           </p>
         </div>

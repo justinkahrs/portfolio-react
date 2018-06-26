@@ -90,7 +90,6 @@ class Navigation extends Component {
 
   render() {
     const { big } = this.props;
-    console.log('sticky:', this.state.sticky);
     if (big) {
       return (
         <div className="navBar">

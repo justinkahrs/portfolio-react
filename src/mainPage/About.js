@@ -20,6 +20,7 @@ class About extends Component {
       padding: this.props.big ? '' : '3rem'
     },
     text: {
+      color: '#212C21',
       padding: this.props.big ? '1rem 45rem' : '0 3rem'
     }
   });

@@ -1,15 +1,15 @@
 .navItems li div {
   text-decoration: none;
-  color: black;
+  color: #212C21;
   cursor: pointer;
 }
 .navItems a {
   text-decoration: none;
-  color: black;
+  color: #212C21;
   cursor: pointer;
 }
 .navItems div:hover {
-  color: #c15c2e;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {
