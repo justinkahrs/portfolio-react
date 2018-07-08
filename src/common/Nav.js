@@ -53,38 +53,75 @@ class Navigation extends Component {
     }
   };
 
-  styles = () => ({
-    bootstrapNav: {
-      display: 'flex !important',
-      flexDirection: 'column !important',
-      alignItems: 'center !important',
-      justifyContent: 'center !important'
-    },
-    closeButton: {
-      color: '#888',
-      display: this.state.open ? 'flex' : 'none',
-      justifyContent: 'flex-end',
-      height: '3rem',
-      width: '3rem',
-      float: 'right',
-      marginRight: '1rem',
-      marginTop: '1rem'
-    },
-    menuIcon: {
-      display: this.state.open ? 'none' : ''
-    },
-    navBrand: {
-      opacity: this.state.sticky ? '1' : '0',
-      transition: 'opacity .25s linear, visibility .25s linear',
-      textAlign: 'center',
-      fontSize: '22px',
-      fontFamily: 'Playfair Display, serif',
-      color: '#c15c2e',
-      cursor: 'pointer',
-      textDecoration: 'none',
-      visibility: this.state.sticky ? 'visible' : 'hidden'
-    }
-  });
+  styles = active => {
+    const { big } = this.props
+    const { open } = this.state
+    return {
+      bootstrapNav: {
+        display: 'flex !important',
+        flexDirection: 'column !important',
+        alignItems: 'center !important',
+        justifyContent: 'center !important'
+      },
+      closeButton: {
+        color: '#888',
+        display: this.state.open ? 'flex' : 'none',
+        justifyContent: 'flex-end',
+        height: '3rem',
+        width: '3rem',
+        float: 'right',
+        marginRight: '1rem',
+        marginTop: '1rem'
+      },
+      menuIcon: {
+        display: this.state.open ? 'none' : ''
+      },
+      navBar: {
+        alignItems: 'center',
+        backgroundColor: 'white',
+        display: 'flex',
+        height: '151px',
+        justifyContent: 'space-around',
+        position: 'fixed',
+        width: '100%',
+        zIndex: 10
+      },
+      navBarContents: {
+        alignItems: 'baseline',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: '0 7.3%',
+        width: '100%'
+      },
+      navBrand: {
+        color: '#A85B4B',
+        cursor: 'pointer',
+        fontFamily: 'Playfair Display, serif',
+        fontSize: big ? '47px' : '32px',
+        textAlign: 'center',
+        textDecoration: 'none'
+      },
+      navItem: {
+        fontSize: '15.5px'
+      },
+      navItemContainer: {
+        alignItems: 'center',
+        border: active ? '2px solid black' : 'none',
+        cursor: 'pointer',
+        display: 'flex',
+        height: '62.5px',
+        justifyContent: 'center',
+        width: '195.85px'
+      },
+      navItems: {
+        display: 'flex',
+        flexDirection: 'row',
+        listStyleType: 'none',
+        textDecoration: 'none'
+      }
+    };
+  };
 
   toggleOpen = () => this.setState({ open: !this.state.open });
 
@@ -92,16 +129,29 @@ class Navigation extends Component {
     const { big } = this.props;
     if (big) {
       return (
-        <div className="navBar">
-          <div style={this.styles().navBrand}>
-            {this.generateLink('Anna VanderJagt')}
+        <div style={this.styles().navBar}>
+          <div style={this.styles().navBarContents}>
+            <div style={this.styles().navBrand}>
+              {this.generateLink('Anna VanderJagt')}
+            </div>
+            <ul style={this.styles().navItems}>
+              <div style={this.styles().navItemContainer}>
+                <li style={this.styles().navItem}>
+                  {this.generateLink('ABOUT')}
+                </li>
+              </div>
+              <div style={this.styles().navItemContainer}>
+                <li style={this.styles().navItem}>
+                  {this.generateLink('WORK')}
+                </li>
+              </div>
+              <div style={this.styles(true).navItemContainer}>
+                <li style={this.styles().navItem}>
+                  {this.generateLink('CONTACT')}
+                </li>
+              </div>
+            </ul>
           </div>
-          <ul className="navItems">
-            <li>{this.generateLink('ABOUT')}</li>
-            <li>{this.generateLink('PORTFOLIO')}</li>
-            <li>{this.generateLink('CONTACT')}</li>
-          </ul>
-          <div />
         </div>
       );
     }

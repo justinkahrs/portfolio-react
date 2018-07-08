@@ -32,7 +32,7 @@ class Portfolio extends Component {
   };
   render() {
     return (
-      <div id="portfolio" style={this.styles().container}>
+      <div id="work" style={this.styles().container}>
         <h4 style={this.styles().header}>Here you'll find my recent projects</h4>
         <div style={this.styles().portfolioItems}>
           {projects.map(i => (

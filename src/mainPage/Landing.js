@@ -1,45 +1,75 @@
 import React, { Component } from 'react';
+import landingBackground from '../landingImage.jpeg';
+import ScrollIntoView from 'react-scroll-into-view';
 
 class Landing extends Component {
   styles = () => {
     const { big } = this.props;
     return {
+      aboutMeButton: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '62px',
+        width: '192px',
+        backgroundColor: '#BB6655',
+        color: 'white',
+        marginTop: '3rem',
+        fontFamily: 'Noto Sans',
+      },
       blurb: {
-        padding: big ? '' : '0 5rem'
+        color: '#212C21',
+        fontSize: '24px',
+        maxWidth: '536px',
+        padding: big ? '' : '0 5rem',
       },
       page: {
+        alignItems: 'left',
+        backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(${landingBackground})`,
+        backgroundSize: 'cover',
         display: 'flex',
-        alignItems: 'center',
+        flexDirection: 'column',
+        height: '100%',
         justifyContent: 'center',
-        flexDirection: big ? 'row' : 'column',
-        minHeight: big ? '88vh' : '60vh',
-        textAlign: big ? 'left' : 'center'
+        minHeight: '100vh',
+        padding: '0 7.3%',
       },
-      landingHeader: {
-        marginRight: big ? '5rem' : '',
-        marginBottom: big ? '' : '2rem',
-        fontFamily: 'Playfair Display, serif',
-        fontSize: '38px',
-        color: '#C15C2E',
-        textAlign: big ? 'left' : 'center'
-      }
+      hero: {
+        textAlign: big ? 'left' : 'center',
+      },
+      heroTitle: {
+        fontSize: '18px',
+        textTransform: 'uppercase',
+      },
+      heroName: {
+        fontFamily: 'Old Standard TT',
+        fontSize: '118px',
+        marginTop: '2rem',
+      },
+      hr: {
+        background: 'black',
+        border: 0,
+        height: '2px',
+        maxWidth: '100px',
+      },
     };
   };
 
   render() {
     return (
       <div style={this.styles().page} id="annavanderjagt">
-        <div style={this.styles().landingHeader}>
-          <div>Anna</div>
-          <div>VanderJagt</div>
-        </div>
-        <div style={this.styles().blurb}>
-          <div style={{ color: '#C15C2E', textTransform: 'uppercase' }}>
+        <div style={this.styles().hero}>
+          <h1 style={this.styles().heroTitle}>
             Hello World
-          </div>
-          <p style={{ color: '#212C21' }}>
+            <hr align="left" style={this.styles().hr} />
+          </h1>
+          <div style={this.styles().heroName}>I'm Anna</div>
+          <p style={this.styles().blurb}>
             I'm an information architect and UX/UI designer in San Francisco.
           </p>
+          <div style={this.styles().aboutMeButton}>
+            <ScrollIntoView selector={'#about'}>ABOUT ME</ScrollIntoView>
+          </div>
         </div>
       </div>
     );
