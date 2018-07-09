@@ -1,47 +1,50 @@
-import React, { Component } from 'react';
-import PortfolioItem from './PortfolioItem';
-import projects from '../projects';
+import React, { Component } from 'react'
+import PortfolioItem from './PortfolioItem'
+import projects from '../projects'
 
 class Portfolio extends Component {
   styles = () => {
-    const { big } = this.props;
+    const { big } = this.props
     return {
       container: {
+        backgroundColor: '#F4F4F4',
         display: 'flex',
         flexDirection: 'column',
         minHeigth: '88vh',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: big ? '20rem 10rem' : ''
+        padding: big ? '2rem 22%' : '',
       },
       header: {
-        color: '#C15C2E',
+        fontSize: '18px',
         textAlign: 'center',
-        textTransform: "uppercase",
       },
-      portfolioItems: {
-        display: 'flex',
-        flexDirection: big ? 'row' : 'column',
-        padding: big ? '' : '0 3rem'
+      portfolioItems: {},
+      text: {},
+      hr: {
+        background: 'black',
+        border: 0,
+        height: '2px',
+        maxWidth: '100px',
+        marginTop: '1rem',
       },
-      text: {
-        textAlign: 'center',
-        padding: big ? '0 22rem' : '0 3rem'
-      }
-    };
-  };
+    }
+  }
   render() {
     return (
       <div id="work" style={this.styles().container}>
-        <h4 style={this.styles().header}>Here you'll find my recent projects</h4>
+        <h1 style={this.styles().header}>
+          TAKE A LOOK AT MY RECENT PROJECTS
+          <hr style={this.styles().hr} />
+        </h1>
         <div style={this.styles().portfolioItems}>
           {projects.map(i => (
             <PortfolioItem big={this.props.big} key={i.id} {...i} />
           ))}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Portfolio;
+export default Portfolio

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class About extends Component {
   styles = () => ({
@@ -8,7 +8,7 @@ class About extends Component {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      minHeight: '60vh',
+      minHeight: '70vh',
     },
     bq: {
       fontFamily: 'Libre Baskerville',
@@ -22,15 +22,16 @@ class About extends Component {
     },
     text: {
       color: '#212C21',
-      padding: this.props.big ? '1rem 25%' : '0 3rem',
+      padding: this.props.big ? '1rem 22%' : '0 3rem',
     },
     hr: {
       background: 'black',
       border: 0,
       height: '2px',
       maxWidth: '100px',
+      marginTop: '1rem',
     },
-  });
+  })
   render() {
     return (
       <div id="about" style={this.styles().aboutPage}>
@@ -56,8 +57,8 @@ class About extends Component {
           </p>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default About;
+export default About

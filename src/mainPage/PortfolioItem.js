@@ -1,72 +1,71 @@
-import React, { Component } from 'react';
-import ImagePaletteProvider from 'react-image-palette';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-const Item = styled.div`
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-`;
 class PortfolioItem extends Component {
   styles = () => ({
-    image: {
-      width: '75%',
-      height: 'auto'
+    date: {
+      fontFamily: 'Noto Sans',
+      fontSize: '21px',
+      letterSpacing: '.5px',
     },
-    test: {
+    portfolioCard: {
       display: 'flex',
+      flexDirection: this.props.id % 2 ? 'row-reverse' : 'row',
       alignItems: 'center',
+      justifyContent: 'space-between',
+      backgroundColor: 'white',
+      minHeight: '37vh',
+      margin: '2rem 0',
+      textDecoration: 'none !important',
+    },
+    portfolioCardImage: {
+      width: '50%',
+    },
+    portfolioCardText: {
+      padding: '2%',
+      width: '50%',
+    },
+    portfolioButton: {
+      display: 'flex',
       justifyContent: 'center',
-      borderRadius: '1px',
-      flexDirection: 'column',
-      textAlign: 'center',
-      boxShadow: '4px 4px 12px 2px lightgrey',
-      margin: this.props.big ? '1rem 3rem' : '1rem',
-      padding: this.props.big ? '1rem' : '1rem',
-      height: this.props.big ? '400px' : '100%'
-    }
-  });
+      alignItems: 'center',
+      height: '62px',
+      width: '192px',
+      backgroundColor: '#BB6655',
+      color: 'white',
+      marginTop: '3rem',
+      fontFamily: 'Noto Sans',
+    },
+  })
   render() {
     return (
-      <ImagePaletteProvider
-        crossOrigin
-        image={this.props.imgURL}
-        key={this.props.imgURL}
-      >
-        {({ backgroundColor, color, alternativeColor }) => (
-          <Link to={`portfolio/${this.props.title.replace(/\s+/g, '')}`}>
-            <Item style={{ color }}>
-              <div
-                className="test"
-                style={{ backgroundColor, ...this.styles().test }}
-              >
-                <h3>{this.props.title}</h3>
-                <div className="imageContainer">
-                  <img
-                    style={this.styles().image}
-                    alt="a representation of the project"
-                    src={this.props.imgURL}
-                  />
-                </div>
-              </div>
-            </Item>
+      <div style={this.styles().portfolioCard}>
+        <div style={this.styles().portfolioCardText}>
+          <div style={this.styles().date}>{this.props.date}</div>
+          <h2>{this.props.title}</h2>
+          <h3>{this.props.subTitle}</h3>
+          <p>{this.props.blurb}</p>
+          <Link
+            to={`portfolio/${this.props.title.replace(/\s+/g, '')}`}
+            style={{ color: 'white', textDecoration: 'none' }}
+          >
+            <div style={this.styles().portfolioButton}>VIEW PROJECT</div>
           </Link>
-        )}
-      </ImagePaletteProvider>
-    );
+        </div>
+        <img
+          style={this.styles().portfolioCardImage}
+          height="402"
+          width="536"
+          alt="a representation of the project"
+          src={this.props.imgURL}
+        />
+      </div>
+    )
   }
 }
 PortfolioItem.defaultProps = {
   title: 'Project Name',
   imgURL:
-    'https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png'
-};
-export default PortfolioItem;
+    'https://lastfm-img2.akamaized.net/i/u/300x300/47c2adc94fe74673afdb2722e8d3ee6c.png',
+}
+export default PortfolioItem

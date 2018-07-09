@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import landingBackground from '../landingImage.jpeg';
-import ScrollIntoView from 'react-scroll-into-view';
+import React, { Component } from 'react'
+import landingBackground from '../landingImage.jpeg'
+import ScrollIntoView from 'react-scroll-into-view'
 
 class Landing extends Component {
   styles = () => {
-    const { big } = this.props;
+    const { big } = this.props
     return {
       aboutMeButton: {
         display: 'flex',
@@ -19,8 +19,8 @@ class Landing extends Component {
       },
       blurb: {
         color: '#212C21',
-        fontSize: '24px',
-        maxWidth: '536px',
+        fontSize: '23px',
+        maxWidth: '470px',
         padding: big ? '' : '0 5rem',
       },
       page: {
@@ -42,8 +42,9 @@ class Landing extends Component {
         textTransform: 'uppercase',
       },
       heroName: {
-        fontFamily: 'Old Standard TT',
+        fontFamily: 'Playfair Display',
         fontSize: '118px',
+        fontWeight: '400',
         marginTop: '2rem',
       },
       hr: {
@@ -51,9 +52,10 @@ class Landing extends Component {
         border: 0,
         height: '2px',
         maxWidth: '100px',
+        marginTop: '1rem',
       },
-    };
-  };
+    }
+  }
 
   render() {
     return (
@@ -65,15 +67,16 @@ class Landing extends Component {
           </h1>
           <div style={this.styles().heroName}>I'm Anna</div>
           <p style={this.styles().blurb}>
-            I'm an information architect and UX/UI designer in San Francisco.
+            I'm an information architect and UX designer living in San
+            Francisco.
           </p>
           <div style={this.styles().aboutMeButton}>
             <ScrollIntoView selector={'#about'}>ABOUT ME</ScrollIntoView>
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Landing;
+export default Landing

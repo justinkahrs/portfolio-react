@@ -1,15 +1,13 @@
-import React from "react";
-import Landing from "./Landing.js";
-import About from "./About.js";
-import Portfolio from "./Portfolio.js";
-import Contact from "./Contact.js";
-import "./App.css";
-import "./imgPalette.css";
+import React from 'react';
+import Landing from './Landing.js';
+import About from './About.js';
+import Portfolio from './Portfolio.js';
+import Contact from './Contact.js';
 
 const styles = {
   app: {
-    display: "grid"
-  }
+    display: 'grid',
+  },
 };
 
 class MainPage extends React.Component {

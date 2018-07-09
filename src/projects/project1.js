@@ -2,7 +2,10 @@ import image from './iu_trident_web_reverse.png';
 
 export default {
   id: 1,
-  title: 'IUPUI Website IA',
+  date: '2017-2018',
+  title: 'IUPUI 50th Anniversary',
+  subTitle: 'IA / IXD',
+  blurb: `Here is where I write small entry text to the project. It shouldn't be more than two sentences. Something like this.`,
   context:
     'IUPUI will be celebrating their 50th anniversary through 2018-2019 and need a website for all celebratory events, stories, and projects. The client requested that the site carry a wow factor with high impact imagery and content that aligns with the school’s commitment to success and innovation in Indiana and beyond. The site’s audience consists of alumni, faculty, staff, students, donors, and the surrounding community. As I was not able to see this project to completion, (due to an unexpected move across the country) I have shared my contributions as a proof of concept.',
   methodsAndSkills:

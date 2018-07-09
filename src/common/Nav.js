@@ -1,33 +1,33 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import Close from 'react-icons/lib/md/close';
-import throttle from 'lodash.throttle';
-import ScrollIntoView from 'react-scroll-into-view';
+import React, { Component } from 'react'
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import Close from 'react-icons/lib/md/close'
+import throttle from 'lodash.throttle'
+import ScrollIntoView from 'react-scroll-into-view'
 
-import './nav.css';
+import './nav.css'
 
 class Navigation extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       open: false,
       portfolio: false,
-      sticky: false
-    };
+      sticky: false,
+    }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', throttle(this.handleScroll, 100), false);
+    window.addEventListener('scroll', throttle(this.handleScroll, 100), false)
 
     if (window.location.href.includes('/portfolio/')) {
-      this.setState({ sticky: true });
+      this.setState({ sticky: true })
     }
   }
 
   generateLink = location => {
     if (window.location.href.includes('/portfolio/')) {
-      return <Link to={`../../#${location}`}>{location}</Link>;
+      return <Link to={`../../#${location}`}>{location}</Link>
     } else {
       return (
         <ScrollIntoView
@@ -35,23 +35,23 @@ class Navigation extends Component {
         >
           {location}
         </ScrollIntoView>
-      );
+      )
     }
-  };
+  }
 
   handleScroll = () => {
-    const { big } = this.props;
-    const { sticky } = this.state;
+    const { big } = this.props
+    const { sticky } = this.state
 
-    const scrollAmount = big ? 650 : 300;
+    const scrollAmount = big ? 650 : 300
 
     if (window.scrollY >= scrollAmount && !sticky) {
-      this.setState({ sticky: true });
+      this.setState({ sticky: true })
     }
     if (window.scrollY < scrollAmount && sticky) {
-      this.setState({ sticky: false });
+      this.setState({ sticky: false })
     }
-  };
+  }
 
   styles = active => {
     const { big } = this.props
@@ -61,49 +61,50 @@ class Navigation extends Component {
         display: 'flex !important',
         flexDirection: 'column !important',
         alignItems: 'center !important',
-        justifyContent: 'center !important'
+        justifyContent: 'center !important',
       },
       closeButton: {
         color: '#888',
-        display: this.state.open ? 'flex' : 'none',
+        display: open ? 'flex' : 'none',
         justifyContent: 'flex-end',
         height: '3rem',
         width: '3rem',
         float: 'right',
         marginRight: '1rem',
-        marginTop: '1rem'
+        marginTop: '1rem',
       },
       menuIcon: {
-        display: this.state.open ? 'none' : ''
+        display: open ? 'none' : '',
       },
       navBar: {
         alignItems: 'center',
         backgroundColor: 'white',
         display: 'flex',
-        height: '151px',
+        height: '7.438em',
         justifyContent: 'space-around',
         position: 'fixed',
         width: '100%',
-        zIndex: 10
+        zIndex: 10,
       },
       navBarContents: {
-        alignItems: 'baseline',
+        alignItems: 'center',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         padding: '0 7.3%',
-        width: '100%'
+        width: '100%',
       },
       navBrand: {
         color: '#A85B4B',
         cursor: 'pointer',
         fontFamily: 'Playfair Display, serif',
         fontSize: big ? '47px' : '32px',
+        fontWeight: '700',
         textAlign: 'center',
-        textDecoration: 'none'
+        textDecoration: 'none',
       },
       navItem: {
-        fontSize: '15.5px'
+        fontSize: '15.5px',
       },
       navItemContainer: {
         alignItems: 'center',
@@ -112,21 +113,21 @@ class Navigation extends Component {
         display: 'flex',
         height: '62.5px',
         justifyContent: 'center',
-        width: '195.85px'
+        width: '195.85px',
       },
       navItems: {
         display: 'flex',
         flexDirection: 'row',
         listStyleType: 'none',
-        textDecoration: 'none'
-      }
-    };
-  };
+        textDecoration: 'none',
+      },
+    }
+  }
 
-  toggleOpen = () => this.setState({ open: !this.state.open });
+  toggleOpen = () => this.setState({ open: !this.state.open })
 
   render() {
-    const { big } = this.props;
+    const { big } = this.props
     if (big) {
       return (
         <div style={this.styles().navBar}>
@@ -153,7 +154,7 @@ class Navigation extends Component {
             </ul>
           </div>
         </div>
-      );
+      )
     }
     return (
       <div style={{ maxHeight: '55px' }}>
@@ -188,8 +189,8 @@ class Navigation extends Component {
           </Navbar.Collapse>
         </Navbar>
       </div>
-    );
+    )
   }
 }
 
-export default Navigation;
+export default Navigation
