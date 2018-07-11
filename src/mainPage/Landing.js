@@ -15,7 +15,7 @@ class Landing extends Component {
         backgroundColor: '#BB6655',
         color: 'white',
         marginTop: '3rem',
-        fontFamily: 'Noto Sans',
+        fontFamily: 'Lato',
       },
       blurb: {
         color: '#212C21',
@@ -42,8 +42,8 @@ class Landing extends Component {
         textTransform: 'uppercase',
       },
       heroName: {
-        fontFamily: 'Playfair Display',
-        fontSize: '118px',
+        fontFamily: 'Old Standard TT, serif',
+        fontSize: '100px',
         fontWeight: '400',
         marginTop: '2rem',
       },

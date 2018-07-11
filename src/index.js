@@ -8,11 +8,9 @@ import './index.css'
 WebFont.load({
   google: {
     families: [
-      'Libre Baskerville',
-      'Noto Sans',
-      'Old Standard TT',
-      'Playfair Display:400,700',
-      'Abril Fatface',
+      'Lato:300,400,400i,700,900',
+      'Old Standard TT:400,400i,700',
+      'Source Serif Pro:400,700',
     ],
   },
 })

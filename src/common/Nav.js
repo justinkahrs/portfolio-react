@@ -97,14 +97,17 @@ class Navigation extends Component {
       navBrand: {
         color: '#A85B4B',
         cursor: 'pointer',
-        fontFamily: 'Playfair Display, serif',
+        fontFamily: 'Old Standard TT, serif',
         fontSize: big ? '47px' : '32px',
-        fontWeight: '700',
+        fontWeight: 'bold',
         textAlign: 'center',
         textDecoration: 'none',
       },
       navItem: {
+        fontFamily: 'Lato, sans',
         fontSize: '15.5px',
+        fontWeight: '700',
+        letterSpacing: '1.5px',
       },
       navItemContainer: {
         alignItems: 'center',

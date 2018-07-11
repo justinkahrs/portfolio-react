@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 class PortfolioItem extends Component {
   styles = () => ({
     date: {
-      fontFamily: 'Noto Sans',
+      fontFamily: 'Lato',
       fontSize: '21px',
       letterSpacing: '.5px',
     },
@@ -34,7 +34,7 @@ class PortfolioItem extends Component {
       backgroundColor: '#BB6655',
       color: 'white',
       marginTop: '3rem',
-      fontFamily: 'Noto Sans',
+      fontFamily: 'Lato',
     },
   })
   render() {

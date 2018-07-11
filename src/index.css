@@ -5,28 +5,23 @@
 body {
   margin: 0;
 }
-nav {
-  font-family: 'Noto Sans', sans-serif;
-}
-li {
-  font-family: 'Noto Sans', sans-serif;
-  letter-spacing: 1px;
-}
+
 h1 {
-  font-family: 'Noto Sans', serif;
+  font-family: 'Lato', serif;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Serif Pro', serif;
 }
 h3 {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-style: italic;
   font-weight: bold;
 }
 p {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 22px;
   line-height: 2rem;
   margin: 0;
 }

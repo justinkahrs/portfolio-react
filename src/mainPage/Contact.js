@@ -8,6 +8,10 @@ class Contact extends Component {
       },
       contactListItem: {
         color: 'white',
+        fontFamily: 'Lato, sans',
+        fontSize: '15.5px',
+        fontWeight: '700',
+        letterSpacing: '1.5px',
         display: 'inline',
         marginRight: '2rem',
       },
@@ -69,7 +73,7 @@ class Contact extends Component {
             </a>
           </li>
           <li style={this.styles().contactListItem}>
-            <a style={{ color: 'white' }} href="https://codepen.io/">
+            <a style={{ color: 'white' }} href="https://codepen.io/avanderj">
               CODEPEN
             </a>
           </li>
