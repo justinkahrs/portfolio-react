@@ -28,7 +28,10 @@ class Navigation extends Component {
   generateLink = location => {
     if (window.location.href.includes('/portfolio/')) {
       return (
-        <Link style={{ textDecoration: 'none' }} to={`../../#${location}`}>
+        <Link
+          style={location === 'Anna VanderJagt' ? this.styles().navBrand : this.styles().navItem}
+          to={`../../#${location}`}
+        >
           {location}
         </Link>
       )
@@ -112,6 +115,8 @@ class Navigation extends Component {
         fontSize: '15.5px',
         fontWeight: '700',
         letterSpacing: '1.5px',
+        textDecoration: 'none',
+        color: 'black'
       },
       navItemContainer: {
         alignItems: 'center',
