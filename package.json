@@ -13,6 +13,8 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "react-scroll-into-view": "^1.2.0",
+    "react-slick": "^0.23.1",
+    "react-undraw-illustrations": "^1.0.10",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -20,5 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^0.5.3"
   }
 }

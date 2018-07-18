@@ -10,7 +10,6 @@ class Portfolio extends Component {
         backgroundColor: '#F4F4F4',
         display: 'flex',
         flexDirection: 'column',
-        minHeigth: '88vh',
         alignItems: 'center',
         justifyContent: 'center',
         padding: big ? '2rem 22%' : '',
@@ -32,8 +31,8 @@ class Portfolio extends Component {
   }
   render() {
     return (
-      <div id="work" style={this.styles().container}>
-        <h1 style={this.styles().header}>
+      <div style={this.styles().container}>
+        <h1 id="work" style={this.styles().header}>
           TAKE A LOOK AT MY RECENT PROJECTS
           <hr style={this.styles().hr} />
         </h1>

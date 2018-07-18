@@ -1,5 +1,5 @@
-import project1 from './project1';
-import project2 from './project2';
-import project3 from './project3';
+import IUPUI50th from './IUPUI50thAnniversary'
+import IUCorps from './IUCorps'
+import College529 from './College529'
 
-export default [project1, project2, project3];
+export default [IUPUI50th, IUCorps, College529]

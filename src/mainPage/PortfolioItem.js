@@ -57,7 +57,7 @@ class PortfolioItem extends Component {
           height="402"
           width="536"
           alt="a representation of the project"
-          src={this.props.imgURL}
+          src={this.props.thumbnail}
         />
       </div>
     )

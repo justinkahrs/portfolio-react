@@ -27,7 +27,11 @@ class Navigation extends Component {
 
   generateLink = location => {
     if (window.location.href.includes('/portfolio/')) {
-      return <Link to={`../../#${location}`}>{location}</Link>
+      return (
+        <Link style={{ textDecoration: 'none' }} to={`../../#${location}`}>
+          {location}
+        </Link>
+      )
     } else {
       return (
         <ScrollIntoView
