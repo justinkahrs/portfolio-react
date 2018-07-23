@@ -21,7 +21,9 @@ h3 {
 }
 p {
   font-family: 'Source Serif Pro', serif;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 2rem;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
