@@ -60,6 +60,7 @@ class PortfolioPage extends Component {
         textAlign: 'center',
       },
       header: {
+        paddingTop: '2rem',
         fontSize: '18px',
         textAlign: 'center',
       },

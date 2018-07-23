@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import Close from 'react-icons/lib/md/close'
 import throttle from 'lodash.throttle'
 import ScrollIntoView from 'react-scroll-into-view'
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../../node_modules/bootstrap/dist/js/bootstrap.min.js'
 
 import './nav.css'
 
@@ -29,7 +31,11 @@ class Navigation extends Component {
     if (window.location.href.includes('/portfolio/')) {
       return (
         <Link
-          style={location === 'Anna VanderJagt' ? this.styles().navBrand : this.styles().navItem}
+          style={
+            location === 'Anna VanderJagt'
+              ? this.styles().navBrand
+              : this.styles().navItem
+          }
           to={`../../#${location}`}
         >
           {location}
@@ -116,7 +122,7 @@ class Navigation extends Component {
         fontWeight: '700',
         letterSpacing: '1.5px',
         textDecoration: 'none',
-        color: 'black'
+        color: 'black',
       },
       navItemContainer: {
         alignItems: 'center',
@@ -171,8 +177,6 @@ class Navigation extends Component {
     return (
       <div style={{ maxHeight: '55px' }}>
         <Navbar
-          style={this.styles().bootstrapNav}
-          className="bootstrapNav"
           expanded={this.state.open}
           fixedTop
           collapseOnSelect
@@ -195,7 +199,7 @@ class Navigation extends Component {
           <Navbar.Collapse>
             <Nav>
               <NavItem eventKey={1}>{this.generateLink('ABOUT')}</NavItem>
-              <NavItem eventKey={2}>{this.generateLink('PORTFOLIO')}</NavItem>
+              <NavItem eventKey={2}>{this.generateLink('WORK')}</NavItem>
               <NavItem eventKey={2}>{this.generateLink('CONTACT')}</NavItem>
             </Nav>
           </Navbar.Collapse>

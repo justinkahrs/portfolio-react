@@ -12,7 +12,7 @@ class Portfolio extends Component {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: big ? '2rem 22%' : '',
+        padding: big ? '5rem 22%' : '10rem 3rem',
       },
       header: {
         fontSize: '18px',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import landingBackground from '../landingImage.jpeg'
+import landingBackground from '../images/landing.jpeg'
 import ScrollIntoView from 'react-scroll-into-view'
 
 class Landing extends Component {
@@ -21,7 +21,8 @@ class Landing extends Component {
         color: '#212C21',
         fontSize: '23px',
         maxWidth: '470px',
-        padding: big ? '' : '0 5rem',
+        padding: big ? '' : '0 18rem 0 0',
+        textAlign: 'left',
       },
       page: {
         alignItems: 'left',
@@ -35,7 +36,7 @@ class Landing extends Component {
         padding: '0 7.3%',
       },
       hero: {
-        textAlign: big ? 'left' : 'center',
+        textAlign: 'left',
       },
       heroTitle: {
         fontSize: '18px',

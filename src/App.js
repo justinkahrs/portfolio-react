@@ -5,7 +5,7 @@ import IUPUI50th from './projects/IUPUI50thAnniversary/Page'
 import IUCorps from './projects/IUCorps/Page'
 import College529 from './projects/College529/Page'
 
-const mql = window.matchMedia(`(min-width:768px)`)
+const mql = window.matchMedia(`(min-width:960px)`)
 
 class App extends Component {
   constructor(props) {

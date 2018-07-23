@@ -1,37 +1,42 @@
 import React, { Component } from 'react'
 
 class About extends Component {
-  styles = () => ({
-    aboutPage: {
-      backgroundColor: '#DBE6E3',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '70vh',
-    },
-    bq: {
-      fontFamily: 'Libre Baskerville',
-      fontWeight: 'bold',
-      fontSize: '24px',
-      marginLeft: 0,
-    },
-    header: {
-      fontSize: '18px',
-      textTransform: 'uppercase',
-    },
-    text: {
-      color: '#212C21',
-      padding: this.props.big ? '1rem 22%' : '0 3rem',
-    },
-    hr: {
-      background: 'black',
-      border: 0,
-      height: '2px',
-      maxWidth: '100px',
-      marginTop: '1rem',
-    },
-  })
+  styles = () => {
+    const { big } = this.props
+    return {
+      aboutPage: {
+        backgroundColor: '#DBE6E3',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        minHeight: '70vh',
+        padding: big ? '' : '10rem 1rem',
+      },
+      bq: {
+        fontFamily: 'Libre Baskerville',
+        fontWeight: 'bold',
+        fontSize: '24px',
+        marginLeft: 0,
+      },
+      header: {
+        fontSize: '18px',
+        textTransform: 'uppercase',
+      },
+      text: {
+        color: '#212C21',
+        padding: this.props.big ? '1rem 22%' : '0 3rem',
+      },
+      hr: {
+        background: 'black',
+        border: 0,
+        height: '2px',
+        maxWidth: '100px',
+        marginTop: '1rem',
+      },
+    }
+  }
+
   render() {
     return (
       <div id="about" style={this.styles().aboutPage}>
