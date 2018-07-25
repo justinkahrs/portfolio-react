@@ -1,5 +1,14 @@
 import thumbnail from './images/iuCorps-thumb.png'
 import hero from './images/iuCorps-hero.png'
+import postit1 from './images/iuCorps-postit1.png'
+import postit2 from './images/iuCorps-postit2.png'
+import postit3 from './images/iuCorps-postit3.png'
+import siteMap from './images/iuCorps-sitemap.PNG'
+import pic1 from './images/about-v2.png'
+import pic2 from './images/get-started-v2.png'
+import pic3 from './images/partnerships-v2.png'
+import pic4 from './images/support-v2.png'
+import pic5 from './images/what-is-v2.png'
 
 export default {
   id: 2,
@@ -9,7 +18,7 @@ export default {
   thumbnail,
   subTitle: 'IA',
   blurb: `A newly formed organization needs a new website to connect the campus and community with service- learning opportunities.`,
-  context:
-    'IU Corps is a newly formed organization on the IU Bloomington Campus that works to connect students who want to participate in engagement with the people and offices on and off campus who provide such opportunities. While the organization is still in its infancy, the client wanted a website that would introduce the organization to stakeholders to enhance the social, cultural, and environmental impact of community engagement experiences. While the first phase of the site would contain high-level information, the client wanted the site to be scalable for future phases, namely a sorting-house functionality that would connect students with opportunities and help to measure and communicate engagement outcomes.',
-
+  whiteBoardPics: [postit1, postit2, postit3],
+  siteMap,
+  slideshow: [pic1, pic2, pic3, pic4, pic5]
 };
