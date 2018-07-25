@@ -141,6 +141,15 @@ class PortfolioPage extends Component {
             {context.split('\n').map((item, i) => (
               <p className={i !== 0 && 'portfolioText'} key={i}>
                 {item}
+                {i === 1 && (
+                  <a
+                    href="https://50.iupui.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    here.
+                  </a>
+                )}
               </p>
             ))}
           </p>
@@ -149,7 +158,11 @@ class PortfolioPage extends Component {
             <hr style={this.styles().hr} />
           </h1>
           <p className="portfolioText" style={this.styles().process}>
-            {process}
+            {process.split('\n').map((item, i) => (
+              <p className={i !== 0 && 'portfolioText'} key={i}>
+                {item}
+              </p>
+            ))}
           </p>
           <div style={this.styles().processPicContainer}>
             {processPics.map(pic => (
@@ -161,7 +174,11 @@ class PortfolioPage extends Component {
             ))}
           </div>
           <p className="portfolioText" style={this.styles().process}>
-            {process2}
+            {process2.split('\n').map((item, i) => (
+              <p className={i !== 0 && 'portfolioText'} key={i}>
+                {item}
+              </p>
+            ))}
           </p>
           <div>
             <img alt="processPic" style={this.styles().siteMap} src={siteMap} />
@@ -197,7 +214,11 @@ class PortfolioPage extends Component {
             <hr style={this.styles().hr} />
           </h1>
           <p className="portfolioText" style={this.styles().observationText}>
-            {observationText}
+            {observationText.split('\n').map((item, i) => (
+              <p className={i !== 0 && 'portfolioText'} key={i}>
+                {item}
+              </p>
+            ))}
           </p>
         </div>
       </div>

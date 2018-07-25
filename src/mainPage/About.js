@@ -55,10 +55,9 @@ class About extends Component {
             I enjoy finding that sweet spot where form meets function.
           </blockquote>
           <p>
-            Besides UX, I've taken a deep dive into creative coding with JS and
-            D3 to broaden my prior knowledge of web technologies like HTML and
-            CSS. When I'm not staring at a screen, I enjoy pinball and my cat.
-            Just look at her.
+            Apart from UX, I've taken a deep dive into creative coding to
+            broaden my prior knowledge of HTML, CSS, and JS. When I'm not
+            staring at a screen, I enjoy pinball, food, and my cat.
           </p>
         </div>
       </div>

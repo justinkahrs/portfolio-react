@@ -8,7 +8,7 @@ export default {
   hero,
   thumbnail,
   subTitle: 'IA / IXD',
-  blurb: `Here is where I write small entry text to the project. It shouldn't be more than two sentences. Something like this.`,
+  blurb: `A simple informational site did not test well with a small sample of users. Information architecture is re-designed based on test results.`,
   context:
     'As a research center of the Office of the Vice Provost for Research, Indiana University Bloomington’s Institute for Advanced Study (IAS) contributes to the university’s research mission by promoting intellectual exchange. The IAS’s existing site was created using Concrete5, a CMS that the university no longer uses to develop websites. For this project, the goal was to migrate the site over to the IU Framework WCMS and restructure the existing architecture and design.',
   methodsAndSkills:
