@@ -10,7 +10,8 @@ export default class ImageContainer extends React.Component {
         display: 'flex',
         flexDirection: big ? 'row' : 'column',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'space-evenly',
+        margin: '5rem',
       },
     }
   }

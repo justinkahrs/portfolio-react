@@ -8,10 +8,14 @@ export default class TextContainer extends React.Component {
   }
   render() {
     const { children } = this.props
-    return children.map((item, i) => (
-      <p className={i !== 0 ? 'portfolioText' : ''} key={i}>
-        {item}
-      </p>
-    ))
+    return Array.isArray(children) ? (
+      children.map((item, i) => (
+        <p className={i !== 0 ? 'portfolioText' : ''} key={i}>
+          {item}
+        </p>
+      ))
+    ) : (
+      <p>{children}</p>
+    )
   }
 }
