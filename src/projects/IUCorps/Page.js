@@ -38,7 +38,6 @@ class PortfolioPage extends Component {
 
   render() {
     const {
-      big,
       date,
       hero,
       slideshow,
@@ -47,6 +46,7 @@ class PortfolioPage extends Component {
       title,
       whiteBoardPics,
     } = metaData
+    const { big } = this.props
     const { scrolled } = this.state
 
     return (
@@ -100,7 +100,7 @@ class PortfolioPage extends Component {
               Post-its at the end of the group activity.
             </React.Fragment>
           </TextContainer>
-          <ImageContainer pics={whiteBoardPics} />
+          <ImageContainer big={big} pics={whiteBoardPics} />
           <TextContainer>
             <React.Fragment>
               After the workshop, both the information architect (myself) and
@@ -108,7 +108,7 @@ class PortfolioPage extends Component {
               the research phase.
             </React.Fragment>
           </TextContainer>
-          <ImageContainer pics={siteMap} />
+          <ImageContainer big={big} pics={siteMap} />
           <TextContainer>
             <React.Fragment>
               Once the sitemap was presented and approved by the client, I built

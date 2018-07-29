@@ -6,7 +6,6 @@ import Header from '../../common/Header'
 import Hero from '../../common/Hero'
 import ImageContainer from '../../common/ImageContainer'
 import Navigation from '../../common/Nav'
-import SlideShow from '../../common/SlideShow'
 import TextContainer from '../../common/TextContainer'
 
 class PortfolioPage extends Component {
@@ -75,7 +74,7 @@ class PortfolioPage extends Component {
               information and I would move on to the next task.
             </React.Fragment>
           </TextContainer>
-          <ImageContainer pics={taskPic} />
+          <ImageContainer big={big} pics={taskPic} />
           <TextContainer>
             <React.Fragment>
               Once testing concluded, a report was written to highlight
@@ -83,7 +82,7 @@ class PortfolioPage extends Component {
               improvement, additional findings, and follow-up comments.
             </React.Fragment>
           </TextContainer>
-          <ImageContainer pics={taskPic2} />
+          <ImageContainer big={big} pics={taskPic2} />
           <TextContainer>
             <React.Fragment>
               The report indicated that users were waffling between three
@@ -96,7 +95,7 @@ class PortfolioPage extends Component {
               approach to learn about 529 plans.
             </React.Fragment>
           </TextContainer>
-          <ImageContainer pics={sitemap} />
+          <ImageContainer big={big} pics={sitemap} />
           <Header title={'Observations and Insights'} />
           <TextContainer>
             <React.Fragment>

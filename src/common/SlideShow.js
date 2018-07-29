@@ -1,17 +1,21 @@
 import React from 'react'
 import Slider from 'react-slick'
+import { Image } from 'react-bootstrap'
 import { PrevArrow, NextArrow } from './SliderArrows'
 
 export default class SlideShow extends React.Component {
   styles = () => {
     return {
-      pic: {},
+      container: {
+        maxHeight: '400px !important',
+      },
     }
   }
   render() {
     const carouselSettings = {
       arrows: true,
       className: 'slides',
+      lazyLoad: true,
       infinite: true,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
@@ -21,11 +25,13 @@ export default class SlideShow extends React.Component {
     }
     const { pics } = this.props
     return (
-      <Slider {...carouselSettings}>
-        {pics.map((pic, i) => (
-          <img alt="processPic" key={i} style={this.styles().pic} src={pic} />
-        ))}
-      </Slider>
+      <div style={this.styles().container}>
+        <Slider {...carouselSettings}>
+          {pics.map((pic, i) => (
+            <Image responsive alt="processPic" key={i} src={pic} />
+          ))}
+        </Slider>
+      </div>
     )
   }
 }

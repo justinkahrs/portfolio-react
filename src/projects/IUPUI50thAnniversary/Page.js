@@ -8,7 +8,6 @@ import ImageContainer from '../../common/ImageContainer'
 import Navigation from '../../common/Nav'
 import SlideShow from '../../common/SlideShow'
 import TextContainer from '../../common/TextContainer'
-import './styles.css'
 
 class PortfolioPage extends Component {
   state = { scrolled: false }
