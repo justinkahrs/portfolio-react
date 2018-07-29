@@ -21,6 +21,11 @@ export default class Hero extends React.Component {
       heroSection: {
         marginTop: '12rem',
       },
+      image: {
+        margin: 'auto',
+        marginTop: '-6rem',
+        maxWidth: '100%',
+      },
       date: {
         fontFamily: 'Lato',
         fontSize: '21px',

@@ -28,11 +28,6 @@ class PortfolioPage extends Component {
 
   styles = () => {
     return {
-      image: {
-        margin: 'auto',
-        marginTop: '-6rem',
-        maxWidth: '100%',
-      },
       page: {
         display: 'flex',
         flexDirection: 'column',
@@ -121,7 +116,7 @@ class PortfolioPage extends Component {
               proposed site.
             </React.Fragment>
           </TextContainer>
-          <ImageContainer pics={processPics} />
+          <ImageContainer pics={processPics} big={big} />
           <TextContainer>
             <React.Fragment>
               The next phase of the development process focused on strategy.
@@ -136,9 +131,7 @@ class PortfolioPage extends Component {
               for review and presented to the client for approval.
             </React.Fragment>
           </TextContainer>
-          <div>
-            <img alt="processPic" style={this.styles().siteMap} src={siteMap} />
-          </div>
+          <ImageContainer pics={siteMap} big={big} />
           <TextContainer>
             <React.Fragment>
               Once the sitemap was approved, the creative phase began. This
@@ -169,7 +162,7 @@ class PortfolioPage extends Component {
             </React.Fragment>
             <React.Fragment />
           </TextContainer>
-          <ImageContainer pics={whiteBoardPics} />
+          <ImageContainer pics={whiteBoardPics} big={big} />
           <Header title={'Observations and Insights'} />
           <TextContainer>
             <React.Fragment>

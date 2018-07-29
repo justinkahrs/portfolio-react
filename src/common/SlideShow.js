@@ -12,7 +12,6 @@ export default class SlideShow extends React.Component {
     const carouselSettings = {
       arrows: true,
       className: 'slides',
-      dots: true,
       infinite: true,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
@@ -22,13 +21,11 @@ export default class SlideShow extends React.Component {
     }
     const { pics } = this.props
     return (
-      <div style={{ width: '50%', textAlign: 'center' }}>
-        <Slider {...carouselSettings}>
-          {pics.map((pic, i) => (
-            <img alt="processPic" key={i} style={this.styles().pic} src={pic} />
-          ))}
-        </Slider>
-      </div>
+      <Slider {...carouselSettings}>
+        {pics.map((pic, i) => (
+          <img alt="processPic" key={i} style={this.styles().pic} src={pic} />
+        ))}
+      </Slider>
     )
   }
 }
