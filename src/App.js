@@ -4,6 +4,7 @@ import MainPage from './mainPage'
 import IUPUI50th from './projects/IUPUI50thAnniversary/Page'
 import IUCorps from './projects/IUCorps/Page'
 import College529 from './projects/College529/Page'
+import LotusFetstival from './projects/LotusFetstival/Page'
 
 const mql = window.matchMedia(`(min-width:960px)`)
 
@@ -52,6 +53,10 @@ class App extends Component {
           <Route
             path="/portfolio/CollegeSavings529Plans"
             render={() => <College529 big={big} />}
+          />
+          <Route
+            path="/portfolio/LotusFestival"
+            render={() => <LotusFetstival big={big} />}
           />
         </div>
       </Router>
