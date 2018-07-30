@@ -58,7 +58,7 @@ class PortfolioItem extends Component {
           <h3>{this.props.subTitle}</h3>
           <p>{this.props.blurb}</p>
           <Link
-            to={`portfolio/${this.props.title.replace(/\s+/g, '')}`}
+            to={`portfolio/${this.props.id}`}
             style={{ color: 'white', textDecoration: 'none' }}
           >
             <div style={this.styles().portfolioButton}>VIEW PROJECT</div>
