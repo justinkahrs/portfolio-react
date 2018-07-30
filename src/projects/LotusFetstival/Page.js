@@ -39,6 +39,7 @@ class Page extends Component {
       contentReq,
       date,
       hero,
+      id,
       personaSlideShow,
       siteMapSlideShow,
       subTitle,
@@ -48,7 +49,7 @@ class Page extends Component {
     const { scrolled } = this.state
 
     return (
-      <PortfolioPage big={big}>
+      <PortfolioPage big={big} id={id}>
         <Hero
           date={date}
           title={title}

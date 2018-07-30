@@ -43,19 +43,19 @@ class App extends Component {
         <div>
           <Route path="/" exact render={() => <MainPage big={big} />} />
           <Route
-            path="/portfolio/IUPUI50thAnniversary"
+            path="/portfolio/1"
             render={() => <IUPUI50th big={big} />}
           />
           <Route
-            path="/portfolio/IUCorps"
+            path="/portfolio/2"
             render={() => <IUCorps big={big} />}
           />
           <Route
-            path="/portfolio/CollegeSavings529Plans"
+            path="/portfolio/3"
             render={() => <College529 big={big} />}
           />
           <Route
-            path="/portfolio/LotusFestival"
+            path="/portfolio/4"
             render={() => <LotusFetstival big={big} />}
           />
         </div>

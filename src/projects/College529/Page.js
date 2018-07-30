@@ -25,12 +25,21 @@ class Page extends Component {
   }
 
   render() {
-    const { date, hero, subTitle, taskPic, taskPic2, title, sitemap } = metaData
+    const {
+      date,
+      hero,
+      id,
+      subTitle,
+      taskPic,
+      taskPic2,
+      title,
+      sitemap,
+    } = metaData
     const { big } = this.props
     const { scrolled } = this.state
 
     return (
-      <PortfolioPage big={big}>
+      <PortfolioPage big={big} id={id}>
         <Hero
           date={date}
           title={title}

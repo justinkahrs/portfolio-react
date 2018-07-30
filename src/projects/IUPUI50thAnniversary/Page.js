@@ -29,6 +29,7 @@ class Page extends Component {
     const {
       date,
       hero,
+      id,
       processPics,
       slideshowPics,
       siteMap,
@@ -40,7 +41,7 @@ class Page extends Component {
     const { scrolled } = this.state
 
     return (
-      <PortfolioPage big={big}>
+      <PortfolioPage big={big} id={id}>
         <Hero
           date={date}
           title={title}
