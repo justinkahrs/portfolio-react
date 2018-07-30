@@ -7,7 +7,7 @@ import Hero from '../../common/Hero'
 import ImageContainer from '../../common/ImageContainer'
 import Navigation from '../../common/Nav'
 import TextContainer from '../../common/TextContainer'
-
+import '../projectPage.css'
 class PortfolioPage extends Component {
   state = { scrolled: false }
 
@@ -24,17 +24,6 @@ class PortfolioPage extends Component {
     if (window.scrollY > 0) this.setState({ scrolled: true })
   }
 
-  styles = () => {
-    return {
-      page: {
-        display: 'flex',
-        flexDirection: 'column',
-        padding: ' 0 16%',
-        textAlign: 'center',
-      },
-    }
-  }
-
   render() {
     const { date, hero, subTitle, taskPic, taskPic2, title, sitemap } = metaData
     const { big } = this.props
@@ -43,7 +32,7 @@ class PortfolioPage extends Component {
     return (
       <div>
         <Navigation big={big} {...this.props} />
-        <div style={this.styles().page}>
+        <div className={big ? 'pageContainer' : ''}>
           <Hero
             date={date}
             title={title}

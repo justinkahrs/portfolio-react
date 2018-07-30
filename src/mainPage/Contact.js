@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 class Contact extends Component {
   styles = () => {
+    const { big } = this.props
     return {
       contactList: {
         listStyleType: 'none',
@@ -12,7 +13,7 @@ class Contact extends Component {
         fontSize: '15.5px',
         fontWeight: '700',
         letterSpacing: '1.5px',
-        display: 'inline',
+        display: big ? 'inline' : '',
         marginRight: '2rem',
       },
       contactPage: {

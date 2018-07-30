@@ -25,17 +25,6 @@ class PortfolioPage extends Component {
     if (window.scrollY > 0) this.setState({ scrolled: true })
   }
 
-  styles = () => {
-    return {
-      page: {
-        display: 'flex',
-        flexDirection: 'column',
-        padding: ' 0 16%',
-        textAlign: 'center',
-      },
-    }
-  }
-
   render() {
     const {
       date,
@@ -52,7 +41,7 @@ class PortfolioPage extends Component {
     return (
       <div>
         <Navigation big={big} {...this.props} />
-        <div style={this.styles().page}>
+        <div className={big ? 'pageContainer' : ''}>
           <Hero
             date={date}
             title={title}

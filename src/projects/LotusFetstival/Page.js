@@ -27,12 +27,6 @@ class PortfolioPage extends Component {
 
   styles = () => {
     return {
-      page: {
-        display: 'flex',
-        flexDirection: 'column',
-        padding: ' 0 16%',
-        textAlign: 'center',
-      },
       subHeading: {
         display: 'block',
       },
@@ -56,7 +50,7 @@ class PortfolioPage extends Component {
     return (
       <div>
         <Navigation big={big} {...this.props} />
-        <div style={this.styles().page}>
+        <div className={big ? 'pageContainer' : ''}>
           <Hero
             date={date}
             title={title}

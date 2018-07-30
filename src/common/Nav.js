@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import Close from 'react-icons/lib/md/close'
 import throttle from 'lodash.throttle'
-import ScrollIntoView from 'react-scroll-into-view'
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../../node_modules/bootstrap/dist/js/bootstrap.min.js'
 
@@ -30,24 +28,29 @@ class Navigation extends Component {
   generateLink = location => {
     if (window.location.href.includes('/portfolio/')) {
       return (
-        <Link
+        <a
           style={
             location === 'Anna VanderJagt'
               ? this.styles().navBrand
               : this.styles().navItem
           }
-          to={`../../#${location}`}
+          href={`../../#${location.toLowerCase().replace(/\s/g, '')}`}
         >
           {location}
-        </Link>
+        </a>
       )
     } else {
       return (
-        <ScrollIntoView
-          selector={`#${location.toLowerCase().replace(/\s/g, '')}`}
+        <a
+          style={
+            location === 'Anna VanderJagt'
+              ? this.styles().navBrand
+              : this.styles().navItem
+          }
+          href={`#${location.toLowerCase().replace(/\s/g, '')}`}
         >
           {location}
-        </ScrollIntoView>
+        </a>
       )
     }
   }

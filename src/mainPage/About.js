@@ -25,7 +25,7 @@ class About extends Component {
       },
       text: {
         color: '#212C21',
-        padding: this.props.big ? '1rem 22%' : '0 3rem',
+        padding: big ? '1rem 25%' : '0 3rem',
       },
       hr: {
         background: 'black',

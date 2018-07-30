@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import landingBackground from '../images/landing.jpeg'
-import ScrollIntoView from 'react-scroll-into-view'
 
 class Landing extends Component {
   styles = () => {
@@ -11,7 +10,7 @@ class Landing extends Component {
         justifyContent: 'center',
         alignItems: 'center',
         height: '62px',
-        width: '192px',
+        width: big ? '192px' : '',
         backgroundColor: '#BB6655',
         color: 'white',
         marginTop: '3rem',
@@ -21,7 +20,7 @@ class Landing extends Component {
         color: '#212C21',
         fontSize: '23px',
         maxWidth: '470px',
-        padding: big ? '' : '0 18rem 0 0',
+        padding: big ? '' : '0 8rem 0 0',
         textAlign: 'left',
       },
       page: {
@@ -44,7 +43,7 @@ class Landing extends Component {
       },
       heroName: {
         fontFamily: 'Old Standard TT, serif',
-        fontSize: '100px',
+        fontSize: big ? '100px' : '72px',
         fontWeight: '400',
         marginTop: '2rem',
       },
@@ -71,9 +70,9 @@ class Landing extends Component {
             I'm an information architect and UX designer living in San
             Francisco.
           </p>
-          <div style={this.styles().aboutMeButton}>
-            <ScrollIntoView selector={'#about'}>ABOUT ME</ScrollIntoView>
-          </div>
+          <a style={this.styles().aboutMeButton} href="#about">
+            ABOUT ME
+          </a>
         </div>
       </div>
     )
