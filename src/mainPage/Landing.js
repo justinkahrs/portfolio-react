@@ -13,8 +13,10 @@ class Landing extends Component {
         width: big ? '192px' : '',
         backgroundColor: '#BB6655',
         color: 'white',
-        marginTop: '3rem',
+        marginTop: '6rem',
         fontFamily: 'Lato',
+        fontWeight: 'bold',
+        letterSpacing: '1.5px'
       },
       blurb: {
         color: '#212C21',

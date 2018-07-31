@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  color: #24170a !important;
 }
 
 h1 {
@@ -24,6 +25,6 @@ p {
   font-size: 21px;
   line-height: 3rem;
   margin: 0;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
 }

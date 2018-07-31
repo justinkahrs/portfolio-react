@@ -5,7 +5,7 @@ class About extends Component {
     const { big } = this.props
     return {
       aboutPage: {
-        backgroundColor: '#DBE6E3',
+        backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -15,9 +15,11 @@ class About extends Component {
       },
       bq: {
         fontFamily: 'Libre Baskerville',
-        fontWeight: 'bold',
-        fontSize: '24px',
+        fontWeight: '500',
+        fontSize: '32px',
         marginLeft: 0,
+        borderLeft: 'none',
+        letterSpacing: '2px',
       },
       header: {
         fontSize: '18px',

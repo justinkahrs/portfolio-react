@@ -23,6 +23,9 @@ export default class PortfolioPage extends React.Component {
       projectNavLink: {
         color: 'black',
         fontSize: '15.5px',
+        fontFamily: 'Lato',
+        fontWeight: 'bold',
+        letterSpacing: '1.5px',
       },
     }
   }
