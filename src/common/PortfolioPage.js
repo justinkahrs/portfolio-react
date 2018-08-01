@@ -10,7 +10,7 @@ export default class PortfolioPage extends React.Component {
       container: {
         display: 'flex',
         flexDirection: 'column',
-        padding: '0 25%',
+        padding: big ? '0 25%' : '2rem',
         textAlign: 'center',
       },
       projectNav: {

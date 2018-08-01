@@ -30,6 +30,7 @@ class PortfolioItem extends Component {
         minHeight: '37vh',
         margin: '2rem 0',
         textDecoration: 'none !important',
+        padding: big ? '' : '2rem',
       },
       portfolioCardText: {
         padding: '2%',
@@ -40,7 +41,7 @@ class PortfolioItem extends Component {
         justifyContent: 'center',
         alignItems: 'center',
         height: '62px',
-        width: '192px',
+        width: big ? '192px' : '',
         backgroundColor: '#BB6655',
         color: 'white',
         marginTop: '3rem',

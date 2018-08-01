@@ -201,9 +201,15 @@ class Navigation extends Component {
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav>
-              <NavItem eventKey={1}>{this.generateLink('ABOUT')}</NavItem>
-              <NavItem eventKey={2}>{this.generateLink('WORK')}</NavItem>
-              <NavItem eventKey={2}>{this.generateLink('CONTACT')}</NavItem>
+              <NavItem eventKey={1} href="#about">
+                {this.generateLink('ABOUT')}
+              </NavItem>
+              <NavItem eventKey={2} href="#work">
+                {this.generateLink('WORK')}
+              </NavItem>
+              <NavItem eventKey={2} href="#contact">
+                {this.generateLink('CONTACT')}
+              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
