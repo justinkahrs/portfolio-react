@@ -1,33 +1,87 @@
-import React, { Component } from "react";
-import { Row } from "reactstrap";
+import React, { Component } from 'react'
 
-const styles = {
-  contactPage: {
-    backgroundColor: "#37474F",
-    minHeight: "88vh"
-  },
-  header: {
-    color: "#C15C2E",
-    fontSize: "16px",
-    fontWeight: "bold",
-    textTransform: "uppercase",
-    textAlign: "center"
-  }
-};
 class Contact extends Component {
+  styles = () => {
+    const { big } = this.props
+    return {
+      contactList: {
+        listStyleType: 'none',
+      },
+      contactListItem: {
+        color: 'white',
+        fontFamily: 'Lato, sans',
+        fontSize: '15.5px',
+        fontWeight: '700',
+        letterSpacing: '1.5px',
+        display: big ? 'inline' : '',
+        marginRight: '2rem',
+      },
+      contactPage: {
+        color: 'white',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#37474F',
+        minHeight: '88vh',
+      },
+      header: {
+        color: 'white',
+        fontSize: '18px',
+        textAlign: 'center',
+      },
+      hr: {
+        background: 'white',
+        border: 0,
+        height: '2px',
+        maxWidth: '100px',
+        marginTop: '1rem',
+      },
+    }
+  }
   render() {
     return (
-      <Row
-        className="d-flex justify-content-center p-lg-5"
-        id="contact"
-        style={styles.contactPage}
-      >
-        <h1 style={styles.header}>
-          I specialize in information architecture & UX
+      <div id="contact" style={this.styles().contactPage}>
+        <h1 style={this.styles().header}>
+          LET'S CONNECT
+          <hr style={this.styles().hr} />
         </h1>
-      </Row>
-    );
+        <ul style={this.styles().contactList}>
+          <li style={this.styles().contactListItem}>
+            <a
+              style={{ color: 'white' }}
+              href="mailto:hello@annavanderjagt.com"
+            >
+              EMAIL
+            </a>
+          </li>
+          <li style={this.styles().contactListItem}>
+            <a
+              style={{ color: 'white' }}
+              href="https://www.linkedin.com/in/annavanderjagt"
+            >
+              LINKEDIN
+            </a>
+          </li>
+          <li style={this.styles().contactListItem}>
+            <a style={{ color: 'white' }} href="https://twitter.com/avanderj">
+              TWITTER
+            </a>
+          </li>
+          <li style={this.styles().contactListItem}>
+            <a style={{ color: 'white' }} href="https://github.com/avanderj">
+              GITHUB
+            </a>
+          </li>
+          <li style={this.styles().contactListItem}>
+            <a style={{ color: 'white' }} href="https://codepen.io/avanderj">
+              CODEPEN
+            </a>
+          </li>
+        </ul>
+      </div>
+    )
   }
 }
 
-export default Contact;
+export default Contact

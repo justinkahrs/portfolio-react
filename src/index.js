@@ -1,9 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
-import "bootstrap/dist/css/bootstrap.css";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import WebFont from 'webfontloader'
+import './index.css'
 
-ReactDOM.render(<App />, document.getElementById("root"));
-registerServiceWorker();
+WebFont.load({
+  google: {
+    families: [
+      'Lato:300,400,400i,700,900',
+      'Old Standard TT:400,400i,700',
+      'Source Serif Pro:400,700',
+    ],
+  },
+})
+
+ReactDOM.render(<App />, document.getElementById('root'))
