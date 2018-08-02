@@ -126,8 +126,6 @@ class Navigation extends Component {
         letterSpacing: '1.5px',
         textDecoration: 'none',
         color: 'black',
-      },
-      navItemContainer: {
         alignItems: 'center',
         border: active ? '2px solid black' : 'none',
         cursor: 'pointer',
@@ -135,6 +133,8 @@ class Navigation extends Component {
         height: '62.5px',
         justifyContent: 'center',
         width: '195.85px',
+      },
+      navItemContainer: {
       },
       navItems: {
         display: 'flex',
@@ -157,21 +157,15 @@ class Navigation extends Component {
               {this.generateLink('Anna VanderJagt')}
             </div>
             <ul style={this.styles().navItems}>
-              <div style={this.styles().navItemContainer}>
                 <li style={this.styles().navItem}>
                   {this.generateLink('ABOUT')}
                 </li>
-              </div>
-              <div style={this.styles().navItemContainer}>
-                <li style={this.styles().navItem}>
+                <li  style={this.styles().navItem}>
                   {this.generateLink('WORK')}
                 </li>
-              </div>
-              <div style={this.styles(true).navItemContainer}>
-                <li style={this.styles().navItem}>
+                <li style={this.styles(true).navItem}>
                   {this.generateLink('CONTACT')}
                 </li>
-              </div>
             </ul>
           </div>
         </div>
