@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import Close from 'react-icons/lib/md/close'
 import throttle from 'lodash.throttle'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../../node_modules/bootstrap/dist/js/bootstrap.min.js'
+import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../../node_modules/bootstrap/dist/js/bootstrap.js'
 
 import './nav.css'
 
@@ -134,8 +134,7 @@ class Navigation extends Component {
         justifyContent: 'center',
         width: '195.85px',
       },
-      navItemContainer: {
-      },
+      navItemContainer: {},
       navItems: {
         display: 'flex',
         flexDirection: 'row',
@@ -157,57 +156,53 @@ class Navigation extends Component {
               {this.generateLink('Anna VanderJagt')}
             </div>
             <ul style={this.styles().navItems}>
-                <li style={this.styles().navItem}>
-                  {this.generateLink('ABOUT')}
-                </li>
-                <li  style={this.styles().navItem}>
-                  {this.generateLink('WORK')}
-                </li>
-                <li style={this.styles(true).navItem}>
-                  {this.generateLink('CONTACT')}
-                </li>
+              <li style={this.styles().navItem}>
+                {this.generateLink('ABOUT')}
+              </li>
+              <li style={this.styles().navItem}>{this.generateLink('WORK')}</li>
+              <li style={this.styles(true).navItem}>
+                {this.generateLink('CONTACT')}
+              </li>
             </ul>
           </div>
         </div>
       )
     }
     return (
-      <div style={{ maxHeight: '55px' }}>
-        <Navbar
-          expanded={this.state.open}
-          fixedTop
-          collapseOnSelect
-          onToggle={this.toggleOpen}
-        >
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a style={this.styles().navBrand}>
-                {this.generateLink('Anna VanderJagt')}
-              </a>
-            </Navbar.Brand>
-            <Navbar.Toggle style={this.styles().menuIcon} />
-            <div style={{ height: '55px' }}>
-              <Close
-                style={this.styles().closeButton}
-                onClick={this.toggleOpen}
-              />
-            </div>
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <NavItem eventKey={1} href="#about">
-                {this.generateLink('ABOUT')}
-              </NavItem>
-              <NavItem eventKey={2} href="#work">
-                {this.generateLink('WORK')}
-              </NavItem>
-              <NavItem eventKey={2} href="#contact">
-                {this.generateLink('CONTACT')}
-              </NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <Navbar
+        expanded={this.state.open}
+        fixedTop
+        collapseOnSelect
+        onToggle={this.toggleOpen}
+      >
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a style={this.styles().navBrand}>
+              {this.generateLink('Anna VanderJagt')}
+            </a>
+          </Navbar.Brand>
+          <Navbar.Toggle style={this.styles().menuIcon} />
+          <div style={{ height: '55px' }}>
+            <Close
+              style={this.styles().closeButton}
+              onClick={this.toggleOpen}
+            />
+          </div>
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#about">
+              {this.generateLink('ABOUT')}
+            </NavItem>
+            <NavItem eventKey={2} href="#work">
+              {this.generateLink('WORK')}
+            </NavItem>
+            <NavItem eventKey={2} href="#contact">
+              {this.generateLink('CONTACT')}
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     )
   }
 }

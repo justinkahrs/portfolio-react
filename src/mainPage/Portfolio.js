@@ -14,6 +14,9 @@ class Portfolio extends Component {
         justifyContent: 'center',
         padding: big ? '5rem 25%' : '10rem 3rem',
       },
+      content: {
+        maxWidth: '960px',
+      },
       header: {
         fontSize: '18px',
         textAlign: 'center',
@@ -32,14 +35,16 @@ class Portfolio extends Component {
   render() {
     return (
       <div style={this.styles().container}>
-        <h1 id="work" style={this.styles().header}>
-          TAKE A LOOK AT MY RECENT PROJECTS
-          <hr style={this.styles().hr} />
-        </h1>
-        <div style={this.styles().portfolioItems}>
-          {projects.map(i => (
-            <PortfolioItem big={this.props.big} key={i.id} {...i} />
-          ))}
+        <div style={this.styles().content}>
+          <h1 id="work" style={this.styles().header}>
+            TAKE A LOOK AT MY RECENT PROJECTS
+            <hr style={this.styles().hr} />
+          </h1>
+          <div style={this.styles().portfolioItems}>
+            {projects.map(i => (
+              <PortfolioItem big={this.props.big} key={i.id} {...i} />
+            ))}
+          </div>
         </div>
       </div>
     )

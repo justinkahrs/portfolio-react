@@ -12,6 +12,10 @@ export default class PortfolioPage extends React.Component {
         flexDirection: 'column',
         padding: big ? '0 25%' : '2rem',
         textAlign: 'center',
+        alignItems: big ? 'center' : '',
+      },
+      content: {
+        maxWidth: big ? '960px' : '',
       },
       projectNav: {
         display: 'flex',
@@ -34,25 +38,27 @@ export default class PortfolioPage extends React.Component {
     return (
       <React.Fragment>
         <Navigation big={big} />
-        <div style={this.styles().container}>{children}</div>
-        <div style={this.styles().projectNav}>
-          {id > 1 && (
-            <Link
-              to={`/portfolio/${id - 1}`}
-              style={this.styles().projectNavLink}
-            >
-              &lt; PREV
-            </Link>
-          )}
-          {id > 1 && id < 4 && <span style={{ margin: '0 2rem' }}>/</span>}
-          {id < 4 && (
-            <Link
-              to={`/portfolio/${id + 1}`}
-              style={this.styles().projectNavLink}
-            >
-              NEXT &gt;
-            </Link>
-          )}
+        <div style={this.styles().container}>
+          <div style={this.styles().content}>{children}</div>
+          <div style={this.styles().projectNav}>
+            {id > 1 && (
+              <Link
+                to={`/portfolio/${id - 1}`}
+                style={this.styles().projectNavLink}
+              >
+                &lt; PREV
+              </Link>
+            )}
+            {id > 1 && id < 4 && <span style={{ margin: '0 2rem' }}>/</span>}
+            {id < 4 && (
+              <Link
+                to={`/portfolio/${id + 1}`}
+                style={this.styles().projectNavLink}
+              >
+                NEXT &gt;
+              </Link>
+            )}
+          </div>
         </div>
       </React.Fragment>
     )
