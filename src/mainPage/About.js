@@ -9,7 +9,6 @@ class About extends Component {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
         minHeight: '70vh',
         padding: big ? '' : '10rem 1rem',
       },
@@ -38,7 +37,8 @@ class About extends Component {
         border: 0,
         height: '2px',
         maxWidth: '100px',
-        marginTop: '1rem',
+        marginTop: '2rem',
+        marginBottom: '6rem',
       },
     }
   }

@@ -13,7 +13,8 @@ export default class Header extends React.Component {
         border: 0,
         height: '2px',
         maxWidth: '100px',
-        marginTop: '1rem',
+        marginTop: '2rem',
+        marginBottom: '6rem',
       },
     }
   }

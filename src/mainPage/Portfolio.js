@@ -12,7 +12,7 @@ class Portfolio extends Component {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: big ? '5rem 25%' : '10rem 3rem',
+        padding: big ? '0 5rem 25%' : '4rem 3rem',
       },
       content: {
         maxWidth: '960px',
@@ -28,7 +28,8 @@ class Portfolio extends Component {
         border: 0,
         height: '2px',
         maxWidth: '100px',
-        marginTop: '1rem',
+        marginTop: '2rem',
+        marginBottom: '6rem',
       },
     }
   }
