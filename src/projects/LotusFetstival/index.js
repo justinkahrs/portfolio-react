@@ -15,7 +15,7 @@ export default {
   hero,
   thumbnail,
   subTitle: 'IA / IXD',
-  blurb: `A non-profit event that attract people from all over the world gets an in-depth IA analysis and redesign as a proof of concept.`,
+  blurb: `A non-profit music and arts event that attracts people from all over the world gets an in-depth IA analysis of the existing website and XD prototype as a proof of concept.`,
   personaSlideShow: [persona1, persona2],
   siteMapSlideShow: [sitemap1, sitemap2, sitemap3],
   contentAudit,
