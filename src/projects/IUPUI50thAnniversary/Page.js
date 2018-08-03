@@ -69,8 +69,9 @@ class Page extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              here.
+              here
             </a>
+            .
           </React.Fragment>
         </TextContainer>
         <Header title={'The Process'} />
@@ -138,12 +139,19 @@ class Page extends Component {
             interaction design for custom functionalities. Websites at IU are
             built using atomic design principles where a page is made up of
             “sections” and each section can have multiple “chunks” (check out
-            the IU Web Style Guide). When a client wants specific functionality
-            outside of the system, things become a bit more complicated. In this
-            project specifically, the client wanted a custom event feed to
-            highlight anniversary events, an interactive timeline that allowed
-            for multiple content types (e.g. text only, single image, carousel),
-            and a story submission page.
+            the{' '}
+            <a
+              href="https://styleguide.iu.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              IU Web Style Guide
+            </a>). When a client wants specific functionality outside of the
+            system, things become a bit more complicated. In this project
+            specifically, the client wanted a custom event feed to highlight
+            anniversary events, an interactive timeline that allowed for
+            multiple content types (e.g. text only, single image, carousel), and
+            a story submission page.
           </React.Fragment>
           <React.Fragment />
         </TextContainer>
