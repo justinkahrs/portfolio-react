@@ -15,6 +15,8 @@ class Contact extends Component {
         fontWeight: '700',
         letterSpacing: '1.5px',
         display: big ? 'inline' : '',
+        marginRight: big ? '2rem' : '',
+        textAlign: big ? '' : 'center'
       },
       contactPage: {
         color: 'white',
