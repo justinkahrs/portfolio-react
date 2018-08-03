@@ -23,7 +23,6 @@ export default class Hero extends React.Component {
       },
       image: {
         margin: 'auto',
-        marginTop: '-6rem',
         maxWidth: '100%',
       },
       date: {

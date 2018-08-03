@@ -1,12 +1,12 @@
-import thumbnail from './images/lotus-thumb.png'
-import hero from './images/lotus-hero.png'
-import sitemap1 from './images/sitemap1-slide1.png'
-import sitemap2 from './images/sitemap2-slide2.png'
+import thumbnail from './images/lotus-thumb-optimized.jpg'
+import hero from './images/lotus-hero-optimized.jpg'
+import sitemap1 from './images/sitemap1-optimized.jpg'
+import sitemap2 from './images/sitemap2-optimized.jpg'
 import sitemap3 from './images/flowchart-slide3.png'
-import persona1 from './images/persona1.png'
-import persona2 from './images/persona2.png'
-import contentAudit from './images/contentAudit.png'
-import contentReq from './images/contentReq.png'
+import persona1 from './images/persona1-optimized.jpg'
+import persona2 from './images/persona2-optimized.jpg'
+import contentAudit from './images/contentAudit-optimized.jpg'
+import contentReq from './images/contentReq-optimized.png'
 
 export default {
   id: 4,
