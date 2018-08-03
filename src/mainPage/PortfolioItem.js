@@ -46,6 +46,8 @@ class PortfolioItem extends Component {
         color: 'white',
         marginTop: '3rem',
         fontFamily: 'Lato',
+        fontWeight: 'bold',
+        letterSpacing: '1.5px',
       },
     }
   }
