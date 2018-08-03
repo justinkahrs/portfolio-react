@@ -16,7 +16,8 @@ class Landing extends Component {
         marginTop: '6rem',
         fontFamily: 'Lato',
         fontWeight: 'bold',
-        letterSpacing: '1.5px'
+        letterSpacing: '1.5px',
+        textDecoration: 'none',
       },
       blurb: {
         color: '#212C21',
