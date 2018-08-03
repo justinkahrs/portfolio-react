@@ -9,7 +9,7 @@ export default {
   title: 'College Savings 529 Plans',
   hero,
   thumbnail,
-  subTitle: 'IA / IXD',
+  subTitle: 'USABILITY TESTING / IA',
   blurb: `A simple informational site did not test well with a small sample of users. Information architecture is re-designed based on test results.`,
   taskPic,
   taskPic2,
