@@ -33,7 +33,7 @@ class About extends Component {
         padding: big ? '' : '0 3rem',
       },
       hr: {
-        background: 'black',
+        background: '#24170A',
         border: 0,
         height: '2px',
         maxWidth: '100px',
