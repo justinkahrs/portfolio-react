@@ -49,6 +49,14 @@ class PortfolioItem extends Component {
         fontWeight: 'bold',
         letterSpacing: '1.5px',
       },
+      subTitle: {
+        fontSize: '18px',
+      },
+      title: {
+        fontFamily: 'Old Standard TT',
+        fontSize: '31px',
+        fontWeight: 'bold',
+      },
     }
   }
 
@@ -57,8 +65,8 @@ class PortfolioItem extends Component {
       <div style={this.styles().portfolioCard}>
         <div style={this.styles().portfolioCardText}>
           <div style={this.styles().date}>{this.props.date}</div>
-          <h2>{this.props.title}</h2>
-          <h3>{this.props.subTitle}</h3>
+          <h2 style={this.styles().title}>{this.props.title}</h2>
+          <h3 style={this.styles().subTitle}>{this.props.subTitle}</h3>
           <p>{this.props.blurb}</p>
           <Link
             to={`portfolio/${this.props.id}`}

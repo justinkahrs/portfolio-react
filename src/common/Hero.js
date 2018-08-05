@@ -41,6 +41,7 @@ export default class Hero extends React.Component {
       subTitle: {
         fontFamily: 'Lato',
         fontStyle: 'italic',
+        fontSize: '18px',
       },
     }
   }
