@@ -40,3 +40,10 @@ p {
   text-align: left;
   text-justify: inter-word;
 }
+p > a {
+  color: #24170a;
+  text-decoration: underline;
+}
+p > a:hover {
+  color: #24170a;
+}
