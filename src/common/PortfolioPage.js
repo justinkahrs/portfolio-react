@@ -11,7 +11,7 @@ export default class PortfolioPage extends React.Component {
       container: {
         display: 'flex',
         flexDirection: 'column',
-        padding: big ? '0 25%' : '2rem',
+        padding: big ? '0 25%' : '4rem',
         textAlign: 'center',
         alignItems: big ? 'center' : '',
       },
