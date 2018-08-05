@@ -209,7 +209,7 @@ class Page extends Component {
             ​end-users​ ​and​ ​a​ ​more​ ​scalable​ ​website​ ​for​ ​future
             festivals.
           </React.Fragment>
-          <Image width="100%" responsive src={gif} />
+          {big && <Image width="100%" responsive src={gif} />}
         </TextContainer>
       </PortfolioPage>
     )
