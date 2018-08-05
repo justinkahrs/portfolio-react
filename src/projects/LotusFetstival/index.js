@@ -7,11 +7,13 @@ import persona1 from './images/persona1-optimized.jpg'
 import persona2 from './images/persona2-optimized.jpg'
 import contentAudit from './images/contentAudit-optimized.jpg'
 import contentReq from './images/contentReq-optimized.png'
+import gif from './images/lotus.gif'
 
 export default {
   id: 4,
   date: '2017',
   title: 'Lotus Festival',
+  gif,
   hero,
   thumbnail,
   subTitle: 'IA / IXD',

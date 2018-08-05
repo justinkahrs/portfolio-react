@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Image } from 'react-bootstrap'
 import throttle from 'lodash.throttle'
 
 import metaData from './index'
@@ -26,7 +27,28 @@ class Page extends Component {
   }
 
   styles = () => {
+    const { big } = this.props
     return {
+      button: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '62px',
+        width: big ? '250px' : '',
+        backgroundColor: '#BB6655',
+        color: 'white',
+        marginTop: '3rem',
+        fontFamily: 'Lato',
+        fontSize: '14px',
+        fontWeight: 'bold',
+        letterSpacing: '1.5px',
+        textDecoration: 'none',
+      },
+      buttonContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
       subHeading: {
         display: 'block',
       },
@@ -38,6 +60,7 @@ class Page extends Component {
       contentAudit,
       contentReq,
       date,
+      gif,
       hero,
       id,
       personaSlideShow,
@@ -78,9 +101,33 @@ class Page extends Component {
             from a detailed analysis of its information architecture and a new
             structure and design. In its current state, the site suffers from
             significant architectural issues that interfere with the overall
-            understanding of the organization and its goals. See below for a
-            high-fidelity wireframe.
+            understanding of the organization and its goals.{' '}
+            {big &&
+              `See below for a
+            high-fidelity wireframe.`}
           </React.Fragment>
+          {big && (
+            <React.Fragment>
+              <iframe
+                width="100%"
+                height="500px"
+                title="LotusFestival"
+                src="https://xd.adobe.com/embed/ee97aed1-da0a-4c09-45ec-8b6228ae73cc-98a6/"
+                frameborder="0"
+                allowfullscreen
+              />
+              <div style={this.styles().buttonContainer}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={this.styles().button}
+                  href="https://xd.adobe.com/embed/ee97aed1-da0a-4c09-45ec-8b6228ae73cc-98a6/"
+                >
+                  SEE FULL SCREEN DEMO
+                </a>
+              </div>
+            </React.Fragment>
+          )}
         </TextContainer>
         <Header title={'The Process'} />
         <TextContainer>
@@ -145,6 +192,7 @@ class Page extends Component {
             ​Festival​ ​and​ ​show​ ​how​ ​important​ ​this​ ​event​ ​is​ ​to​
             ​the community.​
           </React.Fragment>
+          <SlideShow pics={siteMapSlideShow} />
           <React.Fragment>
             Keeping​ ​users​ ​engaged​ ​while​ ​visiting​ ​the​ ​site​ ​is​
             ​pivotal​ ​to the​ ​mission​ ​of​ ​Lotus​ ​Foundation.​ ​Allowing​
@@ -160,8 +208,8 @@ class Page extends Component {
             ​end-users​ ​and​ ​a​ ​more​ ​scalable​ ​website​ ​for​ ​future
             festivals.
           </React.Fragment>
+          <Image width="100%" responsive src={gif} />
         </TextContainer>
-        <SlideShow pics={siteMapSlideShow} />
       </PortfolioPage>
     )
   }
