@@ -43,6 +43,7 @@ class Page extends Component {
     return (
       <PortfolioPage big={big} id={id}>
         <Hero
+          big={big}
           date={date}
           title={title}
           subTitle={subTitle}

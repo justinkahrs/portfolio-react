@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Footer from './Footer'
 import Navigation from './Nav'
+import './portfolioPageHeaders.css'
 
 export default class PortfolioPage extends React.Component {
   styles = () => {
@@ -40,7 +41,7 @@ export default class PortfolioPage extends React.Component {
       <React.Fragment>
         <Navigation big={big} />
         <div style={this.styles().container}>
-          <div style={this.styles().content}>{children}</div>
+          <div className="portfolioPage" style={this.styles().content}>{children}</div>
           <div style={this.styles().projectNav}>
             {id > 1 && (
               <Link
