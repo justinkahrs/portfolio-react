@@ -16,7 +16,7 @@ class Contact extends Component {
         letterSpacing: '1.5px',
         display: big ? 'inline' : '',
         marginRight: big ? '2rem' : '',
-        textAlign: big ? '' : 'center'
+        textAlign: big ? '' : 'center',
       },
       contactPage: {
         color: 'white',
@@ -24,7 +24,7 @@ class Contact extends Component {
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#37474F',
-        minHeight: '92vh',
+        minHeight: '72vh',
       },
       header: {
         color: 'white',

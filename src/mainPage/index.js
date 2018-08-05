@@ -1,9 +1,10 @@
 import React from 'react'
-import Landing from './Landing.js'
 import About from './About.js'
-import Portfolio from './Portfolio.js'
 import Contact from './Contact.js'
+import Footer from '../common/Footer'
+import Landing from './Landing.js'
 import Navigation from '../common/Nav'
+import Portfolio from './Portfolio.js'
 
 const styles = {
   app: {
@@ -22,6 +23,7 @@ class MainPage extends React.Component {
           <About big={big} />
           <Portfolio big={big} />
           <Contact big={big} />
+          <Footer />
         </div>
       </div>
     )

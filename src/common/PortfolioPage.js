@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import Footer from './Footer'
 import Navigation from './Nav'
 
 export default class PortfolioPage extends React.Component {
@@ -60,6 +61,7 @@ export default class PortfolioPage extends React.Component {
             )}
           </div>
         </div>
+        <Footer />
       </React.Fragment>
     )
   }
