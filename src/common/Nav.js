@@ -125,7 +125,7 @@ class Navigation extends Component {
         fontWeight: '700',
         letterSpacing: '1.5px',
         textDecoration: 'none',
-        color: 'black',
+        color: '#24170A',
         alignItems: 'center',
         border: active ? '2px solid black' : 'none',
         cursor: 'pointer',
@@ -134,12 +134,18 @@ class Navigation extends Component {
         justifyContent: 'center',
         width: '195.85px',
       },
-      navItemContainer: {},
+      navItemContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
       navItems: {
         display: 'flex',
         flexDirection: 'row',
         listStyleType: 'none',
         textDecoration: 'none',
+        marginBottom: '0 !important',
       },
     }
   }
@@ -177,9 +183,7 @@ class Navigation extends Component {
       >
         <Navbar.Header>
           <Navbar.Brand>
-            <a style={this.styles().navBrand}>
-              {this.generateLink('Anna VanderJagt')}
-            </a>
+            <a style={this.styles().navBrand}>Anna VanderJagt</a>
           </Navbar.Brand>
           <Navbar.Toggle style={this.styles().menuIcon} />
           <div style={{ height: '55px' }}>
@@ -189,16 +193,16 @@ class Navigation extends Component {
             />
           </div>
         </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav>
-            <NavItem eventKey={1} href="#about">
-              {this.generateLink('ABOUT')}
+        <Navbar.Collapse style={{ color: '#24170A !important' }}>
+          <Nav style={this.styles().navItemContainer}>
+            <NavItem eventKey={1} href="#about" style={this.styles().navItem}>
+              ABOUT
             </NavItem>
-            <NavItem eventKey={2} href="#work">
-              {this.generateLink('WORK')}
+            <NavItem eventKey={2} href="#work" style={this.styles().navItem}>
+              WORK
             </NavItem>
-            <NavItem eventKey={2} href="#contact">
-              {this.generateLink('CONTACT')}
+            <NavItem eventKey={2} href="#contact" style={this.styles().navItem}>
+              CONTACT
             </NavItem>
           </Nav>
         </Navbar.Collapse>

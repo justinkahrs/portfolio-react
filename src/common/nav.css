@@ -1,3 +1,28 @@
 li a {
-  
+  color: #24170a !important;
+}
+.navbar-default .navbar-toggle {
+  border: none !important;
+  color: #24170a !important;
+}
+
+#root > div > div > nav > div > div.navbar-header > button > span {
+  background-color: #24170a !important;
+}
+#root > div > div > nav > div > div.navbar-header > div > svg > g > path {
+  fill: #24170a !important;
+}
+#root > div > div > nav > div > div.navbar-header > button {
+  margin-top: 1.15rem !important;
+  margin-right: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+#root > div > div > nav > div > div.navbar-header > a {
+  margin-top: 0.5rem !important;
+  margin-left: 1rem !important;
+  padding-left: 1rem !important;
+}
+#root > div > div > div:nth-child(1) > div > ul {
+  margin-bottom: 0 !important;
 }
