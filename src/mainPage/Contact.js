@@ -9,14 +9,15 @@ class Contact extends Component {
         paddingLeft: '0',
       },
       contactListItem: {
-        color: 'white',
         fontFamily: 'Lato, sans',
         fontSize: '15.5px',
         fontWeight: '700',
         letterSpacing: '1.5px',
+        lineSpacing: '2px',
         display: big ? 'inline' : '',
         marginRight: big ? '2rem' : '',
         textAlign: big ? '' : 'center',
+        paddingBottom: big ? '' : '1.5rem',
       },
       contactPage: {
         color: 'white',

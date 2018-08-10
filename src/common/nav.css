@@ -1,4 +1,4 @@
-li a {
+#root > div > div > nav > div > div.navbar-collapse > ul > li > a {
   color: #24170a !important;
 }
 .navbar-default .navbar-toggle {
