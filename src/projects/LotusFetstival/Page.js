@@ -203,11 +203,9 @@ class Page extends Component {
             ​tool​ ​that​ ​will​ ​enhance​ ​the​ ​Lotus​ ​experience for all
             attendees.​ ​By​ ​spreading​ ​content across​ ​a​ ​global​
             ​navigation,​ ​important​ ​information​ ​like​ ​ticket​ ​prices​
-            ​and​ ​schedules​ ​will be​ ​easy​ ​to​ ​locate.​ ​Overall,​ I
-            recommended ​applying​ ​a​ ​narrower​ ​scope​ ​to​ ​the​ ​existing​
-            ​architecture​ ​will lead​ ​to​ ​a​ ​better​ ​user-experience​ ​for​
-            ​end-users​ ​and​ ​a​ ​more​ ​scalable​ ​website​ ​for​ ​future
-            festivals.
+            ​and​ ​schedules​ ​will be​ ​easy​ ​to​ ​locate.​ Applying a
+            narrower scope to the existing achitecture will lead to a better
+            user-experience and a more scalable website for future festivals.
           </React.Fragment>
           {big && <Image width="100%" responsive src={gif} />}
         </TextContainer>
