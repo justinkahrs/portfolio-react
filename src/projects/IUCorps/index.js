@@ -20,7 +20,7 @@ export default {
   hero,
   thumbnail,
   subTitle: 'IA',
-  blurb: `A newly formed organization needs a new website to connect the campus and community with service- learning opportunities.`,
+  blurb: `A newly formed organization needs a new website to connect the campus and community with service-learning opportunities.`,
   whiteBoardPics: [postit1, postit2, postit3],
   siteMap,
   slideshow: [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8],
