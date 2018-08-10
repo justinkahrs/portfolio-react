@@ -11,8 +11,10 @@ import slide4 from './images/slide4-stories-optimized.png'
 import slide5 from './images/slide5-fifty-faces-optimized.png'
 import slide6 from './images/slide6-getInvolved-optimized.png'
 
+import gif from './images/50th-anniversary-IXD.gif'
 import ixd1 from './images/50anniversary-ixd1.png'
 import ixd2 from './images/50anniversary-ixd2.png'
+import mobile from './images/50anniversary-mobile.png'
 
 export default {
   id: 1,
@@ -21,7 +23,9 @@ export default {
   date: '2017-2018',
   title: 'IUPUI 50th Anniversary',
   subTitle: 'IA / IXD',
+  gif,
   hero,
+  mobile,
   processPics: [postit1, postit2, postit3],
   siteMap,
   slideshowPics: [

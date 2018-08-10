@@ -7,7 +7,7 @@ import persona1 from './images/persona1-optimized.jpg'
 import persona2 from './images/persona2-optimized.jpg'
 import contentAudit from './images/contentAudit-optimized.jpg'
 import contentReq from './images/contentReq-optimized.png'
-import gif from './images/lotus.gif'
+import gif from './images/lotus-ixd.gif'
 
 export default {
   id: 4,

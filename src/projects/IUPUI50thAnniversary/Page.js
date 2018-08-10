@@ -28,11 +28,13 @@ class Page extends Component {
   render() {
     const {
       date,
+      gif,
       hero,
       id,
+      mobile,
       processPics,
-      slideshowPics,
       siteMap,
+      slideshowPics,
       subTitle,
       title,
       whiteBoardPics,
@@ -74,6 +76,7 @@ class Page extends Component {
             </a>
             .
           </React.Fragment>
+          <ImageContainer pics={mobile} big={big} />
         </TextContainer>
         <Header title={'The Process'} />
         <TextContainer>
@@ -147,16 +150,18 @@ class Page extends Component {
               rel="noopener noreferrer"
             >
               IU Web Style Guide
-            </a>). When a client wants specific functionality outside of the
-            system, things become a bit more complicated. In this project
-            specifically, the client wanted a custom event feed to highlight
-            anniversary events, an interactive timeline that allowed for
-            multiple content types (e.g. text only, single image, carousel), and
-            a story submission page.
+            </a>
+            ). When a client wants specific functionality outside of the system,
+            things become a bit more complicated. In this project specifically,
+            the client wanted a custom event feed to highlight anniversary
+            events, an interactive timeline that allowed for multiple content
+            types (e.g. text only, single image, carousel), and a story
+            submission page.
           </React.Fragment>
           <React.Fragment />
         </TextContainer>
         <ImageContainer pics={whiteBoardPics} big={big} />
+        {big && <ImageContainer pics={gif} big={big} />}
         <Header title={'Observations and Insights'} />
         <TextContainer>
           <React.Fragment>
