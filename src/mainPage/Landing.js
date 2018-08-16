@@ -70,8 +70,7 @@ class Landing extends Component {
           </h1>
           <div style={this.styles().heroName}>I'm Anna</div>
           <p style={this.styles().blurb}>
-            I'm an information architect and UX designer living in San
-            Francisco.
+            I'm a UX designer living in San Francisco.
           </p>
           <a style={this.styles().aboutMeButton} href="#about">
             ABOUT ME
