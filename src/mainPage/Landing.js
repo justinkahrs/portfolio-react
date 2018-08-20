@@ -16,7 +16,8 @@ class Landing extends Component {
         marginTop: '6rem',
         fontFamily: 'Lato',
         fontWeight: 'bold',
-        letterSpacing: '1.5px'
+        letterSpacing: '1.5px',
+        textDecoration: 'none',
       },
       blurb: {
         color: '#212C21',
@@ -50,7 +51,7 @@ class Landing extends Component {
         marginTop: '2rem',
       },
       hr: {
-        background: 'black',
+        background: '#24170A',
         border: 0,
         height: '2px',
         maxWidth: '100px',
@@ -69,8 +70,7 @@ class Landing extends Component {
           </h1>
           <div style={this.styles().heroName}>I'm Anna</div>
           <p style={this.styles().blurb}>
-            I'm an information architect and UX designer living in San
-            Francisco.
+            I'm a UX designer living in San Francisco.
           </p>
           <a style={this.styles().aboutMeButton} href="#about">
             ABOUT ME

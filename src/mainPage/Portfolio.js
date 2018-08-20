@@ -12,7 +12,10 @@ class Portfolio extends Component {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: big ? '5rem 25%' : '10rem 3rem',
+        padding: big ? '0 5rem 25%' : '4rem 3rem',
+      },
+      content: {
+        maxWidth: '960px',
       },
       header: {
         fontSize: '18px',
@@ -21,25 +24,28 @@ class Portfolio extends Component {
       portfolioItems: {},
       text: {},
       hr: {
-        background: 'black',
+        background: '#24170A',
         border: 0,
         height: '2px',
         maxWidth: '100px',
-        marginTop: '1rem',
+        marginTop: '2rem',
+        marginBottom: '6rem',
       },
     }
   }
   render() {
     return (
       <div style={this.styles().container}>
-        <h1 id="work" style={this.styles().header}>
-          TAKE A LOOK AT MY RECENT PROJECTS
-          <hr style={this.styles().hr} />
-        </h1>
-        <div style={this.styles().portfolioItems}>
-          {projects.map(i => (
-            <PortfolioItem big={this.props.big} key={i.id} {...i} />
-          ))}
+        <div style={this.styles().content}>
+          <h1 id="work" style={this.styles().header}>
+            TAKE A LOOK AT MY RECENT PROJECTS
+            <hr style={this.styles().hr} />
+          </h1>
+          <div style={this.styles().portfolioItems}>
+            {projects.map(i => (
+              <PortfolioItem big={this.props.big} key={i.id} {...i} />
+            ))}
+          </div>
         </div>
       </div>
     )

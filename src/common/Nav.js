@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import Close from 'react-icons/lib/md/close'
 import throttle from 'lodash.throttle'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import '../../node_modules/bootstrap/dist/js/bootstrap.min.js'
+import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../../node_modules/bootstrap/dist/js/bootstrap.js'
 
 import './nav.css'
 
@@ -125,9 +125,7 @@ class Navigation extends Component {
         fontWeight: '700',
         letterSpacing: '1.5px',
         textDecoration: 'none',
-        color: 'black',
-      },
-      navItemContainer: {
+        color: '#24170A',
         alignItems: 'center',
         border: active ? '2px solid black' : 'none',
         cursor: 'pointer',
@@ -136,11 +134,18 @@ class Navigation extends Component {
         justifyContent: 'center',
         width: '195.85px',
       },
+      navItemContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
       navItems: {
         display: 'flex',
         flexDirection: 'row',
         listStyleType: 'none',
         textDecoration: 'none',
+        marginBottom: '0 !important',
       },
     }
   }
@@ -157,63 +162,51 @@ class Navigation extends Component {
               {this.generateLink('Anna VanderJagt')}
             </div>
             <ul style={this.styles().navItems}>
-              <div style={this.styles().navItemContainer}>
-                <li style={this.styles().navItem}>
-                  {this.generateLink('ABOUT')}
-                </li>
-              </div>
-              <div style={this.styles().navItemContainer}>
-                <li style={this.styles().navItem}>
-                  {this.generateLink('WORK')}
-                </li>
-              </div>
-              <div style={this.styles(true).navItemContainer}>
-                <li style={this.styles().navItem}>
-                  {this.generateLink('CONTACT')}
-                </li>
-              </div>
+              <li style={this.styles().navItem}>
+                {this.generateLink('ABOUT')}
+              </li>
+              <li style={this.styles().navItem}>{this.generateLink('WORK')}</li>
+              <li style={this.styles(true).navItem}>
+                {this.generateLink('CONTACT')}
+              </li>
             </ul>
           </div>
         </div>
       )
     }
     return (
-      <div style={{ maxHeight: '55px' }}>
-        <Navbar
-          expanded={this.state.open}
-          fixedTop
-          collapseOnSelect
-          onToggle={this.toggleOpen}
-        >
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a style={this.styles().navBrand}>
-                {this.generateLink('Anna VanderJagt')}
-              </a>
-            </Navbar.Brand>
-            <Navbar.Toggle style={this.styles().menuIcon} />
-            <div style={{ height: '55px' }}>
-              <Close
-                style={this.styles().closeButton}
-                onClick={this.toggleOpen}
-              />
-            </div>
-          </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <NavItem eventKey={1} href="#about">
-                {this.generateLink('ABOUT')}
-              </NavItem>
-              <NavItem eventKey={2} href="#work">
-                {this.generateLink('WORK')}
-              </NavItem>
-              <NavItem eventKey={2} href="#contact">
-                {this.generateLink('CONTACT')}
-              </NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+      <Navbar
+        expanded={this.state.open}
+        fixedTop
+        collapseOnSelect
+        onToggle={this.toggleOpen}
+      >
+        <Navbar.Header>
+          <Navbar.Brand>
+            <a style={this.styles().navBrand}>Anna VanderJagt</a>
+          </Navbar.Brand>
+          <Navbar.Toggle style={this.styles().menuIcon} />
+          <div style={{ height: '55px' }}>
+            <Close
+              style={this.styles().closeButton}
+              onClick={this.toggleOpen}
+            />
+          </div>
+        </Navbar.Header>
+        <Navbar.Collapse style={{ color: '#24170A !important' }}>
+          <Nav style={this.styles().navItemContainer}>
+            <NavItem eventKey={1} href="#about" style={this.styles().navItem}>
+              ABOUT
+            </NavItem>
+            <NavItem eventKey={2} href="#work" style={this.styles().navItem}>
+              WORK
+            </NavItem>
+            <NavItem eventKey={2} href="#contact" style={this.styles().navItem}>
+              CONTACT
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
     )
   }
 }

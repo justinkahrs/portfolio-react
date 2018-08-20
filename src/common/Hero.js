@@ -4,7 +4,7 @@ import { Image } from 'react-bootstrap'
 
 export default class Hero extends React.Component {
   styles = () => {
-    const { scrolled } = this.props
+    const { big, scrolled } = this.props
     return {
       aboveFold: {
         display: 'flex',
@@ -16,14 +16,15 @@ export default class Hero extends React.Component {
       circleDown: {
         fill: 'rgba(58, 76, 57, .34)',
         opacity: scrolled ? 0 : 1,
-        transition: 'opacity .25s ease-in-out',
+        transition: 'opacity .1s ease-in-out',
+        position: 'fixed',
+        bottom: '20px',
       },
       heroSection: {
-        marginTop: '12rem',
+        marginTop: big ? '12rem' : '',
       },
       image: {
         margin: 'auto',
-        marginTop: '-6rem',
         maxWidth: '100%',
       },
       date: {
@@ -40,6 +41,7 @@ export default class Hero extends React.Component {
       subTitle: {
         fontFamily: 'Lato',
         fontStyle: 'italic',
+        fontSize: '18px',
       },
     }
   }

@@ -9,7 +9,6 @@ class About extends Component {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
         minHeight: '70vh',
         padding: big ? '' : '10rem 1rem',
       },
@@ -21,20 +20,25 @@ class About extends Component {
         borderLeft: 'none',
         letterSpacing: '2px',
       },
+      content: {
+        maxWidth: '960px',
+      },
       header: {
         fontSize: '18px',
         textTransform: 'uppercase',
+        textAlign: 'center',
       },
       text: {
         color: '#212C21',
-        padding: big ? '1rem 25%' : '0 3rem',
+        padding: big ? '' : '0 3rem',
       },
       hr: {
-        background: 'black',
+        background: '#24170A',
         border: 0,
         height: '2px',
         maxWidth: '100px',
-        marginTop: '1rem',
+        marginTop: '2rem',
+        marginBottom: '6rem',
       },
     }
   }
@@ -42,25 +46,27 @@ class About extends Component {
   render() {
     return (
       <div id="about" style={this.styles().aboutPage}>
-        <h1 style={this.styles().header}>
-          A little bit about myself
-          <hr style={this.styles().hr} />
-        </h1>
-        <div style={this.styles().text}>
-          <p>
-            I have a passion for creating engaging digital experiences through
-            user-centered design and information architecture. With degrees in
-            both art and information science, I am obsessed with visual goodness
-            and systemic details.
-          </p>
-          <blockquote style={this.styles().bq}>
-            I enjoy finding that sweet spot where form meets function.
-          </blockquote>
-          <p>
-            Apart from UX, I've taken a deep dive into creative coding to
-            broaden my prior knowledge of HTML, CSS, and JS. When I'm not
-            staring at a screen, I enjoy pinball, food, and my cat.
-          </p>
+        <div style={this.styles().content}>
+          <h1 style={this.styles().header}>
+            A little bit about myself
+            <hr style={this.styles().hr} />
+          </h1>
+          <div style={this.styles().text}>
+            <p>
+              I have a passion for creating engaging digital experiences through
+              user-centered design and information architecture. With degrees in
+              both art and information science, I am obsessed with visual
+              goodness and systemic details.
+            </p>
+            <blockquote style={this.styles().bq}>
+              I enjoy finding that sweet spot where form meets function.
+            </blockquote>
+            <p>
+              Apart from UX, I've taken a deep dive into creative coding to
+              broaden my prior knowledge of HTML, CSS, and JS. When I'm not
+              staring at a screen, I enjoy pinball, food, and my cat.
+            </p>
+          </div>
         </div>
       </div>
     )

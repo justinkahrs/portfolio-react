@@ -42,6 +42,7 @@ class Page extends Component {
     return (
       <PortfolioPage big={big} id={id}>
         <Hero
+          big={big}
           date={date}
           title={title}
           subTitle={subTitle}
@@ -73,19 +74,31 @@ class Page extends Component {
             particular client before, we wanted to start by introducing our
             user-centered and responsive website strategy, accessibility
             policies, and the IU brand. We then identified primary audiences for
-            the site and began a group exercise. The group exercise required
-            stakeholders to break into groups of three and spend 10 minutes
-            answering three questions by writing answers on individual Post-its.
-            The questions read: 1. What is the most important information users
-            need to see on the site? 2. What are the most important tasks users
-            need to perform when they visit the site? 3. What are the benefits
-            of engagement for primary audiences? At the end of the ten minutes,
-            groups were instructed to choose their top five answers to each
-            question and adhere them to the corresponding question. Next, every
-            stakeholder was given dot stickers and instructed to place one
-            sticker next to their top three answers on that particular question.
-            We then discussed answers with the most Post-its at the end of the
-            group activity.
+            the site and began a group exercise.
+          </React.Fragment>
+          <React.Fragment>
+            The group exercise required stakeholders to break into groups of
+            three and spend 10 minutes answering three questions by writing
+            answers on individual Post-its. The questions read:
+          </React.Fragment>
+          <React.Fragment>
+            1. What is the most important information users need to see on the
+            site?
+          </React.Fragment>
+          <React.Fragment>
+            2. What are the most important tasks users need to perform when they
+            visit the site?
+          </React.Fragment>
+          <React.Fragment>
+            3. What are the benefits of engagement for primary audiences?
+          </React.Fragment>
+          <React.Fragment>
+            At the end of the ten minutes, groups were instructed to choose
+            their top five answers to each question and adhere them to the
+            corresponding question. Next, every stakeholder was given dot
+            stickers and instructed to place one sticker next to their top three
+            answers on that particular question. We then discussed answers with
+            the most Post-its at the end of the group activity.
           </React.Fragment>
         </TextContainer>
         <ImageContainer big={big} pics={whiteBoardPics} />

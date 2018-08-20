@@ -9,11 +9,12 @@ export default class Header extends React.Component {
         textAlign: 'center',
       },
       hr: {
-        background: 'black',
+        background: '#24170A',
         border: 0,
         height: '2px',
         maxWidth: '100px',
-        marginTop: '1rem',
+        marginTop: '2rem',
+        marginBottom: '6rem',
       },
     }
   }
