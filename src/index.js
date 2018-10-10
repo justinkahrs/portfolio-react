@@ -4,6 +4,9 @@ import './index.css'
 import App from './App'
 import WebFont from 'webfontloader'
 import './index.css'
+import ReactGA from 'react-ga'
+ReactGA.initialize('UA-127271210-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 WebFont.load({
   google: {
