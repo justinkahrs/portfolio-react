@@ -64,10 +64,6 @@ class Landing extends Component {
     return (
       <div style={this.styles().page} id="annavanderjagt">
         <div style={this.styles().hero}>
-          <h1 style={this.styles().heroTitle}>
-            Hello World
-            <hr align="left" style={this.styles().hr} />
-          </h1>
           <div style={this.styles().heroName}>I'm Anna</div>
           <p style={this.styles().blurb}>
             I'm a UX designer living in San Francisco.
