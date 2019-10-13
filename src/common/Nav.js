@@ -114,7 +114,7 @@ class Navigation extends Component {
         color: '#A85B4B',
         cursor: 'pointer',
         fontFamily: 'Old Standard TT, serif',
-        fontSize: big ? '47px' : '32px',
+        fontSize: '32px',
         fontWeight: 'bold',
         textAlign: 'center',
         textDecoration: 'none',

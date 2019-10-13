@@ -38,7 +38,7 @@ class Portfolio extends Component {
       <div style={this.styles().container}>
         <div style={this.styles().content}>
           <h1 id="work" style={this.styles().header}>
-            TAKE A LOOK AT MY RECENT PROJECTS
+            MY WORK
             <hr style={this.styles().hr} />
           </h1>
           <div style={this.styles().portfolioItems}>

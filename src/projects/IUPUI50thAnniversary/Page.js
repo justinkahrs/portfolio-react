@@ -76,7 +76,7 @@ class Page extends Component {
             </a>
             .
           </React.Fragment>
-          <ImageContainer pics={mobile} big={big} />
+          <ImageContainer pics={mobile} big={big} noShadow />
         </TextContainer>
         <Header title={'The Process'} />
         <TextContainer>

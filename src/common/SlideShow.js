@@ -16,7 +16,7 @@ export default class SlideShow extends React.Component {
     const { pics } = this.props
     return (
       <div style={this.styles().container}>
-        <Carousel interval={null}>
+        {pics && (<Carousel interval={null}>
           {pics.map((pic, i) => (
             <Carousel.Item key={i}>
               <img
@@ -29,7 +29,7 @@ export default class SlideShow extends React.Component {
               />
             </Carousel.Item>
           ))}
-        </Carousel>
+        </Carousel>)}
       </div>
     )
   }

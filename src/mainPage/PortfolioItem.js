@@ -20,9 +20,7 @@ class PortfolioItem extends Component {
       portfolioCard: {
         display: 'flex',
         flexDirection: big
-          ? this.props.id % 2
-            ? 'row-reverse'
-            : 'row'
+          ? 'row-reverse'
           : 'column-reverse',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -64,7 +62,6 @@ class PortfolioItem extends Component {
     return (
       <div style={this.styles().portfolioCard}>
         <div style={this.styles().portfolioCardText}>
-          <div style={this.styles().date}>{this.props.date}</div>
           <h2 style={this.styles().title}>{this.props.title}</h2>
           <h3 style={this.styles().subTitle}>{this.props.subTitle}</h3>
           <p>{this.props.blurb}</p>

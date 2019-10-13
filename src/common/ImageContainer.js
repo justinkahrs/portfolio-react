@@ -3,9 +3,11 @@ import { Image } from 'react-bootstrap'
 
 export default class ImageContainer extends React.Component {
   styles = () => {
-    const { big } = this.props
+    const { big, noShadow } = this.props
     return {
-      pic: {},
+      pic: {
+        ...noShadow ? {} : { boxShadow: '10px 10px 5px rgba(0, 0, 0, 0.2)' },
+      },
       picContainer: {
         display: 'flex',
         flexDirection: big ? 'row' : 'column',
