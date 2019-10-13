@@ -53,18 +53,13 @@ class About extends Component {
           </h1>
           <div style={this.styles().text}>
             <p>
-              I have a passion for creating engaging digital experiences through
-              user-centered design and information architecture. With degrees in
-              both art and information science, I am obsessed with visual
-              goodness and systemic details.
+              I am a multidisciplinary designer specializing in service design, user experience, and information architecture. I believe the value of my work is in understanding people, context, and systems to design solutions that create value for users and businesses. 
             </p>
             <blockquote style={this.styles().bq}>
-              I enjoy finding that sweet spot where form meets function.
+              Along with my motivation to deliver meaningful experiences that champion the user, simplifying the way people interact with technology through empathy, research, and iteration is what inspires me.
             </blockquote>
             <p>
-              Apart from UX, I've taken a deep dive into creative coding to
-              broaden my prior knowledge of HTML, CSS, and JS. When I'm not
-              staring at a screen, I enjoy pinball, food, and my cat.
+              I enjoy fast-paced environments, learning new topics, and collaborating with people that have different perspectives. When I'm not doing design work, you'll find me cooking, exploring the gems of San Francisco, or listening to music.
             </p>
           </div>
         </div>

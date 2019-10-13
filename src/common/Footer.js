@@ -13,4 +13,6 @@ const styles = () => ({
     letterSpacing: '1.5px',
   },
 })
-export default () => <div style={styles().footer}>© 2018 PROJECT CHICKENS STUDIO</div>
+const date = new Date()
+
+export default () => <div style={styles().footer}>© {date.getFullYear()} PROJECT CHICKENS STUDIO</div>
