@@ -66,7 +66,7 @@ class Landing extends Component {
         <div style={this.styles().hero}>
           <div style={this.styles().heroName}>Anna VanderJagt</div>
           <p style={this.styles().blurb}>
-            Design and content strategist and based in San Francisco.
+            Design and content strategist based in San Francisco.
           </p>
           <a style={this.styles().contactMeButton} href="#contact">
             CONTACT ME
