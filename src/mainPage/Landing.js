@@ -5,7 +5,7 @@ class Landing extends Component {
   styles = () => {
     const { big } = this.props
     return {
-      aboutMeButton: {
+      contactMeButton: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -64,12 +64,12 @@ class Landing extends Component {
     return (
       <div style={this.styles().page} id="annavanderjagt">
         <div style={this.styles().hero}>
-          <div style={this.styles().heroName}>I'm Anna</div>
+          <div style={this.styles().heroName}>Anna VanderJagt</div>
           <p style={this.styles().blurb}>
-            I'm a UX designer living in San Francisco.
+            Design and content strategist and based in San Francisco.
           </p>
-          <a style={this.styles().aboutMeButton} href="#about">
-            ABOUT ME
+          <a style={this.styles().contactMeButton} href="#contact">
+            CONTACT ME
           </a>
         </div>
       </div>
