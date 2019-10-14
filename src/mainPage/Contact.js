@@ -87,9 +87,9 @@ class Contact extends Component {
               <li style={this.styles().contactListItem}>
                 <a
                   style={{ color: 'white' }}
-                  href="https://codepen.io/avanderj"
+                  href="https://www.behance.net/avanderj"
                 >
-                  CODEPEN
+                  BEHANCE
                 </a>
               </li>
             </ul>
