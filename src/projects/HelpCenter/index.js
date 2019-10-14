@@ -15,7 +15,7 @@ export default {
   subTitle: 'IA / Content Strategy',
   hero,
   thumbnail,
-  blurb: `Empowering users with self-service by redesigning library knowledge base.`,
+  blurb: `Empowering users with self-service by redesigning UCSF Library's knowledge base.`,
   architectureHC,
   titlesHC,
   styleHC,
