@@ -21,7 +21,7 @@ class Landing extends Component {
       },
       blurb: {
         color: '#212C21',
-        fontSize: '23px',
+        fontSize: '18px',
         maxWidth: '470px',
         padding: big ? '' : '0 8rem 0 0',
         textAlign: 'left',
