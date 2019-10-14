@@ -46,7 +46,7 @@ class Landing extends Component {
       },
       heroName: {
         fontFamily: 'Old Standard TT, serif',
-        fontSize: big ? '100px' : '72px',
+        fontSize: big ? '80px' : '72px',
         fontWeight: '400',
         marginTop: '2rem',
       },
