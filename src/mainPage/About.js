@@ -18,7 +18,6 @@ class About extends Component {
         fontSize: '32px',
         marginLeft: 0,
         borderLeft: 'none',
-        letterSpacing: '2px',
       },
       content: {
         maxWidth: '960px',
