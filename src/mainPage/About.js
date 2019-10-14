@@ -15,7 +15,7 @@ class About extends Component {
       bq: {
         fontFamily: 'Libre Baskerville',
         fontWeight: '500',
-        fontSize: '32px',
+        fontSize: '27px',
         marginLeft: 0,
         borderLeft: 'none',
       },
