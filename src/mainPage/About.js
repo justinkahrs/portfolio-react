@@ -52,7 +52,7 @@ class About extends Component {
           </h1>
           <div style={this.styles().text}>
             <p>
-              I am a multidisciplinary designer specializing in service design, user experience, and information architecture. I believe the value of my work is in understanding people, context, and systems to design solutions that create value for users and businesses. 
+              I'm a multidisciplinary designer specializing in service design, user experience, and information architecture. I believe the value of my work is in understanding people, context, and systems to design solutions that create value for users and businesses. 
             </p>
             <blockquote style={this.styles().bq}>
               Along with my motivation to deliver meaningful experiences that champion the user, simplifying the way people interact with technology through empathy, research, and iteration is what inspires me.
