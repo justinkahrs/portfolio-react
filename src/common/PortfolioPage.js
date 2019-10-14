@@ -12,7 +12,7 @@ export default class PortfolioPage extends React.Component {
       container: {
         display: 'flex',
         flexDirection: 'column',
-        padding: big ? '0 25%' : '4rem',
+        padding: big ? '0 25%' : '5rem',
         textAlign: 'center',
         alignItems: big ? 'center' : '',
       },
@@ -51,8 +51,8 @@ export default class PortfolioPage extends React.Component {
                 &lt; PREV
               </Link>
             )}
-            {id > 1 && id < 4 && <span style={{ margin: '0 2rem' }}>/</span>}
-            {id < 4 && (
+            {id > 1 && id < 5 && <span style={{ margin: '0 2rem' }}>/</span>}
+            {id < 5 && (
               <Link
                 to={`/portfolio/${id + 1}`}
                 style={this.styles().projectNavLink}

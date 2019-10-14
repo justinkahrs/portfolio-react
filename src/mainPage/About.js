@@ -48,7 +48,7 @@ class About extends Component {
       <div id="about" style={this.styles().aboutPage}>
         <div style={this.styles().content}>
           <h1 style={this.styles().header}>
-            A little bit about myself
+            About me
             <hr style={this.styles().hr} />
           </h1>
           <div style={this.styles().text}>
