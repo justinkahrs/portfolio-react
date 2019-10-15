@@ -46,11 +46,10 @@ export default class Hero extends React.Component {
     }
   }
   render() {
-    const { date, title, subTitle, hero } = this.props
+    const { title, subTitle, hero } = this.props
     return (
       <div style={this.styles().aboveFold}>
         <div style={this.styles().heroSection}>
-          <div style={this.styles().date}>{date}</div>
           <div style={this.styles().title}>{title}</div>
           <div style={this.styles().subTitle}>{subTitle}</div>
           <Image

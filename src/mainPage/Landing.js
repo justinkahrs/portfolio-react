@@ -21,8 +21,9 @@ class Landing extends Component {
       },
       blurb: {
         color: '#212C21',
-        fontSize: '18px',
-        maxWidth: '470px',
+        fontSize: '20px',
+        maxWidth: '490px',
+        marginTop: big ? '-10px' : '',
         padding: big ? '' : '0 8rem 0 0',
         textAlign: 'left',
       },
@@ -49,6 +50,7 @@ class Landing extends Component {
         fontSize: big ? '80px' : '72px',
         fontWeight: '400',
         marginTop: '2rem',
+        wordSpacing: '-20px',
       },
       hr: {
         background: '#24170A',

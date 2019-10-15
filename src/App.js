@@ -44,6 +44,10 @@ class App extends Component {
         <div>
           <Route path="/" exact render={() => <MainPage big={big} />} />
           <Route
+            path="/portfolio/1"
+            render={() => <HelpCenter big={big} />}
+          />
+          <Route
             path="/portfolio/2"
             render={() => <IUPUI50th big={big} />}
           />
@@ -58,11 +62,7 @@ class App extends Component {
           <Route
             path="/portfolio/5"
             render={() => <LotusFetstival big={big} />}
-          />
-          <Route
-            path="/portfolio/1"
-            render={() => <HelpCenter big={big} />}
-          />
+          />          
         </div>
       </Router>
     )

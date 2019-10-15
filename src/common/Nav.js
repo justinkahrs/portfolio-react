@@ -70,7 +70,6 @@ class Navigation extends Component {
   }
 
   styles = active => {
-    const { big } = this.props
     const { open } = this.state
     return {
       bootstrapNav: {
@@ -183,6 +182,7 @@ class Navigation extends Component {
       >
         <Navbar.Header>
           <Navbar.Brand>
+            {/* eslint-disable-next-line*/}
             <a style={this.styles().navBrand}>Anna VanderJagt</a>
           </Navbar.Brand>
           <Navbar.Toggle style={this.styles().menuIcon} />

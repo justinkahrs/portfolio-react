@@ -25,15 +25,18 @@ class Page extends Component {
     if (window.scrollY > 0) this.setState({ scrolled: true })
   }
 
-  styles = () => ({
-    caption: {
-      fontStyle: 'italic',
-      fontSize: '16px',
-      textAlign: 'center',
-      paddingLeft: '10rem',
-      paddingRight: '10rem',
+  styles = () => {
+    const { big } = this.props
+    return {
+      caption: {
+        fontStyle: 'italic',
+        fontSize: '16px',
+        textAlign: 'center',
+        paddingLeft: big ? '10rem' : '',
+        paddingRight: big ? '10rem' : '',
+      }
     }
-  })
+  }
 
   render() {
     const {

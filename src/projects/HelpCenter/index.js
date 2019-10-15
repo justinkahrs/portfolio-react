@@ -1,4 +1,4 @@
-import thumbnail from './images/thumbnailHC.png'
+import thumbnail from './images/ucsfthumb.png'
 import hero from './images/heroHC.png'
 import architectureHC from './images/architectureHC.png'
 import titlesHC from './images/titlesHC.png'
