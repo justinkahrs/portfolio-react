@@ -14,7 +14,7 @@ import pic7 from './images/slide7-partnerships-optimized.jpg'
 import pic8 from './images/slide8-support-optimized.jpg'
 
 export default {
-  id: 2,
+  id: 3,
   date: '2017-2018',
   title: 'IU Corps',
   hero,

@@ -17,7 +17,7 @@ import ixd2 from './images/50anniversary-ixd2.png'
 import mobile from './images/50anniversary-mobile.png'
 
 export default {
-  id: 1,
+  id: 2,
   thumbnail,
   blurb: `Indiana University Purdue University (IUPUI) is celebrating their 50th anniversary 2018-2019 and requested a custom website.`,
   date: '2017-2018',

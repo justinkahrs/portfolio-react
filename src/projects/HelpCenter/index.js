@@ -10,7 +10,7 @@ import before from './images/beforeHC.png'
 import after from './images/afterHC.png'
 
 export default {
-  id: 5,
+  id: 1,
   title: 'Library Knowledge Base',
   subTitle: 'IA / Content Strategy',
   hero,
