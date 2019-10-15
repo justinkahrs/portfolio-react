@@ -58,7 +58,7 @@ class About extends Component {
               Along with my motivation to deliver meaningful experiences that champion the user, simplifying the way people interact with technology through empathy, research, and iteration is what inspires me.
             </blockquote>
             <p>
-              I enjoy fast-paced environments, learning new topics, and collaborating with people that have different perspectives. When I'm not doing design work, you'll find me cooking, exploring the gems of San Francisco, or listening to music.
+              I enjoy fast-paced environments, learning new topics, and collaborating with people that have different perspectives. When I'm not doing design work, you'll find me cooking, working on a DIY project, or exploring San Francisco.
             </p>
           </div>
         </div>
