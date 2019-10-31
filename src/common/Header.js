@@ -1,30 +1,30 @@
-import React from 'react'
+import React from "react";
 
 export default class Header extends React.Component {
   styles = () => {
     return {
       header: {
-        paddingTop: '2rem',
-        fontSize: '18px',
-        textAlign: 'center',
+        paddingTop: "2rem",
+        fontSize: "18px",
+        textAlign: "center"
       },
       hr: {
-        background: '#24170A',
+        background: "#24170A",
         border: 0,
-        height: '2px',
-        maxWidth: '100px',
-        marginTop: '2rem',
-        marginBottom: '6rem',
-      },
-    }
-  }
+        height: "2px",
+        maxWidth: "100px",
+        marginTop: "2rem",
+        marginBottom: "6rem"
+      }
+    };
+  };
   render() {
-    const { title } = this.props
+    const { title } = this.props;
     return (
       <h1 style={this.styles().header}>
         {title.toUpperCase()}
         <hr style={this.styles().hr} />
       </h1>
-    )
+    );
   }
 }

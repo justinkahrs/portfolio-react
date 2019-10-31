@@ -1,20 +1,20 @@
-import React from 'react'
-import About from './About.js'
-import Contact from './Contact.js'
-import Footer from '../common/Footer'
-import Landing from './Landing.js'
-import Navigation from '../common/Nav'
-import Portfolio from './Portfolio.js'
+import React from "react";
+import About from "./About.js";
+import Contact from "./Contact.js";
+import Footer from "../common/Footer";
+import Landing from "./Landing.js";
+import Navigation from "../common/Nav";
+import Portfolio from "./Portfolio.js";
 
 const styles = {
   app: {
-    display: 'grid',
-  },
-}
+    display: "grid"
+  }
+};
 
 class MainPage extends React.Component {
   render() {
-    const { big } = this.props
+    const { big } = this.props;
     return (
       <div>
         <Navigation big={big} {...this.props} />
@@ -26,8 +26,8 @@ class MainPage extends React.Component {
           <Footer />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default MainPage
+export default MainPage;

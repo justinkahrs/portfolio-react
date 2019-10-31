@@ -1,29 +1,29 @@
-import React, { Component } from 'react'
-import throttle from 'lodash.throttle'
+import React, { Component } from "react";
+import throttle from "lodash.throttle";
 
-import metaData from './index'
-import Header from '../../common/Header'
-import Hero from '../../common/Hero'
-import ImageContainer from '../../common/ImageContainer'
-import PortfolioPage from '../../common/PortfolioPage'
-import SlideShow from '../../common/SlideShow'
-import TextContainer from '../../common/TextContainer'
+import metaData from "./index";
+import Header from "../../common/Header";
+import Hero from "../../common/Hero";
+import ImageContainer from "../../common/ImageContainer";
+import PortfolioPage from "../../common/PortfolioPage";
+import SlideShow from "../../common/SlideShow";
+import TextContainer from "../../common/TextContainer";
 
 class Page extends Component {
-  state = { scrolled: false }
+  state = { scrolled: false };
 
   componentDidMount() {
-    window.scrollTo(0, 0)
-    window.addEventListener('scroll', throttle(this.handleScroll, 100), false)
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", throttle(this.handleScroll, 100), false);
   }
   componentWillReceiveProps() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   handleScroll = () => {
-    if (window.scrollY === 0) this.setState({ scrolled: false })
-    if (window.scrollY > 0) this.setState({ scrolled: true })
-  }
+    if (window.scrollY === 0) this.setState({ scrolled: false });
+    if (window.scrollY > 0) this.setState({ scrolled: true });
+  };
 
   render() {
     const {
@@ -34,10 +34,10 @@ class Page extends Component {
       siteMap,
       subTitle,
       title,
-      whiteBoardPics,
-    } = metaData
-    const { big } = this.props
-    const { scrolled } = this.state
+      whiteBoardPics
+    } = metaData;
+    const { big } = this.props;
+    const { scrolled } = this.state;
 
     return (
       <PortfolioPage big={big} id={id}>
@@ -49,7 +49,9 @@ class Page extends Component {
           hero={hero}
           scrolled={scrolled}
         />
-        <Header title={'Some Context'} />
+        <br />
+        <br />
+        <Header title={"Some Context"} />
         <TextContainer>
           <React.Fragment>
             IU Corps is a newly formed organization on the Indiana University
@@ -66,7 +68,7 @@ class Page extends Component {
             and communicate engagement outcomes.
           </React.Fragment>
         </TextContainer>
-        <Header title={'The Process'} />
+        <Header title={"The Process"} />
         <TextContainer>
           <React.Fragment>
             To get to know the new organization, a stakeholder workshop was
@@ -118,7 +120,7 @@ class Page extends Component {
           </React.Fragment>
         </TextContainer>
         <SlideShow pics={slideshow} />
-        <Header title={'Observations and Insights'} />
+        <Header title={"Observations and Insights"} />
         <TextContainer>
           <React.Fragment>
             Since the client's organization was still forming in the midst of
@@ -131,8 +133,8 @@ class Page extends Component {
           </React.Fragment>
         </TextContainer>
       </PortfolioPage>
-    )
+    );
   }
 }
 
-export default Page
+export default Page;

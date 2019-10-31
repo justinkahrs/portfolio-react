@@ -1,28 +1,28 @@
-import React, { Component } from 'react'
-import throttle from 'lodash.throttle'
+import React, { Component } from "react";
+import throttle from "lodash.throttle";
 
-import metaData from './index'
-import Header from '../../common/Header'
-import Hero from '../../common/Hero'
-import ImageContainer from '../../common/ImageContainer'
-import PortfolioPage from '../../common/PortfolioPage'
-import TextContainer from '../../common/TextContainer'
+import metaData from "./index";
+import Header from "../../common/Header";
+import Hero from "../../common/Hero";
+import ImageContainer from "../../common/ImageContainer";
+import PortfolioPage from "../../common/PortfolioPage";
+import TextContainer from "../../common/TextContainer";
 
 class Page extends Component {
-  state = { scrolled: false }
+  state = { scrolled: false };
 
   componentDidMount() {
-    window.scrollTo(0, 0)
-    window.addEventListener('scroll', throttle(this.handleScroll, 100), false)
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", throttle(this.handleScroll, 100), false);
   }
   componentWillReceiveProps() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   handleScroll = () => {
-    if (window.scrollY === 0) this.setState({ scrolled: false })
-    if (window.scrollY > 0) this.setState({ scrolled: true })
-  }
+    if (window.scrollY === 0) this.setState({ scrolled: false });
+    if (window.scrollY > 0) this.setState({ scrolled: true });
+  };
 
   render() {
     const {
@@ -33,10 +33,10 @@ class Page extends Component {
       taskPic,
       taskPic2,
       title,
-      sitemap,
-    } = metaData
-    const { big } = this.props
-    const { scrolled } = this.state
+      sitemap
+    } = metaData;
+    const { big } = this.props;
+    const { scrolled } = this.state;
 
     return (
       <PortfolioPage big={big} id={id}>
@@ -48,7 +48,9 @@ class Page extends Component {
           hero={hero}
           scrolled={scrolled}
         />
-        <Header title={'Some Context'} />
+        <br />
+        <br />
+        <Header title={"Some Context"} />
         <TextContainer>
           <React.Fragment>
             Indiana University's 529 Savings Plans serves as an informational
@@ -59,7 +61,7 @@ class Page extends Component {
             architecture was constructed based on the results.
           </React.Fragment>
         </TextContainer>
-        <Header title={'The Process'} />
+        <Header title={"The Process"} />
         <TextContainer>
           <React.Fragment>
             Nineteen questions were compiled that represented typical tasks a
@@ -93,7 +95,7 @@ class Page extends Component {
           </React.Fragment>
         </TextContainer>
         <ImageContainer big={big} pics={sitemap} />
-        <Header title={'Observations and Insights'} />
+        <Header title={"Observations and Insights"} />
         <TextContainer>
           <React.Fragment>
             I consider this testing method informal but fitting for time and
@@ -107,19 +109,20 @@ class Page extends Component {
             quick study. This lack of knowledge ultimately helped create the new
             architecture as I thought about how I would break down a subject
             into simplified sections starting with the most basic question,
-            "What is a 529?" View the new architecture on{' '}
+            "What is a 529?" View the new architecture on{" "}
             <a
               href="http://529.iu.edu"
               target="_blank"
               rel="noopener noreferrer"
             >
               529.iu.edu
-            </a>.
+            </a>
+            .
           </React.Fragment>
         </TextContainer>
       </PortfolioPage>
-    )
+    );
   }
 }
 
-export default Page
+export default Page;

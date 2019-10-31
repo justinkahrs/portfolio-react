@@ -1,59 +1,59 @@
-import React, { Component } from 'react'
-import { Image } from 'react-bootstrap'
-import throttle from 'lodash.throttle'
+import React, { Component } from "react";
+import { Image } from "react-bootstrap";
+import throttle from "lodash.throttle";
 
-import metaData from './index'
-import Header from '../../common/Header'
-import Hero from '../../common/Hero'
-import ImageContainer from '../../common/ImageContainer'
-import PortfolioPage from '../../common/PortfolioPage'
-import SlideShow from '../../common/SlideShow'
-import TextContainer from '../../common/TextContainer'
+import metaData from "./index";
+import Header from "../../common/Header";
+import Hero from "../../common/Hero";
+import ImageContainer from "../../common/ImageContainer";
+import PortfolioPage from "../../common/PortfolioPage";
+import SlideShow from "../../common/SlideShow";
+import TextContainer from "../../common/TextContainer";
 
 class Page extends Component {
-  state = { scrolled: false }
+  state = { scrolled: false };
 
   componentDidMount() {
-    window.scrollTo(0, 0)
-    window.addEventListener('scroll', throttle(this.handleScroll, 100), false)
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", throttle(this.handleScroll, 100), false);
   }
   componentWillReceiveProps() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   handleScroll = () => {
-    if (window.scrollY === 0) this.setState({ scrolled: false })
-    if (window.scrollY > 0) this.setState({ scrolled: true })
-  }
+    if (window.scrollY === 0) this.setState({ scrolled: false });
+    if (window.scrollY > 0) this.setState({ scrolled: true });
+  };
 
   styles = () => {
-    const { big } = this.props
+    const { big } = this.props;
     return {
       button: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '62px',
-        width: big ? '250px' : '',
-        backgroundColor: '#BB6655',
-        color: 'white',
-        marginTop: '3rem',
-        fontFamily: 'Lato',
-        fontSize: '14px',
-        fontWeight: 'bold',
-        letterSpacing: '1.5px',
-        textDecoration: 'none',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "62px",
+        width: big ? "250px" : "",
+        backgroundColor: "#BB6655",
+        color: "white",
+        marginTop: "3rem",
+        fontFamily: "Lato",
+        fontSize: "14px",
+        fontWeight: "bold",
+        letterSpacing: "1.5px",
+        textDecoration: "none"
       },
       buttonContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
       },
       subHeading: {
-        display: 'block',
-      },
-    }
-  }
+        display: "block"
+      }
+    };
+  };
 
   render() {
     const {
@@ -66,10 +66,10 @@ class Page extends Component {
       personaSlideShow,
       siteMapSlideShow,
       subTitle,
-      title,
-    } = metaData
-    const { big } = this.props
-    const { scrolled } = this.state
+      title
+    } = metaData;
+    const { big } = this.props;
+    const { scrolled } = this.state;
 
     return (
       <PortfolioPage big={big} id={id}>
@@ -81,7 +81,9 @@ class Page extends Component {
           hero={hero}
           scrolled={scrolled}
         />
-        <Header title={'Some Context'} />
+        <br />
+        <br />
+        <Header title={"Some Context"} />
         <TextContainer>
           <React.Fragment>
             Lotus Education & Arts Foundation is a non-profit 501(c)3
@@ -102,7 +104,7 @@ class Page extends Component {
             from a detailed analysis of its information architecture and a new
             structure and design. In its current state, the site suffers from
             significant architectural issues that interfere with the overall
-            understanding of the organization and its goals.{' '}
+            understanding of the organization and its goals.{" "}
             {big &&
               `See below for a
             high-fidelity wireframe.`}
@@ -130,7 +132,7 @@ class Page extends Component {
             </React.Fragment>
           )}
         </TextContainer>
-        <Header title={'The Process'} />
+        <Header title={"The Process"} />
         <TextContainer>
           <React.Fragment>
             To better understand the existing site and prioritize tasks, I put
@@ -210,8 +212,8 @@ class Page extends Component {
           {big && <Image width="100%" responsive src={gif} />}
         </TextContainer>
       </PortfolioPage>
-    )
+    );
   }
 }
 
-export default Page
+export default Page;

@@ -1,29 +1,29 @@
-import React, { Component } from 'react'
-import throttle from 'lodash.throttle'
+import React, { Component } from "react";
+import throttle from "lodash.throttle";
 
-import metaData from './index'
-import Header from '../../common/Header'
-import Hero from '../../common/Hero'
-import ImageContainer from '../../common/ImageContainer'
-import PortfolioPage from '../../common/PortfolioPage'
-import SlideShow from '../../common/SlideShow'
-import TextContainer from '../../common/TextContainer'
+import metaData from "./index";
+import Header from "../../common/Header";
+import Hero from "../../common/Hero";
+import ImageContainer from "../../common/ImageContainer";
+import PortfolioPage from "../../common/PortfolioPage";
+import SlideShow from "../../common/SlideShow";
+import TextContainer from "../../common/TextContainer";
 
 class Page extends Component {
-  state = { scrolled: false }
+  state = { scrolled: false };
 
   componentDidMount() {
-    window.scrollTo(0, 0)
-    window.addEventListener('scroll', throttle(this.handleScroll, 100), false)
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", throttle(this.handleScroll, 100), false);
   }
   componentWillReceiveProps() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
 
   handleScroll = () => {
-    if (window.scrollY === 0) this.setState({ scrolled: false })
-    if (window.scrollY > 0) this.setState({ scrolled: true })
-  }
+    if (window.scrollY === 0) this.setState({ scrolled: false });
+    if (window.scrollY > 0) this.setState({ scrolled: true });
+  };
 
   render() {
     const {
@@ -37,10 +37,10 @@ class Page extends Component {
       slideshowPics,
       subTitle,
       title,
-      whiteBoardPics,
-    } = metaData
-    const { big } = this.props
-    const { scrolled } = this.state
+      whiteBoardPics
+    } = metaData;
+    const { big } = this.props;
+    const { scrolled } = this.state;
 
     return (
       <PortfolioPage big={big} id={id}>
@@ -52,7 +52,9 @@ class Page extends Component {
           hero={hero}
           scrolled={scrolled}
         />
-        <Header title={'Some Context'} />
+        <br />
+        <br />
+        <Header title={"Some Context"} />
         <TextContainer>
           <React.Fragment>
             Indiana University Purdue University (IUPUI) is celebrating their
@@ -66,7 +68,7 @@ class Page extends Component {
           <React.Fragment>
             As I was not able to see this project to completion, due to a move
             across the country, I have shared my contributions as a proof of
-            concept. You can find the live site{' '}
+            concept. You can find the live site{" "}
             <a
               href="https://50.iupui.edu/"
               target="_blank"
@@ -78,7 +80,7 @@ class Page extends Component {
           </React.Fragment>
           <ImageContainer pics={mobile} big={big} noShadow />
         </TextContainer>
-        <Header title={'The Process'} />
+        <Header title={"The Process"} />
         <TextContainer>
           <React.Fragment>
             The IU Communications development process is designed to be flexible
@@ -143,7 +145,7 @@ class Page extends Component {
             interaction design for custom functionalities. Websites at IU are
             built using atomic design principles where a page is made up of
             “sections” and each section can have multiple “chunks” (check out
-            the{' '}
+            the{" "}
             <a
               href="https://styleguide.iu.edu/"
               target="_blank"
@@ -162,7 +164,7 @@ class Page extends Component {
         </TextContainer>
         <ImageContainer pics={whiteBoardPics} big={big} />
         {big && <ImageContainer pics={gif} big={big} />}
-        <Header title={'Observations and Insights'} />
+        <Header title={"Observations and Insights"} />
         <TextContainer>
           <React.Fragment>
             All websites created by IU Communications must meet AA WCAG
@@ -182,8 +184,8 @@ class Page extends Component {
           </React.Fragment>
         </TextContainer>
       </PortfolioPage>
-    )
+    );
   }
 }
 
-export default Page
+export default Page;

@@ -1,72 +1,62 @@
-import React, { Component } from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import MainPage from './mainPage'
-import IUPUI50th from './projects/IUPUI50thAnniversary/Page'
-import IUCorps from './projects/IUCorps/Page'
-import College529 from './projects/College529/Page'
-import LotusFetstival from './projects/LotusFetstival/Page'
-import HelpCenter from './projects/HelpCenter/Page'
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import MainPage from "./mainPage";
+import IUPUI50th from "./projects/IUPUI50thAnniversary/Page";
+import IUCorps from "./projects/IUCorps/Page";
+import College529 from "./projects/College529/Page";
+import LotusFetstival from "./projects/LotusFetstival/Page";
+import HelpCenter from "./projects/HelpCenter/Page";
+import AskAnExpert from "./projects/AskAnExpert/Page";
 
-const mql = window.matchMedia(`(min-width:960px)`)
+const mql = window.matchMedia(`(min-width:960px)`);
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       mql: mql,
-      big: false,
-    }
+      big: false
+    };
   }
 
   componentWillMount() {
-    mql.addListener(this.mediaQueryChanged)
+    mql.addListener(this.mediaQueryChanged);
     this.setState({
       mql: mql,
-      big: mql.matches,
-    })
+      big: mql.matches
+    });
   }
 
   componentWillUnmount() {
-    this.state.mql.removeListener(this.mediaQueryChanged)
+    this.state.mql.removeListener(this.mediaQueryChanged);
   }
 
   mediaQueryChanged = () => {
     this.setState({
       mql: mql,
-      big: this.state.mql.matches,
-    })
-  }
+      big: this.state.mql.matches
+    });
+  };
 
   render() {
-    const { big } = this.state
+    const { big } = this.state;
     return (
       <Router>
         <div>
           <Route path="/" exact render={() => <MainPage big={big} />} />
-          <Route
-            path="/portfolio/1"
-            render={() => <HelpCenter big={big} />}
-          />
-          <Route
-            path="/portfolio/2"
-            render={() => <IUPUI50th big={big} />}
-          />
-          <Route
-            path="/portfolio/3"
-            render={() => <IUCorps big={big} />}
-          />
-          <Route
-            path="/portfolio/4"
-            render={() => <College529 big={big} />}
-          />
+          <Route path="/portfolio/1" render={() => <AskAnExpert big={big} />} />
+          <Route path="/portfolio/2" render={() => <HelpCenter big={big} />} />
+          <Route path="/portfolio/3" render={() => <IUPUI50th big={big} />} />
+          <Route path="/portfolio/4" render={() => <IUCorps big={big} />} />
+          <Route path="/portfolio/5" render={() => <College529 big={big} />} />
           <Route
             path="/portfolio/5"
             render={() => <LotusFetstival big={big} />}
-          />          
+          />
         </div>
       </Router>
-    )
+    );
   }
 }
 
-export default App
+export default App;

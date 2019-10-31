@@ -1,38 +1,38 @@
-import React, { Component } from 'react'
-import PortfolioItem from './PortfolioItem'
-import projects from '../projects'
+import React, { Component } from "react";
+import PortfolioItem from "./PortfolioItem";
+import projects from "../projects";
 
 class Portfolio extends Component {
   styles = () => {
-    const { big } = this.props
+    const { big } = this.props;
     return {
       container: {
-        backgroundColor: '#F4F4F4',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: big ? '0 5rem 25%' : '4rem 3rem',
+        backgroundColor: "#F4F4F4",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: big ? "0 5rem 25%" : "4rem 3rem"
       },
       content: {
-        maxWidth: '960px',
+        maxWidth: "960px"
       },
       header: {
-        fontSize: '18px',
-        textAlign: 'center',
+        fontSize: "18px",
+        textAlign: "center"
       },
       portfolioItems: {},
       text: {},
       hr: {
-        background: '#24170A',
+        background: "#24170A",
         border: 0,
-        height: '2px',
-        maxWidth: '100px',
-        marginTop: '2rem',
-        marginBottom: '6rem',
-      },
-    }
-  }
+        height: "2px",
+        maxWidth: "100px",
+        marginTop: "2rem",
+        marginBottom: "6rem"
+      }
+    };
+  };
   render() {
     return (
       <div style={this.styles().container}>
@@ -48,8 +48,8 @@ class Portfolio extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Portfolio
+export default Portfolio;

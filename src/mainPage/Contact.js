@@ -1,47 +1,47 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Contact extends Component {
   styles = () => {
-    const { big } = this.props
+    const { big } = this.props;
     return {
       contactList: {
-        listStyleType: 'none',
-        paddingLeft: '0',
+        listStyleType: "none",
+        paddingLeft: "0"
       },
       contactListItem: {
-        fontFamily: 'Lato, sans',
-        fontSize: '15.5px',
-        fontWeight: '700',
-        letterSpacing: '1.5px',
-        lineSpacing: '2px',
-        display: big ? 'inline' : '',
-        marginRight: big ? '2rem' : '',
-        textAlign: big ? '' : 'center',
-        paddingBottom: big ? '' : '1.5rem',
+        fontFamily: "Lato, sans",
+        fontSize: "15.5px",
+        fontWeight: "700",
+        letterSpacing: "1.5px",
+        lineSpacing: "2px",
+        display: big ? "inline" : "",
+        marginRight: big ? "2rem" : "",
+        textAlign: big ? "" : "center",
+        paddingBottom: big ? "" : "1.5rem"
       },
       contactPage: {
-        color: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: '#37474F',
-        minHeight: '72vh',
+        color: "white",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        backgroundColor: "#37474F",
+        minHeight: "72vh"
       },
       header: {
-        color: 'white',
-        fontSize: '18px',
-        textAlign: 'center',
+        color: "white",
+        fontSize: "18px",
+        textAlign: "center"
       },
       hr: {
-        background: 'white',
+        background: "white",
         border: 0,
-        height: '2px',
-        maxWidth: '100px',
-        marginTop: '2rem',
-        marginBottom: '6rem',
-      },
-    }
-  }
+        height: "2px",
+        maxWidth: "100px",
+        marginTop: "2rem",
+        marginBottom: "6rem"
+      }
+    };
+  };
   render() {
     return (
       <div id="contact" style={this.styles().contactPage}>
@@ -54,7 +54,7 @@ class Contact extends Component {
             <ul style={this.styles().contactList}>
               <li style={this.styles().contactListItem}>
                 <a
-                  style={{ color: 'white' }}
+                  style={{ color: "white" }}
                   href="mailto:hello@annavanderjagt.com"
                 >
                   EMAIL
@@ -62,7 +62,7 @@ class Contact extends Component {
               </li>
               <li style={this.styles().contactListItem}>
                 <a
-                  style={{ color: 'white' }}
+                  style={{ color: "white" }}
                   href="https://www.linkedin.com/in/annavanderjagt"
                 >
                   LINKEDIN
@@ -70,7 +70,7 @@ class Contact extends Component {
               </li>
               <li style={this.styles().contactListItem}>
                 <a
-                  style={{ color: 'white' }}
+                  style={{ color: "white" }}
                   href="https://twitter.com/avanderj"
                 >
                   TWITTER
@@ -78,7 +78,7 @@ class Contact extends Component {
               </li>
               <li style={this.styles().contactListItem}>
                 <a
-                  style={{ color: 'white' }}
+                  style={{ color: "white" }}
                   href="https://github.com/avanderj"
                 >
                   GITHUB
@@ -86,7 +86,7 @@ class Contact extends Component {
               </li>
               <li style={this.styles().contactListItem}>
                 <a
-                  style={{ color: 'white' }}
+                  style={{ color: "white" }}
                   href="https://www.behance.net/avanderj"
                 >
                   BEHANCE
@@ -96,8 +96,8 @@ class Contact extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Contact
+export default Contact;
