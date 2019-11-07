@@ -9,7 +9,7 @@ export default [
   AskAnExpert,
   HelpCenter,
   IUPUI50th,
-  IUCorps,
   College529,
+  IUCorps,
   LotusFestival
 ];

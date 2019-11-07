@@ -22,7 +22,7 @@ export default {
   blurb: `Indiana University Purdue University (IUPUI) is celebrating their 50th anniversary 2018-2019 and requested a custom website.`,
   date: "2017-2018",
   title: "IUPUI 50th Anniversary",
-  subTitle: "IA / IXD",
+  subTitle: "IA / UX",
   gif,
   hero,
   mobile,

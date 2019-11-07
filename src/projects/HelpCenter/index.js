@@ -1,7 +1,6 @@
 import thumbnail from "./images/ucsfthumb.png";
 import hero from "./images/heroHC.png";
 import architectureHC from "./images/architectureHC.png";
-import titlesHC from "./images/titlesHC.png";
 import styleHC from "./images/styleHC.png";
 import gif from "./images/helpCenter-ticketattch.gif";
 import webWidget from "./images/webWidgetHC.png";
@@ -17,7 +16,6 @@ export default {
   thumbnail,
   blurb: `Empowering users with self-service by redesigning UCSF Library's knowledge base.`,
   architectureHC,
-  titlesHC,
   styleHC,
   gif,
   webWidget,

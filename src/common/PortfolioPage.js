@@ -53,8 +53,8 @@ export default class PortfolioPage extends React.Component {
                 &lt; PREV
               </Link>
             )}
-            {id > 1 && id < 5 && <span style={{ margin: "0 2rem" }}>/</span>}
-            {id < 5 && (
+            {id > 1 && id < 6 && <span style={{ margin: "0 2rem" }}>/</span>}
+            {id < 6 && (
               <Link
                 to={`/portfolio/${id + 1}`}
                 style={this.styles().projectNavLink}

@@ -47,10 +47,10 @@ class App extends Component {
           <Route path="/portfolio/1" render={() => <AskAnExpert big={big} />} />
           <Route path="/portfolio/2" render={() => <HelpCenter big={big} />} />
           <Route path="/portfolio/3" render={() => <IUPUI50th big={big} />} />
-          <Route path="/portfolio/4" render={() => <IUCorps big={big} />} />
-          <Route path="/portfolio/5" render={() => <College529 big={big} />} />
+          <Route path="/portfolio/4" render={() => <College529 big={big} />} />
+          <Route path="/portfolio/5" render={() => <IUCorps big={big} />} />
           <Route
-            path="/portfolio/5"
+            path="/portfolio/6"
             render={() => <LotusFetstival big={big} />}
           />
         </div>

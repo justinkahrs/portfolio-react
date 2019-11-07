@@ -41,7 +41,6 @@ class Page extends Component {
   render() {
     const {
       architectureHC,
-      titlesHC,
       styleHC,
       gif,
       webWidget,
@@ -84,52 +83,68 @@ class Page extends Component {
             brand. A knowledge base is only as helpful as its content and when
             users find that content is outdated or incorrect, that’s a
             reflection of the brand and its credibility to provide good service.
+          </React.Fragment>
+        </TextContainer>
+        <TextContainer>
+          <React.Fragment>
             At UCSF, the library’s knowledge base was largely outdated, did not
             have an assigned owner, and was very underutilized.
           </React.Fragment>
         </TextContainer>
-        <Header title={"Goals and outcomes"} />
+        <Header title={"The process"} />
         <TextContainer>
           <React.Fragment>
-            <strong>Identify knowledge gaps</strong> – Audited existing content,
-            reached out to stakeholders for fresh content, and research support
-            ticket history to identify information gaps within the existing
-            knowledge base.
+            <strong>Problem</strong>
+            <ul>
+              <li>
+                The content was massively outdated and lumped into catch-all
+                categories
+              </li>
+              <li>Help Center wasn’t integrated into the main website</li>
+              <li>Lacked buy-in from knowledge holders</li>
+              <li>Inconsistent editorial and visual styles</li>
+            </ul>
           </React.Fragment>
           <React.Fragment>
-            <strong>Information architecture</strong> – Mapped out the existing
-            architecture and benchmarked library knowledge base architecture.
+            <strong>Brainstorm</strong>
+            <ul>
+              <li>Identified knowledge gaps by auditing existing content</li>
+              <li>
+                Combed through support tickets to identify common inquiries
+              </li>
+              <li>
+                Asked stakeholders what questions they’re constantly answering
+              </li>
+              <li>Benchmarked similar institution’s knowledge bases</li>
+            </ul>
           </React.Fragment>
           <ImageContainer big={big} pics={architectureHC} />
         </TextContainer>
         <TextContainer>
           <React.Fragment>
-            <strong>Reduce cognitive load on the user</strong> – Incorporated a
-            clear architecture that’s jargon-free with a narrow, deep
-            architecture approach.
-          </React.Fragment>
-          <React.Fragment>
-            <strong>Consistent look and feel</strong> – Selected new Zendesk
-            theme and created style guide for writing for the web and formatting
-            content.
-          </React.Fragment>
-          <ImageContainer big={big} pics={titlesHC} />
-          <React.Fragment>
-            <div style={this.styles().caption}>
-              Consistent article titles. Question? Answer.
-            </div>
+            <strong>Solutions</strong>
+            <ul>
+              <li>
+                Incorporated a new architecture that removed catch-all
+                categories and library jargon
+              </li>
+              <li>
+                Selected a new theme and created a visual and editorial style
+                guide
+              </li>
+              <li>
+                Integrated Zendesk support tools like Knowledge Capture to
+                streamline support workflows
+              </li>
+              <li>Applied the Help Center Web Widget globally</li>
+              <li>Enabled Contextual Help</li>
+            </ul>
           </React.Fragment>
           <ImageContainer big={big} pics={styleHC} />
           <React.Fragment>
             <div style={this.styles().caption}>
               Style guide incorporated in the Help Center for easy reference.
             </div>
-          </React.Fragment>
-          <React.Fragment>
-            <strong>Integrate with existing tools/platforms</strong> – Provided
-            multiple portals to the Help Center throughout main website and
-            incorporated existing support tool so stakeholders answering support
-            tickets can easily access documentation.
           </React.Fragment>
           <ImageContainer big={big} pics={gif} />
           <React.Fragment>
@@ -161,7 +176,7 @@ class Page extends Component {
         </TextContainer>
         <Header title={"Before / After"} />
         <SlideShow pics={slideshow} />
-        <Header title={"Learn more and see my work"} />
+        <Header title={"see my work"} />
         <React.Fragment>
           <div>
             <a href="https://www.library.ucsf.edu/news/introducing-the-new-online-library-help-center/">
