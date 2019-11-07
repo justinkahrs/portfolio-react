@@ -71,7 +71,8 @@ class Page extends Component {
           <React.Fragment>
             <strong>Phase 1 – Kick-off</strong>
             <ul>
-              <li>Determined proposal and customization scope.</li>
+              <li>Determined proposal and customization scope</li>
+              <li>Discussed high-level goals and needs with client</li>
             </ul>
           </React.Fragment>
         </TextContainer>
@@ -89,7 +90,7 @@ class Page extends Component {
                 </li>
                 <li>
                   Asked stakeholders what are the most important tasks,
-                  messages, and imagery they’d like to see
+                  messages, and imagery
                 </li>
               </ul>
             </ul>
@@ -136,7 +137,8 @@ class Page extends Component {
                 custom features requested by the client
               </li>
               <ul>
-                <li>a custom event feed </li>
+                <li>an image slider</li>                
+                <li>a custom event feed</li>
                 <li>an interactive timeline</li>
                 <li>a story submission page</li>
               </ul>

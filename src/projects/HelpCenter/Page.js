@@ -115,7 +115,7 @@ class Page extends Component {
               <li>
                 Asked stakeholders what questions they’re constantly answering
               </li>
-              <li>Benchmarked similar institution’s knowledge bases</li>
+              <li>Benchmarked similar institutions' knowledge bases</li>
             </ul>
           </React.Fragment>
           <ImageContainer big={big} pics={architectureHC} />
@@ -133,7 +133,7 @@ class Page extends Component {
                 guide
               </li>
               <li>
-                Integrated Zendesk support tools like Knowledge Capture to
+                Integrated Zendesk Knowledge Capture to
                 streamline support workflows
               </li>
               <li>Applied the Help Center Web Widget globally</li>

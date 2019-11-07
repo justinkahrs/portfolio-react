@@ -103,7 +103,7 @@ class Page extends Component {
             particular service webpage. From there, I synthesized the
             information to develop low-fi wireframes to share with stakeholders.
           </React.Fragment>
-          <strong>Iterate. Improve. Iterate. Repeat.</strong>
+          <strong>Iterate. Improve. Iterate some more.</strong>
         </TextContainer>
         <Header title={"Goals and outcomes"} />
         <TextContainer>

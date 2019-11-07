@@ -11,7 +11,7 @@ import after from "./images/afterHC.png";
 export default {
   id: 2,
   title: "Library Knowledge Base",
-  subTitle: "IA / Content Strategy",
+  subTitle: "IA / Content Strategy / UX",
   hero,
   thumbnail,
   blurb: `Empowering users with self-service by redesigning UCSF Library's knowledge base.`,

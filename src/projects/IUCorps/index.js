@@ -19,7 +19,7 @@ export default {
   title: "IU Corps",
   hero,
   thumbnail,
-  subTitle: "IA",
+  subTitle: "IA / UX",
   blurb: `A newly formed organization needs a new website to connect the campus and community with service-learning opportunities.`,
   whiteBoardPics: [postit1, postit2, postit3],
   siteMap,
